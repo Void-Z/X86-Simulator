@@ -1,6 +1,7 @@
 #include "nemu.h"
 #include "monitor/monitor.h"
 #include <unistd.h>
+#include <optget.h>
 
 void init_difftest(char *ref_so_file, long img_size);
 void init_regex();
