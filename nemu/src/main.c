@@ -21,7 +21,7 @@ void expr_test() {
   assert(fp != NULL);
   printflog("Open success!\n");
   while(fscanf(fp, "%d %s\n", &expr_test_unit.val, expr_test_unit.expr_buf) != EOF) {
-    printf("%d %s\n",expr_test_unit.val,expr_test_unit.expr_buf);
+    printf("value : %d, expression : %s\n",expr_test_unit.val,expr_test_unit.expr_buf);
     ++expr_test_unit.total;
     bool * success = (bool *)malloc(sizeof(bool));
     if(expr_test_unit.val != expr(expr_test_unit.expr_buf,success)) {
