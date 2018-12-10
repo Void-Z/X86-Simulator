@@ -192,12 +192,11 @@ uint32_t eval(int beg,int end,bool *success) {
 }
 
 uint32_t expr(char *e, bool *success) {
-  printf("asd\n");
   if (!make_token(e)) {
     *success = false;
     return 0;
   }
-  printf("dd\n");
+
   /* TODO: Insert codes to evaluate the expression. */
   *success = true;
   uint32_t expr_val = eval(0,nr_token - 1,success);
