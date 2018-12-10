@@ -97,7 +97,7 @@ static int cmd_p(char *args) {
   if(*success) {
     printflog("Expression Value : %u\n",val);
   } else {
-    printflog("Invalid Expression!\n");
+    printflog("Invalid Expression! % d\n",val);
   }
   free(success);
   return 0; 
