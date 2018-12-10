@@ -20,20 +20,11 @@ void expr_test() {
   FILE *fp = fopen("test.txt", "rt");
   assert(fp != NULL);
   printflog("Open success!\n");
-  // while(fscanf(fp, "%d %s\n", &expr_test_unit.val, expr_test_unit.expr_buf) != EOF) {
-  //   printf("value : %d, expression : %s\n",expr_test_unit.val,expr_test_unit.expr_buf);
-  //   ++expr_test_unit.total;
-  //   bool * success = (bool *)malloc(sizeof(bool));
-  //   if(expr_test_unit.val != expr(expr_test_unit.expr_buf,success)) {
-  //     ++expr_test_unit.error;
-  //   }
-  //   free(success);
-  // }
   while(!feof(fp) && fgets(expr_test_unit.expr_buf,sizeof(char) * 65535,fp) != NULL) {
-    printf("%s\n",expr_test_unit.expr_buf);
+    // printf("%s\n",expr_test_unit.expr_buf);
     char val[16];
     sscanf(expr_test_unit.expr_buf,"%s",val);
-    printf("%s\n",val);
+    // printf("%s\n",val);
     expr_test_unit.val = atoi(val);
     ++expr_test_unit.total;
     bool *success = (bool *)malloc(sizeof(bool));
@@ -53,7 +44,7 @@ int main(int argc, char *argv[]) {
 
   /* Test expr(). */
   
-  expr_test();
+  // expr_test();
 
   /* Receive commands from user. */
   ui_mainloop(is_batch_mode);
