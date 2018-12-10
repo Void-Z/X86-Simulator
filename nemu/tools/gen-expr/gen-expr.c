@@ -6,9 +6,75 @@
 #include <string.h>
 
 // this should be enough
+const int GEN_NUM_MAX = 65536;
 static char buf[65536];
+buf[0] = '\0';
+uint32_t pos = 0;
+inline int choose(int range) {
+  return rand() % range;
+}
+
+inline void gen(char c) {
+  buf[pos++] = c;
+  buf[pos] = '\0';
+}
+
+inline void gen_num() {
+  int num = choose(GEN_NUM_MAX);
+  bool zero = true;
+  while(num) {
+    if(zero) {
+      if(num % 10) {
+        zero = false;
+        gen(num % 10 - '0');
+      }
+    } else {
+      gen(num % 10 - '0');
+    }
+    num /= 10;
+  }
+}
+
+inline void gen_rand_op() {
+  switch(choose(4)) {
+    case 0: {
+      gen('+');
+      break;
+    }
+    case 1: {
+      gen('-');
+      break;
+    }
+    case 2: {
+      gen('*');
+      break;
+    }
+    case 3: {
+      gen('/');
+      break;
+    }
+  }
+}
+
 static inline void gen_rand_expr() {
-  buf[0] = '\0';
+  switch(choose(3)) {
+    case 0: {
+      gen_num();
+      break;
+    }
+    case 1: {
+      gen('(');
+      gen_rand_expr();
+      gen(')');
+      break;
+    }
+    case 2: {
+      gen_rand_expr();
+      gen_rand_op();
+      gen_rand_expr();
+      break;
+    }
+  }
 }
 
 static char code_buf[65536];
