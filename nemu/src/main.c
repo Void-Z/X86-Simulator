@@ -6,7 +6,7 @@ void ui_mainloop(int);
 
 struct {
   unsigned int val;
-  char expr_buf[32];
+  char expr_buf[65536];
   unsigned int error;
   unsigned int total;
 } expr_test_unit;
@@ -33,7 +33,8 @@ int main(int argc, char *argv[]) {
   /* Test expr(). */
   
   bool * success = (bool *)malloc(sizeof(bool));
-  expr("1 + 2",success);
+  char *s = "1 + 2";
+  expr(s,success);
   printf("%d",*success);
   free(success);
   expr_test();
