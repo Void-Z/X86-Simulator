@@ -31,6 +31,9 @@ void expr_test() {
 
 int main(int argc, char *argv[]) {
   /* Test expr(). */
+  bool * success = (bool *)malloc(sizeof(bool));
+  expr("1",success);
+  free(success);
   expr_test();
 
   /* Initialize the monitor. */
