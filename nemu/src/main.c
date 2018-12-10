@@ -1,6 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "monitor/expr.h"
+
+#include <regex.h>
+
+
 int init_monitor(int, char *[]);
 void ui_mainloop(int);
 
@@ -31,12 +35,6 @@ void expr_test() {
 
 int main(int argc, char *argv[]) {
   /* Test expr(). */
-  
-  bool * success = (bool *)malloc(sizeof(bool));
-  char *s = "1 + 2";
-  expr(s,success);
-  printf("%d",*success);
-  free(success);
   expr_test();
 
   /* Initialize the monitor. */
