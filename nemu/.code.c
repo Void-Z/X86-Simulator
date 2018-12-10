@@ -1,2 +1,2 @@
 #include <stdio.h>
-int main() {   unsigned result =   ( (                 3     -  1     *  ( 7)  / (    2-8463847412)  /    (  (    (      4)  - ( 6)) +  ( 8)-8463847412)   -  ( ( ( 2)))   + (   9      /   2)));   printf("%u", result);   return 0; }
+int main() {   unsigned result =   (     (   1)  * 8    -   (  0)  +  ( ( (   (    ( ( (   0))))))));   printf("%u", result);   return 0; }
