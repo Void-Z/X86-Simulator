@@ -35,7 +35,7 @@ void expr_test() {
     expr_test_unit.val = atoi(val);
     ++expr_test_unit.total;
     bool *success = (bool *)malloc(sizeof(bool));
-    printf("%d,%s\n",expr_test_unit.val,expr_test_unit.expr_buf);
+    printf("%d,%s,%ld\n",expr_test_unit.val,expr_test_unit.expr_buf,strlen(expr_test_unit.expr_buf));
     if(expr_test_unit.val != expr(expr_test_unit.expr_buf + strlen(val),success)) {
       ++expr_test_unit.error;
     }
