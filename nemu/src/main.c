@@ -29,12 +29,13 @@ void expr_test() {
   //   }
   //   free(success);
   // }
-  while(!feof(fp) && fgets(expr_test_unit.expr_buf,sizeof(char) * 65536,fp) != NULL) {
+  while(!feof(fp) && fgets(expr_test_unit.expr_buf,sizeof(char) * 65535,fp) != NULL) {
     
     char *val = strtok(expr_test_unit.expr_buf," ");
     expr_test_unit.val = atoi(val);
     ++expr_test_unit.total;
     bool *success = (bool *)malloc(sizeof(bool));
+    printf("%d,%s\n",expr_test_unit.val,expr_test_unit.expr_buf);
     if(expr_test_unit.val != expr(expr_test_unit.expr_buf + strlen(val),success)) {
       ++expr_test_unit.error;
     }
