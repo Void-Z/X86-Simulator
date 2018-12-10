@@ -172,6 +172,7 @@ uint32_t eval(int beg,int end,bool *success) {
       printflog("Expression %d to %d, main token position : %d,type : %c\n",beg,end,main_token,tokens[main_token].type);
       uint32_t val_left = eval(beg,main_token - 1,success);
       uint32_t val_right = eval(main_token + 1,end,success);
+      printf("left:%u,right:%u\n",val_left,val_right);
       switch(tokens[main_token].type) {
         case '+': {
           return val_left + val_right;
