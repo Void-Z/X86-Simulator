@@ -93,7 +93,7 @@ static int cmd_info(char *args) {
 
 static int cmd_p(char *args) {
   bool *success = (bool *)malloc(sizeof(bool));
-  uint32_t val = expr(/*args*/"1",success);
+  uint32_t val = expr(args,success);
   if(*success) {
     printflog("Expression Value : %u\n",val);
   } else {

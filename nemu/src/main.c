@@ -23,6 +23,7 @@ void expr_test() {
     if(expr_test_unit.val != expr(expr_test_unit.expr_buf,success)) {
       ++expr_test_unit.error;
     }
+    free(success);
   }
   fclose(fp);
   printflog("Expr() test results : total %d test(s), %d error(s)\n",expr_test_unit.total,expr_test_unit.error);
@@ -30,7 +31,7 @@ void expr_test() {
 
 int main(int argc, char *argv[]) {
   /* Test expr(). */
-  // expr_test();
+  expr_test();
 
   /* Initialize the monitor. */
   int is_batch_mode = init_monitor(argc, argv);
