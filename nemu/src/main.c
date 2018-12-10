@@ -31,11 +31,12 @@ void expr_test() {
   // }
   while(!feof(fp) && fgets(expr_test_unit.expr_buf,sizeof(char) * 65535,fp) != NULL) {
     printf("%s\n",expr_test_unit.expr_buf);
-    char *val = strtok(expr_test_unit.expr_buf," ");
+    char val[16];
+    sscanf(expr_test_unit.expr_buf,"%s",val);
+    printf("%s\n",val);
     expr_test_unit.val = atoi(val);
     ++expr_test_unit.total;
     bool *success = (bool *)malloc(sizeof(bool));
-    printf("%d,%s,%ld\n",expr_test_unit.val,expr_test_unit.expr_buf,strlen(expr_test_unit.expr_buf));
     if(expr_test_unit.val != expr(expr_test_unit.expr_buf + strlen(val),success)) {
       ++expr_test_unit.error;
     }
