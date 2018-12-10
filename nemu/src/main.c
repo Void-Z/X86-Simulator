@@ -30,7 +30,7 @@ void expr_test() {
   //   free(success);
   // }
   while(!feof(fp) && fgets(expr_test_unit.expr_buf,sizeof(char) * 65535,fp) != NULL) {
-    
+    printf("%s\n",expr_test_unit.expr_buf);
     char *val = strtok(expr_test_unit.expr_buf," ");
     expr_test_unit.val = atoi(val);
     ++expr_test_unit.total;
