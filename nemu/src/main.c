@@ -32,7 +32,7 @@ void expr_test() {
 int main(int argc, char *argv[]) {
   /* Test expr(). */
   bool * success = (bool *)malloc(sizeof(bool));
-  expr("1",success);
+  expr("1 + 2",success);
   printf("%d",*success);
   free(success);
   expr_test();
