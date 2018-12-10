@@ -192,6 +192,8 @@ uint32_t eval(int beg,int end,bool *success) {
 }
 
 uint32_t expr(char *e, bool *success) {
+  assert(e != NULL);
+  printf("Expression : %s\n",e);
   if (!make_token(e)) {
     *success = false;
     return 0;
