@@ -23,6 +23,7 @@ void expr_test() {
     if(expr_test_unit.val != expr(expr_test_unit.expr_buf,success)) {
       ++expr_test_unit.error;
     }
+    printf("sad\n");
   }
   fclose(fp);
   printflog("Expr() test results : total %d test(s), %d error(s)\n",expr_test_unit.total,expr_test_unit.error);
