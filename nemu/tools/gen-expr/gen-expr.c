@@ -5,37 +5,44 @@
 #include <assert.h>
 #include <string.h>
 
+#define true 1
+#define false 0
+typedef uint8_t bool;
+const int GEN_NUM_MAX = 10;
+
+
 // this should be enough
-const int GEN_NUM_MAX = 65536;
 static char buf[65536];
-buf[0] = '\0';
 uint32_t pos = 0;
-inline int choose(int range) {
+int choose(int range) {
   return rand() % range;
 }
 
-inline void gen(char c) {
+static inline void gen(char c) {
+  // printf("gen:%c\n",c);
   buf[pos++] = c;
   buf[pos] = '\0';
 }
 
-inline void gen_num() {
+static inline void gen_num() {
   int num = choose(GEN_NUM_MAX);
+  if(!num) gen('0');
+  // printf("gen_num:%d\n",num);
   bool zero = true;
   while(num) {
     if(zero) {
       if(num % 10) {
         zero = false;
-        gen(num % 10 - '0');
+        gen(num % 10 + '0');
       }
     } else {
-      gen(num % 10 - '0');
+      gen(num % 10 + '0');
     }
     num /= 10;
   }
 }
 
-inline void gen_rand_op() {
+static inline void gen_rand_op() {
   switch(choose(4)) {
     case 0: {
       gen('+');
@@ -56,7 +63,7 @@ inline void gen_rand_op() {
   }
 }
 
-static inline void gen_rand_expr() {
+static inline void _gen_rand_expr() {
   switch(choose(3)) {
     case 0: {
       gen_num();
@@ -64,17 +71,22 @@ static inline void gen_rand_expr() {
     }
     case 1: {
       gen('(');
-      gen_rand_expr();
+      _gen_rand_expr();
       gen(')');
       break;
     }
     case 2: {
-      gen_rand_expr();
+      _gen_rand_expr();
       gen_rand_op();
-      gen_rand_expr();
+      _gen_rand_expr();
       break;
     }
   }
+}
+
+static inline void gen_rand_expr() {
+  pos = 0;
+  _gen_rand_expr();
 }
 
 static char code_buf[65536];
@@ -96,7 +108,7 @@ int main(int argc, char *argv[]) {
   int i;
   for (i = 0; i < loop; i ++) {
     gen_rand_expr();
-
+    // printf("%s\n",buf);
     sprintf(code_buf, code_format, buf);
 
     FILE *fp = fopen(".code.c", "w");
