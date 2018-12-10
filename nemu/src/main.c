@@ -30,7 +30,7 @@ void expr_test() {
 
 int main(int argc, char *argv[]) {
   /* Test expr(). */
-  expr_test();
+  // expr_test();
 
   /* Initialize the monitor. */
   int is_batch_mode = init_monitor(argc, argv);
