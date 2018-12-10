@@ -23,7 +23,7 @@ static struct rule {
    * Pay attention to the precedence level of different rules.
    */
 
-  {" +|\\n|\\r", TK_NOTYPE},    // spaces
+  {" +", TK_NOTYPE},    // spaces
   {"\\+", '+'},         // plus
   {"-", '-'},           // sub
   {"\\*", '*'},         // mul
