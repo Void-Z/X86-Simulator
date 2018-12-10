@@ -23,10 +23,22 @@ static inline void gen(char c) {
   buf[pos++] = c;
   buf[pos] = '\0';
 }
-
-static inline void gen_num() {
+static inline void gen_rand_space() {
+  switch(choose(2)) {
+    case 0: {
+      gen(' ');
+      break;
+    }
+    case 1: {
+      gen(' ');
+      gen_rand_space();
+      break;
+    }
+  }
+}
+static inline void gen_num(bool non_zero) {
   int num = choose(GEN_NUM_MAX);
-  if(!num) gen('0');
+  if(!num) non_zero ? gen('1') : gen('0');
   // printf("gen_num:%d\n",num);
   bool zero = true;
   while(num) {
@@ -42,7 +54,8 @@ static inline void gen_num() {
   }
 }
 
-static inline void gen_rand_op() {
+static inline void gen_rand_op(bool *is_div) {
+  *is_div = false;
   switch(choose(4)) {
     case 0: {
       gen('+');
@@ -58,27 +71,48 @@ static inline void gen_rand_op() {
     }
     case 3: {
       gen('/');
+      *is_div = true;
       break;
     }
   }
 }
 
-static inline void _gen_rand_expr() {
+static inline void _gen_rand_expr(bool non_zero) {
+  gen_rand_space();
   switch(choose(3)) {
     case 0: {
-      gen_num();
+      gen_num(non_zero);
       break;
     }
     case 1: {
       gen('(');
-      _gen_rand_expr();
+      _gen_rand_expr(false);
+      if(non_zero) {
+        gen('-');
+        uint32_t num = 1 << 31;
+        bool zero = true;
+        while(num) {
+          if(zero) {
+            if(num % 10) {
+              zero = false;
+              gen(num % 10 + '0');
+            }
+          } else {
+            gen(num % 10 + '0');
+          }
+          num /= 10;
+        }
+      }
       gen(')');
       break;
     }
     case 2: {
-      _gen_rand_expr();
-      gen_rand_op();
-      _gen_rand_expr();
+      bool *is_div = (bool *)malloc(sizeof(bool));
+      _gen_rand_expr(non_zero);
+      gen_rand_space();
+      gen_rand_op(is_div);
+      *is_div ? _gen_rand_expr(true) : _gen_rand_expr(false);
+      free(is_div);
       break;
     }
   }
@@ -86,7 +120,7 @@ static inline void _gen_rand_expr() {
 
 static inline void gen_rand_expr() {
   pos = 0;
-  _gen_rand_expr();
+  _gen_rand_expr(false);
 }
 
 static char code_buf[65536];
