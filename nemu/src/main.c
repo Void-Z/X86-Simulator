@@ -12,7 +12,7 @@ struct {
 } expr_test_unit;
 
 void expr_test() {
-  FILE *fp = fopen("test.txt", "ra");
+  FILE *fp = fopen("test.txt", "wt");
   assert(fp != NULL);
   while(fscanf(fp, "%d %s\n", &expr_test_unit.val, expr_test_unit.expr_buf) != EOF) {
     ++expr_test_unit.total;
