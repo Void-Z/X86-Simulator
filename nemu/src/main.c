@@ -20,7 +20,7 @@ void expr_test() {
     printf("%d %s\n",expr_test_unit.val,expr_test_unit.expr_buf);
     ++expr_test_unit.total;
     bool * success = (bool *)malloc(sizeof(bool));
-    if(expr_test_unit.val != expr(expr_test_unit.expr_buf,success)) {
+    if(expr_test_unit.val != expr("1",success)) {
       ++expr_test_unit.error;
     }
   }
@@ -30,7 +30,7 @@ void expr_test() {
 
 int main(int argc, char *argv[]) {
   /* Test expr(). */
-  // expr_test();
+  expr_test();
 
   /* Initialize the monitor. */
   int is_batch_mode = init_monitor(argc, argv);
