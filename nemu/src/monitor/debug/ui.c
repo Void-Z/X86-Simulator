@@ -76,6 +76,31 @@ static int cmd_x(char *args) {
   return 0;
 }
 
+struct {
+  unsigned int val;
+  char expr_buf[65536];
+  unsigned int error;
+  unsigned int total;
+} expr_test_unit;
+
+void expr_test() {
+  printflog("Open test file ...\n");
+  FILE *fp = fopen("test.txt", "rt");
+  assert(fp != NULL);
+  printflog("Open success!\n");
+  while(fscanf(fp, "%d %s\n", &expr_test_unit.val, expr_test_unit.expr_buf) != EOF) {
+    printf("%d %s\n",expr_test_unit.val,expr_test_unit.expr_buf);
+    ++expr_test_unit.total;
+    bool * success = (bool *)malloc(sizeof(bool));
+    if(expr_test_unit.val != expr(expr_test_unit.expr_buf,success)) {
+      ++expr_test_unit.error;
+    }
+    free(success);
+  }
+  fclose(fp);
+  printflog("Expr() test results : total %d test(s), %d error(s)\n",expr_test_unit.total,expr_test_unit.error);
+}
+
 static int cmd_info(char *args) {
   if(!strcmp("r",args)) {
     printflog("eax : 0x%08x ,esp : 0x%08x\n",cpu.eax,cpu.esp);
@@ -85,6 +110,8 @@ static int cmd_info(char *args) {
     printflog("eip : 0x%08x\n",cpu.eip);
   } else if(!strcmp("w",args)) {
     printf("Watchpoint mods has no implemention.\n");
+  } else if(!strcmp("test",args)) {
+    expr_test();
   } else {
     printf("Invalid Commands!\n");
   }
