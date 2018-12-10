@@ -21,10 +21,10 @@ void expr_test() {
   assert(fp != NULL);
   printflog("Open success!\n");
   while(!feof(fp) && fgets(expr_test_unit.expr_buf,sizeof(char) * 65535,fp) != NULL) {
-    // printf("%s\n",expr_test_unit.expr_buf);
+    printf("%s\n",expr_test_unit.expr_buf);
     char val[16];
     sscanf(expr_test_unit.expr_buf,"%s",val);
-    // printf("%s\n",val);
+    printf("%s\n",val);
     expr_test_unit.val = atoi(val);
     ++expr_test_unit.total;
     bool *success = (bool *)malloc(sizeof(bool));
