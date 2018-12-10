@@ -15,6 +15,7 @@ void expr_test() {
   printflog("Open test file ...\n");
   FILE *fp = fopen("test.txt", "rt");
   assert(fp != NULL);
+  printflog("Open success!\n");
   while(fscanf(fp, "%d %s\n", &expr_test_unit.val, expr_test_unit.expr_buf) != EOF) {
     ++expr_test_unit.total;
     bool * success = (bool *)malloc(sizeof(bool));
