@@ -120,7 +120,18 @@ static bool make_token(char *e) {
   return true;
 }
 
-inline bool check_parentheses(int beg,int end) {return tokens[beg].type == '(' && tokens[end].type == ')';}
+inline bool check_parentheses(int beg,int end) {
+  if(tokens[beg].type == '(' && tokens[end].type == ')') {
+    for(int i = beg + 1;i < end;++i) {
+      if(tokens[i].type == ')') {
+        return false;
+      }
+    }
+    return true;
+  } else {
+    return false;
+  }
+}
 
 inline bool check_operator(int type) {return type == '+' || type == '-' || type == '*' || type == '/';}
 
