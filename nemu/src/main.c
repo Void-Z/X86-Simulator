@@ -12,6 +12,7 @@ struct {
 } expr_test_unit;
 
 void expr_test() {
+  printflog("Open test file ...\n");
   FILE *fp = fopen("test.txt", "rt");
   assert(fp != NULL);
   while(fscanf(fp, "%d %s\n", &expr_test_unit.val, expr_test_unit.expr_buf) != EOF) {
