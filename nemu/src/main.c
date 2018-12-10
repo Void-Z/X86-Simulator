@@ -14,8 +14,7 @@ struct {
 void expr_test() {
   FILE *fp = fopen("../output", "r");
   assert(fp != NULL);
-  while(!feof(fp)) {
-    fscanf(fp, "%d %s\n", &expr_test_unit.val, expr_test_unit.expr_buf);
+  while(fscanf(fp, "%d %s\n", &expr_test_unit.val, expr_test_unit.expr_buf) != EOF) {
     ++expr_test_unit.total;
     bool * success = (bool *)malloc(sizeof(bool));
     if(expr_test_unit.val != expr(expr_test_unit.expr_buf,success)) {
