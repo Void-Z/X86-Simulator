@@ -308,6 +308,6 @@ uint32_t expr(char *e, bool *success) {
   /* TODO: Insert codes to evaluate the expression. */
   
   uint32_t expr_val = eval(0,nr_token - 1,success);
-  printf("asdasdsadsa\n");
+  printf("expr return value:%d,%u,%x\n",expr_val,expr_val,expr_val);
   return expr_val;
 }
