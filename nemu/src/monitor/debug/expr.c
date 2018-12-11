@@ -258,7 +258,6 @@ uint32_t eval(int beg,int end,bool *success) {
     return val;
   } else {
     int main_token = found_mainToken(beg,end,success);
-    // printf("%d",main_token);
     if(main_token < 0) {
       *success = false;
       return 0;
@@ -269,13 +268,11 @@ uint32_t eval(int beg,int end,bool *success) {
       uint32_t val_right = eval(main_token + 1,end,success);
       if(!*success) return 0;
       printf("left:%u,token:%c,right:%u\n",val_left,tokens[main_token].type,val_right);
-      printf("dfgs\n");
       switch(tokens[main_token].type) {
         case '+': {
           return val_left + val_right;
         }
         case '-': {
-          printf("aaa\n");
           return val_left - val_right;
         }
         case '*': {
@@ -311,6 +308,6 @@ uint32_t expr(char *e, bool *success) {
   /* TODO: Insert codes to evaluate the expression. */
   
   uint32_t expr_val = eval(0,nr_token - 1,success);
-  printf("asd\n");
+  printf("asdasdsadsa\n");
   return expr_val;
 }
