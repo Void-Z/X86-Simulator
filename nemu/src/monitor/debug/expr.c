@@ -269,6 +269,7 @@ uint32_t eval(int beg,int end,bool *success) {
       uint32_t val_right = eval(main_token + 1,end,success);
       if(!*success) return 0;
       printf("left:%u,token:%c,right:%u\n",val_left,tokens[main_token].type,val_right);
+      printf("dfgs\n");
       switch(tokens[main_token].type) {
         case '+': {
           return val_left + val_right;
