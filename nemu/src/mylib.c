@@ -35,6 +35,7 @@ uint16_t mylib_regname2number(const char *args,int len) {
     if(len == 4) {
         code += args[3] >= 'a' ? args[3] - 'a' : args[3] - 'A';
     }
+    printf("%s %d",args,code);
     return code;
 }
 
