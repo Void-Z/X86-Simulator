@@ -86,7 +86,7 @@ static int cmd_p(char *args) {
   bool *success = (bool *)malloc(sizeof(bool));
   uint32_t val = expr(args,success);
   if(*success) {
-    printflog("Expression Value : %u\n",val);
+    printflog("Expression Value is dec:%u, hex:%x\n",val,val);
   } else {
     printflog("Invalid Expression! % d\n",val);
   }
