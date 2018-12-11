@@ -151,7 +151,7 @@ static bool make_token(char *e) {
   return true;
 }
 
-inline bool check_parentheses(int beg,int end) {
+inline bool check_parentheses(int beg,int end,bool *success) {
   if(tokens[beg].type == '(' && tokens[end].type == ')') {
     int l = 0;
     for(int i = beg + 1;i < end;++i) {
@@ -168,7 +168,7 @@ inline bool check_parentheses(int beg,int end) {
 
 inline bool check_operator(int type) {return type == '+' || type == '-' || type == '*' || type == '/';}
 
-int found_mainToken(int beg,int end) {
+int found_mainToken(int beg,int end,bool *success) {
   int high_level_token = -1,low_level_token = -1;
   while(tokens[end].type != ')' && end > beg) {
     if(check_operator(tokens[end].type)) {
@@ -197,19 +197,38 @@ uint32_t eval(int beg,int end,bool *success) {
   if(beg > end) {
     return 0;
   } else if(beg == end) {
-    if(tokens[beg].type != TK_DEC) {
-      // Invalid expression!
-      *success = false;
-      return 0;
-    } else {
-      return (uint32_t)atoi(tokens[beg].str);
+    // if(tokens[beg].type != TK_DEC) {
+    //   *success = false;
+    //   return 0;
+    // } else {
+    //   return (uint32_t)atoi(tokens[beg].str);
+    // }
+    switch(tokens[beg].type) {
+      case TK_DEC: {
+        return (uint32_t)atoi(tokens[beg].str);
+        break;
+      }
+      case TK_HEX: {
+        return (uint32_t)$.atox(tokens[beg].str);
+        break;
+      }
+      case TK_REG: {
+        uint32_t val = (uint32_t)$.getreg(tokens[beg].str,success);
+        if(!*success) {
+          $.log("Invalid register name : %s !\n",tokens[beg].str);
+        }
+        break;
+      }
+      default: {
+        *success = false;
+        return 0;
+      }
     }
-  } else if(check_parentheses(beg,end)) {
+  } else if(check_parentheses(beg,end,success)) {
     return eval(beg + 1,end - 1,success);
   } else {
-    int main_token = found_mainToken(beg,end);
+    int main_token = found_mainToken(beg,end,success);
     if(main_token < 0) {
-      // Invalid expression!
       *success = false;
       return 0;
     } else {
@@ -237,15 +256,16 @@ uint32_t eval(int beg,int end,bool *success) {
 }
 
 uint32_t expr(char *e, bool *success) {
-  assert(e != NULL);
-  printf("Expression : %s\n",e);
+  assert(e != NULL && success != NULL);
+  *success = true;
+  printf("Begin make tokens for expression : %s\n",e);
   if (!make_token(e)) {
     *success = false;
     return 0;
   }
 
   /* TODO: Insert codes to evaluate the expression. */
-  *success = true;
+  
   uint32_t expr_val = eval(0,nr_token - 1,success);
   return expr_val;
 }

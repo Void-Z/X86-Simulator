@@ -48,15 +48,6 @@ static int cmd_si(char *args) {
   return 0;
 }
 
-uint32_t atox(char *args) {
-  uint32_t val = 0;
-  args += 2;
-  for(;*args;++args) {
-    val *= 16;
-    val += *args - '0';
-  }
-  return val;
-}
 
 static int cmd_x(char *args) {
   if(!args) {
@@ -66,7 +57,7 @@ static int cmd_x(char *args) {
     uint32_t counts = atoi(args);
     args = strtok(NULL," ");
     printf("%s\n",args);
-    uint32_t entry = atox(args);
+    uint32_t entry = $.atox(args);
     printf("%u %x\n",entry,entry);
     for(uint32_t i = 0;i < counts;++i) {
       printflog("0x%08x\n",*(unsigned *)guest_to_host(entry + i * 4));
