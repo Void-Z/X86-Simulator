@@ -14,7 +14,7 @@ uint32_t __mylib_atox__(char *);
 uint32_t __mylib_getreg__(char *,bool *);
 
 
-struct {
+struct mylib{
     
     // int (*log)(const char *, ...);
     uint32_t (*atox)(char *);
