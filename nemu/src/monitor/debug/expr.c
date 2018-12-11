@@ -202,7 +202,7 @@ int found_mainToken(int beg,int end,bool *success) {
       ++rp;
     } else if(tokens[beg].type == '(') {
       --rp;
-    } else if(check_operator(tokens[beg].type)){
+    } else if(!rp && check_operator(tokens[beg].type)){
       if(tokens[end].type == '+' || tokens[end].type == '-') {
         return end;
       } else {
