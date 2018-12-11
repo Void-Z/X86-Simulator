@@ -19,7 +19,6 @@ int mylib_log(const char * format, ...) {
 }
 
 uint32_t mylib_atox(char *args) {
-    _.log("%s",args);
     uint32_t val = 0;
     args += 2;
     for(;*args;++args) {
@@ -29,43 +28,61 @@ uint32_t mylib_atox(char *args) {
     return val;
 }
 
+uint16_t mylib_regname2number(const char *args,int len) {
+    uint16_t code;
+    code = ((args[1] >= 'A' ? args[1] - 'A' : args[1] - 'a') << 10) + 
+           ((args[2] >= 'A' ? args[2] - 'A' : args[2] - 'a') << 5);
+    if(len == 4) {
+        code += args[3] >= 'A' ? args[3] - 'A' : args[3] - 'a';
+    }
+    return code;
+}
+
 uint32_t mylib_getreg(char *args,bool *success) {
-    // if(!strcmp(args,"$eax")) {
-    //     return cpu.eax;
-    // } else if(!strcmp(args,"$ecx")) {
-    //     return cpu.ecx;
-    // } else if(!strcmp(args,"$edx")) {
-
-    // } else if(!strcmp(args,"$ebx")) {
-
-    // } else if(!strcmp(args,"$esp")) {
-
-    // } else if(!strcmp(args,"$ebp")) {
-
-    // } else if(!strcmp(args,"$esi")) {
-
-    // } else if(!strcmp(args,"$edi")) {
-
-    // } else if(!strcmp(args,"$eip")) {
-
-    // } else {
-    //     return 0;
-    // }
-    // 00 a,b,c,e
-    // 0000 a,b,c,d,s,i,x,h,l
-    // 00 x,p,i
     assert(args != NULL && success != NULL);
-    // uint8_t op;
-    // int len = strlen(args);
-    // if(len == 4) {
-    //     // 1100 0000
-    //     op = 0xc0;
-    // } else if(len == 3) {
-        
-    // } else {
-    //     *success = false;
-    //     return 0;
-    // }
-    return 0;
+    uint16_t op;
+    int len = strlen(args);
+    if(len == 4) {
+        op = mylib_regname2number(args,4);
+    } else if(len == 3) {
+        op = mylib_regname2number(args,3);
+    } else {
+        *success = false;
+        return 0;
+    }
+    switch(op) {
+        case 0x9437: {
+            return cpu.eax;
+        }
+        case 0x9477: {
+            return cpu.ecx;
+        }
+        case 0x9497: {
+            return cpu.edx;
+        }
+        case 0x9457: {
+            return cpu.ebx;
+        }
+        case 0x966f: {
+            return cpu.esp;
+        }
+        case 0x944f: {
+            return cpu.ebp;
+        }
+        case 0x9668: {
+            return cpu.esi;
+        }
+        case 0x9488: {
+            return cpu.edi;
+        } 
+        case 0x952f: {
+            return cpu.eip;
+        }
+        default: {
+            *success = false;
+            Log("Error register name:%s.\n",args);
+            return 0;
+        }
+    }
 }
 
