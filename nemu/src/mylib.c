@@ -23,6 +23,6 @@ uint32_t __mylib_atox__(char *args) {
 }
 
 uint32_t __mylib_getreg__(char *args,bool *success) {
-
+    return 0;
 }
 

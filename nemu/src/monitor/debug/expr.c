@@ -209,14 +209,17 @@ uint32_t eval(int beg,int end,bool *success) {
         break;
       }
       case TK_HEX: {
-        return (uint32_t)$.atox(tokens[beg].str);
+        // return (uint32_t)$.atox(tokens[beg].str);
+        return 0;
         break;
       }
       case TK_REG: {
-        uint32_t val = (uint32_t)$.getreg(tokens[beg].str,success);
+        // uint32_t val = (uint32_t)$.getreg(tokens[beg].str,success);
+        uint32_t val = 0;
         if(!*success) {
-          $.log("Invalid register name : %s !\n",tokens[beg].str);
+          // $.log("Invalid register name : %s !\n",tokens[beg].str);
         }
+        return val;
         break;
       }
       default: {

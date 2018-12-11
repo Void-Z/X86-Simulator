@@ -16,12 +16,12 @@ uint32_t __mylib_getreg__(char *,bool *);
 
 struct {
     
-    int (*log)(const char *, ...);
+    // int (*log)(const char *, ...);
     uint32_t (*atox)(char *);
     uint32_t (*getreg)(char *,bool *);
 
 } $ = {
-    __mylib_log__,
+    // __mylib_log__,
     __mylib_atox__,
     __mylib_getreg__
 };
