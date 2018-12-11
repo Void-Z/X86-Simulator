@@ -20,7 +20,7 @@ struct mylib{
     uint32_t (*atox)(char *);
     uint32_t (*getreg)(char *,bool *);
 
-} $ = {
+} $123 = {
     // __mylib_log__,
     __mylib_atox__,
     __mylib_getreg__
