@@ -206,7 +206,7 @@ int found_mainToken(int beg,int end,bool *success) {
       if(tokens[end].type == '+' || tokens[end].type == '-') {
         return end;
       } else {
-        token_mulordiv = end;
+        if(token_mulordiv < 0) token_mulordiv = end;
       }
     }
     --end;

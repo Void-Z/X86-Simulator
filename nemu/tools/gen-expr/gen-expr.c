@@ -89,7 +89,7 @@ static inline void _gen_rand_expr(bool non_zero) {
       _gen_rand_expr(false);
       if(non_zero) {
         gen('-');
-        uint32_t num = 1 << 31;
+        uint32_t num = 0x1 << 31;
         bool zero = true;
         while(num) {
           if(zero) {

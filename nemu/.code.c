@@ -1,2 +1,3 @@
 #include <stdio.h>
-int main() {   unsigned result =  4;   printf("%u", result);   return 0; }
+#include <stdlib.h>
+int main() {   printf("%x,%u,%lu,%x",atoi("8463847412"),0x1<<31,atoi("8463847412"),1<<31); }
