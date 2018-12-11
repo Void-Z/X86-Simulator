@@ -274,6 +274,7 @@ uint32_t eval(int beg,int end,bool *success) {
           return val_left + val_right;
         }
         case '-': {
+          printf("aaa");
           return val_left - val_right;
         }
         case '*': {
@@ -309,5 +310,6 @@ uint32_t expr(char *e, bool *success) {
   /* TODO: Insert codes to evaluate the expression. */
   
   uint32_t expr_val = eval(0,nr_token - 1,success);
+  printf("asd");
   return expr_val;
 }
