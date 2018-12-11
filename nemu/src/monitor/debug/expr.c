@@ -261,7 +261,7 @@ uint32_t eval(int beg,int end,bool *success) {
 uint32_t expr(char *e, bool *success) {
   assert(e != NULL && success != NULL);
   *success = true;
-  printf("Begin make tokens for expression : %s\n",e);
+  // $.log("Begin make tokens for expression : %s\n",e);
   if (!make_token(e)) {
     *success = false;
     return 0;

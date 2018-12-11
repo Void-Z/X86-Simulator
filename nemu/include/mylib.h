@@ -14,18 +14,14 @@ uint32_t __mylib_atox__(char *);
 uint32_t __mylib_getreg__(char *,bool *);
 
 
-struct mylib{
+typedef struct My_lib {
     
-    // int (*log)(const char *, ...);
+    int (*log)(const char *, ...);
     uint32_t (*atox)(char *);
     uint32_t (*getreg)(char *,bool *);
 
-} $123 = {
-    // __mylib_log__,
-    __mylib_atox__,
-    __mylib_getreg__
-};
-
+} My_lib;
+extern My_lib $;
 
 
 #endif
