@@ -255,14 +255,14 @@ uint32_t _eval(int beg,int end,bool *success) {
     }
   } else if(check_parentheses(beg,end)) {
     return eval(beg + 1,end - 1,success);
-  } else if(tokens[beg].type == TK_NEG) {
+  } else if(tokens[beg].type == TK_NEG && !found_mainToken(beg,end,success)) {
     uint32_t val = eval(beg + 1,end,success);
     if(!*success) {
       return 0;
     }
     val = ~val + 1;
     return val;
-  } else if(tokens[beg].type == TK_DEREF) {
+  } else if(tokens[beg].type == TK_DEREF && !found_mainToken(beg,end,success)) {
     uint32_t val = eval(beg + 1,end,success);
     if(!*success) {
       return 0;
