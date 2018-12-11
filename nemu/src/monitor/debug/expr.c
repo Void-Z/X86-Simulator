@@ -214,7 +214,20 @@ int found_mainToken(int beg,int end,bool *success) {
   return token_mulordiv;
 }
 
+
+
+uint32_t _eval(int beg,int end,bool *success);
 uint32_t eval(int beg,int end,bool *success) {
+  printf("in\n");
+  uint32_t val = _eval(beg,end,success);
+  printf("out:%u,0x%08x\n",val,val);
+  return val;
+}
+
+
+
+
+uint32_t _eval(int beg,int end,bool *success) {
   if(beg > end) {
     return 0;
   } else if(beg == end) {
