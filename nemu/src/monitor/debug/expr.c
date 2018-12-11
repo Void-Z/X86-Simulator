@@ -174,28 +174,43 @@ inline bool check_parentheses(int beg,int end) {
 inline bool check_operator(int type) {return type == '+' || type == '-' || type == '*' || type == '/';}
 
 int found_mainToken(int beg,int end,bool *success) {
-  int high_level_token = -1,low_level_token = -1;
-  while(tokens[end].type != ')' && end > beg) {
-    if(check_operator(tokens[end].type)) {
+  // int high_level_token = -1,low_level_token = -1;
+  // while(tokens[end].type != ')' && end > beg) {
+  //   if(check_operator(tokens[end].type)) {
+  //     if(tokens[end].type == '+' || tokens[end].type == '-') {
+  //       return end;
+  //     } else {
+  //       high_level_token = end;
+  //     }
+  //   }
+  //   --end;
+  // }
+  // while(tokens[beg].type != '(' && end > beg) {
+  //   if(check_operator(tokens[beg].type)) {
+  //     if(tokens[beg].type == '+' || tokens[beg].type == '-') {
+  //       low_level_token = beg;
+  //     } else {
+  //       high_level_token = high_level_token < beg ? beg : high_level_token;
+  //     }
+  //   }
+  //   ++beg;
+  // }
+  // return low_level_token > 0 ? low_level_token : high_level_token;
+  int rp = 0,token_mulordiv = -1;
+  while(end > beg) {
+    if(tokens[beg].type == ')') {
+      ++rp;
+    } else if(tokens[beg].type == '(') {
+      --rp;
+    } else if(check_operator(tokens[beg].type)){
       if(tokens[end].type == '+' || tokens[end].type == '-') {
         return end;
       } else {
-        high_level_token = end;
+        token_mulordiv = end;
       }
     }
-    --end;
   }
-  while(tokens[beg].type != '(' && end > beg) {
-    if(check_operator(tokens[beg].type)) {
-      if(tokens[beg].type == '+' || tokens[beg].type == '-') {
-        low_level_token = beg;
-      } else {
-        high_level_token = high_level_token < beg ? beg : high_level_token;
-      }
-    }
-    ++beg;
-  }
-  return low_level_token > 0 ? low_level_token : high_level_token;
+  return token_mulordiv;
 }
 
 uint32_t eval(int beg,int end,bool *success) {
@@ -227,7 +242,6 @@ uint32_t eval(int beg,int end,bool *success) {
   } else if(check_parentheses(beg,end)) {
     return eval(beg + 1,end - 1,success);
   } else {
-    _.log("asd\n");
     int main_token = found_mainToken(beg,end,success);
     if(main_token < 0) {
       *success = false;
