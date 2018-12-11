@@ -159,6 +159,8 @@ inline bool check_parentheses(int beg,int end,bool *success) {
       if(tokens[i].type == ')') {
         if(l) --l;
         else return false;
+      } else if(tokens[i].type == '(') {
+        ++l;
       }
     }
     return true;
@@ -198,12 +200,6 @@ uint32_t eval(int beg,int end,bool *success) {
   if(beg > end) {
     return 0;
   } else if(beg == end) {
-    // if(tokens[beg].type != TK_DEC) {
-    //   *success = false;
-    //   return 0;
-    // } else {
-    //   return (uint32_t)atoi(tokens[beg].str);
-    // }
     switch(tokens[beg].type) {
       case TK_DEC: {
         return (uint32_t)atoi(tokens[beg].str);
