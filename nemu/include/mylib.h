@@ -15,11 +15,9 @@ uint32_t __mylib_getreg__(char *,bool *);
 
 
 typedef struct My_lib {
-    
     int (*log)(const char *, ...);
     uint32_t (*atox)(char *);
     uint32_t (*getreg)(char *,bool *);
-
 } My_lib;
 extern My_lib $;
 
