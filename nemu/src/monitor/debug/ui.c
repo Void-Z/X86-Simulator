@@ -57,7 +57,7 @@ static int cmd_x(char *args) {
     uint32_t counts = atoi(args);
     args = strtok(NULL," ");
     printf("%s\n",args);
-    uint32_t entry = $.atox(args);
+    uint32_t entry = _.atox(args);
     printf("%u %x\n",entry,entry);
     for(uint32_t i = 0;i < counts;++i) {
       printflog("0x%08x\n",*(unsigned *)guest_to_host(entry + i * 4));

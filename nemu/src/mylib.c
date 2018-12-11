@@ -1,13 +1,12 @@
 #include "mylib.h"
 
-My_lib $ = {
-    0xff,
-    __mylib_log__,
-    __mylib_atox__,
-    __mylib_getreg__
+My_lib _ = {
+    mylib_log,
+    mylib_atox,
+    mylib_getreg
 };
 
-int __mylib_log__(const char * format, ...) {
+int mylib_log(const char * format, ...) {
 #ifdef __MYLIB_DEBUG__
     va_list arg_ptr;
     va_start(arg_ptr, format);
@@ -19,7 +18,7 @@ int __mylib_log__(const char * format, ...) {
 #endif
 }
 
-uint32_t __mylib_atox__(char *args) {
+uint32_t mylib_atox(char *args) {
   uint32_t val = 0;
   args += 2;
   for(;*args;++args) {
@@ -29,7 +28,43 @@ uint32_t __mylib_atox__(char *args) {
   return val;
 }
 
-uint32_t __mylib_getreg__(char *args,bool *success) {
+uint32_t mylib_getreg(char *args,bool *success) {
+    // if(!strcmp(args,"$eax")) {
+    //     return cpu.eax;
+    // } else if(!strcmp(args,"$ecx")) {
+    //     return cpu.ecx;
+    // } else if(!strcmp(args,"$edx")) {
+
+    // } else if(!strcmp(args,"$ebx")) {
+
+    // } else if(!strcmp(args,"$esp")) {
+
+    // } else if(!strcmp(args,"$ebp")) {
+
+    // } else if(!strcmp(args,"$esi")) {
+
+    // } else if(!strcmp(args,"$edi")) {
+
+    // } else if(!strcmp(args,"$eip")) {
+
+    // } else {
+    //     return 0;
+    // }
+    // 00 a,b,c,e
+    // 0000 a,b,c,d,s,i,x,h,l
+    // 00 x,p,i
+    assert(args != NULL && success != NULL);
+    // uint8_t op;
+    // int len = strlen(args);
+    // if(len == 4) {
+    //     // 1100 0000
+    //     op = 0xc0;
+    // } else if(len == 3) {
+        
+    // } else {
+    //     *success = false;
+    //     return 0;
+    // }
     return 0;
 }
 

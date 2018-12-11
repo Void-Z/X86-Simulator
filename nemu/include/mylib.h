@@ -9,17 +9,16 @@
 
 #define __MYLIB_DEBUG__
 
-int __mylib_log__(const char *, ...);
-uint32_t __mylib_atox__(char *);
-uint32_t __mylib_getreg__(char *,bool *);
+int mylib_log(const char *, ...);
+uint32_t mylib_atox(char *);
+uint32_t mylib_getreg(char *,bool *);
 
 typedef struct My_lib {
-    uint8_t id;
     int (*log)(const char *, ...);
     uint32_t (*atox)(char *);
     uint32_t (*getreg)(char *,bool *);
 } My_lib;
-extern My_lib $;
+extern My_lib _;
 
 
 #endif
