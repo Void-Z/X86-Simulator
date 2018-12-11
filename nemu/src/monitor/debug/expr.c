@@ -209,6 +209,7 @@ int found_mainToken(int beg,int end,bool *success) {
         token_mulordiv = end;
       }
     }
+    --end;
   }
   return token_mulordiv;
 }
