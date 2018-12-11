@@ -261,8 +261,8 @@ uint32_t eval(int beg,int end,bool *success) {
 uint32_t expr(char *e, bool *success) {
   assert(e != NULL && success != NULL);
   *success = true;
-  __mylib_log__("Begin make tokens for expression : %s\n",e);
-  $.atox("0x1000");
+  $.log("Begin make tokens for expression : %s\n",e);
+  
   if (!make_token(e)) {
     *success = false;
     return 0;

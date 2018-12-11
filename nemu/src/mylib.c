@@ -1,10 +1,15 @@
 #include "mylib.h"
 
 My_lib $ = {
+    test,
     __mylib_log__,
     __mylib_atox__,
     __mylib_getreg__
 };
+
+void test() {
+    printf("test");
+}
 
 int __mylib_log__(const char * format, ...) {
 #ifdef __MYLIB_DEBUG__

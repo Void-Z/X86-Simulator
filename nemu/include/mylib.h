@@ -12,9 +12,10 @@
 int __mylib_log__(const char *, ...);
 uint32_t __mylib_atox__(char *);
 uint32_t __mylib_getreg__(char *,bool *);
-
+void test();
 
 typedef struct My_lib {
+    void (*test)();
     int (*log)(const char *, ...);
     uint32_t (*atox)(char *);
     uint32_t (*getreg)(char *,bool *);
