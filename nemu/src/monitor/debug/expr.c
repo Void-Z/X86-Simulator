@@ -244,7 +244,7 @@ uint32_t eval(int beg,int end,bool *success) {
     return eval(beg + 1,end - 1,success);
   } else {
     int main_token = found_mainToken(beg,end,success);
-    printf("%d",main_token);
+    // printf("%d",main_token);
     if(main_token < 0) {
       *success = false;
       return 0;
@@ -252,7 +252,7 @@ uint32_t eval(int beg,int end,bool *success) {
       printflog("Expression %d to %d, main token position : %d,type : %c\n",beg,end,main_token,tokens[main_token].type);
       uint32_t val_left = eval(beg,main_token - 1,success);
       uint32_t val_right = eval(main_token + 1,end,success);
-      printf("left:%u,right:%u\n",val_left,val_right);
+      printf("left:%u,token:%c,right:%u\n",val_left,tokens[main_token].type,val_right);
       switch(tokens[main_token].type) {
         case '+': {
           return val_left + val_right;
