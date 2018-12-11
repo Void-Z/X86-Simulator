@@ -30,12 +30,11 @@ uint32_t mylib_atox(char *args) {
 
 uint16_t mylib_regname2number(const char *args,int len) {
     uint16_t code;
-    code = ((args[1] >= 'a' ? args[1] - 'a' : args[1] - 'A') << 10) + 
-           ((args[2] >= 'a' ? args[2] - 'a' : args[2] - 'A') << 5);
+    code = ((args[1] < 'a' ? args[1] - 'A' : args[1] - 'a') << 10) + 
+           ((args[2] < 'a' ? args[2] - 'A' : args[2] - 'a') << 5);
     if(len == 4) {
-        code += args[3] >= 'a' ? args[3] - 'a' : args[3] - 'A';
+        code += args[3] < 'a' ? args[3] - 'A' : args[3] - 'a';
     }
-    printf("%s %d",args,code);
     return code;
 }
 
@@ -52,31 +51,31 @@ uint32_t mylib_getreg(char *args,bool *success) {
         return 0;
     }
     switch(op) {
-        case 0x9437: {
+        case 0x1017: {
             return cpu.eax;
         }
-        case 0x9477: {
+        case 0x1057: {
             return cpu.ecx;
         }
-        case 0x9497: {
+        case 0x1077: {
             return cpu.edx;
         }
-        case 0x9457: {
+        case 0x1037: {
             return cpu.ebx;
         }
-        case 0x966f: {
+        case 0x124f: {
             return cpu.esp;
         }
-        case 0x944f: {
+        case 0x102f: {
             return cpu.ebp;
         }
-        case 0x9668: {
+        case 0x1248: {
             return cpu.esi;
         }
-        case 0x9488: {
+        case 0x1068: {
             return cpu.edi;
         } 
-        case 0x952f: {
+        case 0x110f: {
             return cpu.eip;
         }
         default: {

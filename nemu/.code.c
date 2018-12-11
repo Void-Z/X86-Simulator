@@ -2,10 +2,10 @@
 #include <stdint.h>
 uint16_t mylib_regname2number(const char *args,int len) {
     uint16_t code;
-    code = ((args[1] >= 'A' ? args[1] - 'A' : args[1] - 'a') << 10) + 
-           ((args[2] >= 'A' ? args[2] - 'A' : args[2] - 'a') << 5);
+    code = ((args[1] < 'a' ? args[1] - 'A' : args[1] - 'a') << 10) + 
+           ((args[2] < 'a' ? args[2] - 'A' : args[2] - 'a') << 5);
     if(len == 4) {
-        code += args[3] >= 'A' ? args[3] - 'A' : args[3] - 'a';
+        code += args[3] < 'a' ? args[3] - 'A' : args[3] - 'a';
     }
     return code;
 }
