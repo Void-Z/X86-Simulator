@@ -8,7 +8,7 @@
 #include <stdlib.h>
 
 enum {
-  TK_NOTYPE = 256, TK_EQ, TK_INT
+  TK_NOTYPE = 256, TK_EQ, TK_DEC, TK_HEX, TK_REG, TK_NEQ, TK_AND, TK_DEREF, TK_NEG
 
   /* TODO: Add more token types */
 
@@ -23,15 +23,20 @@ static struct rule {
    * Pay attention to the precedence level of different rules.
    */
 
-  {" +", TK_NOTYPE},    // spaces
-  {"\\+", '+'},         // plus
-  {"-", '-'},           // sub
-  {"\\*", '*'},         // mul
-  {"/", '/'},           // div
-  {"\\(", '('},         // left parentheses
-  {"\\)", ')'},         // right parentheses
-  {"==", TK_EQ},        // equal
-  {"0|[1-9][0-9]*", TK_INT}    // int
+  {" +", TK_NOTYPE},            // spaces or other useless token
+  {"\\+", '+'},                 // plus
+  {"-", '-'},                   // sub or negative number
+  {"\\*", '*'},                 // mul or deference
+  {"/", '/'},                   // div
+  {"\\(", '('},                 // left parentheses
+  {"\\)", ')'},                 // right parentheses
+  {"==", TK_EQ},                // equal
+  {"!=", TK_NEQ},               // non-equal
+  {"&&", TK_AND},               // and
+  {"0|[1-9][0-9]*", TK_DEC},    // decimal number
+  {"0x[0-9]+"},                 // hexadecimal number    
+  {"$[a-z|A-Z]+"}               // reg name
+
 };
 
 #define NR_REGEX (sizeof(rules) / sizeof(rules[0]) )
@@ -63,6 +68,22 @@ typedef struct token {
 Token tokens[1024];
 int nr_token;
 
+inline bool check_type(int type) {
+  switch(type) {
+    case ')':
+    case TK_DEC:
+    case TK_HEX:
+    case TK_REG: {
+      // Next token is not TK_DEREF or TK_NEG
+      return false;
+    }
+    default: {
+      // Next token is not '-' or '*'
+      return true;
+    }
+  }
+}
+
 static bool make_token(char *e) {
   int position = 0;
   int i;
@@ -87,18 +108,28 @@ static bool make_token(char *e) {
          */
         
         switch (rules[i].token_type) {
-          case '+':
-          case '-':
           case '*':
+          case '-': {
+            if(nr_token <= 0 || check_type(tokens[nr_token - 1].type)) {
+              tokens[nr_token].type = rules[i].token_type == '*' ? TK_DEREF : TK_NEG;
+              ++nr_token;
+              break;
+            }
+          }
+          case '+':
           case '/':
           case '(':
           case ')':
+          case TK_AND:
+          case TK_NEQ:
           case TK_EQ: {
             tokens[nr_token].type = rules[i].token_type;
             ++nr_token;
             break;
           }
-          case TK_INT: {
+          case TK_HEX:
+          case TK_REG:
+          case TK_DEC: {
             tokens[nr_token].type = rules[i].token_type;
             strncpy(tokens[nr_token].str,substr_start,substr_len);
             ++nr_token;
@@ -166,7 +197,7 @@ uint32_t eval(int beg,int end,bool *success) {
   if(beg > end) {
     return 0;
   } else if(beg == end) {
-    if(tokens[beg].type != TK_INT) {
+    if(tokens[beg].type != TK_DEC) {
       // Invalid expression!
       *success = false;
       return 0;
