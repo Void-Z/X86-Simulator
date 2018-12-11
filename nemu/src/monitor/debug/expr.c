@@ -198,11 +198,11 @@ int found_mainToken(int beg,int end,bool *success) {
   // return low_level_token > 0 ? low_level_token : high_level_token;
   int rp = 0,token_mulordiv = -1;
   while(end > beg) {
-    if(tokens[beg].type == ')') {
+    if(tokens[end].type == ')') {
       ++rp;
-    } else if(tokens[beg].type == '(') {
+    } else if(tokens[end].type == '(') {
       --rp;
-    } else if(!rp && check_operator(tokens[beg].type)){
+    } else if(!rp && check_operator(tokens[end].type)){
       if(tokens[end].type == '+' || tokens[end].type == '-') {
         return end;
       } else {
