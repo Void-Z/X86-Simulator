@@ -152,13 +152,15 @@ static bool make_token(char *e) {
   return true;
 }
 
-inline bool check_parentheses(int beg,int end,bool *success) {
+inline bool check_parentheses(int beg,int end) {
   if(tokens[beg].type == '(' && tokens[end].type == ')') {
     int l = 0;
     for(int i = beg + 1;i < end;++i) {
       if(tokens[i].type == ')') {
         if(l) --l;
-        else return false;
+        else {
+          return false;
+        }
       } else if(tokens[i].type == '(') {
         ++l;
       }
@@ -222,7 +224,7 @@ uint32_t eval(int beg,int end,bool *success) {
         return 0;
       }
     }
-  } else if(check_parentheses(beg,end,success)) {
+  } else if(check_parentheses(beg,end)) {
     return eval(beg + 1,end - 1,success);
   } else {
     int main_token = found_mainToken(beg,end,success);
