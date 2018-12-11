@@ -242,6 +242,20 @@ uint32_t eval(int beg,int end,bool *success) {
     }
   } else if(check_parentheses(beg,end)) {
     return eval(beg + 1,end - 1,success);
+  } else if(tokens[beg].type == TK_NEG) {
+    uint32_t val = eval(beg + 1,end,success);
+    if(!*success) {
+      return 0;
+    }
+    val = ~val + 1;
+    return val;
+  } else if(tokens[beg].type == TK_DEREF) {
+    uint32_t val = eval(beg + 1,end,success);
+    if(!*success) {
+      return 0;
+    }
+    val = *(uint32_t *)guest_to_host(val);
+    return val;
   } else {
     int main_token = found_mainToken(beg,end,success);
     // printf("%d",main_token);
@@ -251,7 +265,9 @@ uint32_t eval(int beg,int end,bool *success) {
     } else {
       printflog("Expression %d to %d, main token position : %d,type : %c\n",beg,end,main_token,tokens[main_token].type);
       uint32_t val_left = eval(beg,main_token - 1,success);
+      if(!*success) return 0;
       uint32_t val_right = eval(main_token + 1,end,success);
+      if(!*success) return 0;
       printf("left:%u,token:%c,right:%u\n",val_left,tokens[main_token].type,val_right);
       switch(tokens[main_token].type) {
         case '+': {
@@ -265,6 +281,15 @@ uint32_t eval(int beg,int end,bool *success) {
         }
         case '/': {
           return val_left / val_right;
+        }
+        case TK_EQ: {
+          return (uint32_t)(val_left == val_right ? 0x1 : 0x0);
+        }
+        case TK_NEQ: {
+          return (uint32_t)(val_left == val_right ? 0x0 : 0x1);
+        }
+        case TK_AND: {
+          return (uint32_t)(val_left != 0 && val_right != 0) ? 0x1 : 0x0;
         }
         default: assert(0);     // Unexcepted situation!
       }
