@@ -227,6 +227,7 @@ uint32_t eval(int beg,int end,bool *success) {
   } else if(check_parentheses(beg,end)) {
     return eval(beg + 1,end - 1,success);
   } else {
+    _.log("asd\n");
     int main_token = found_mainToken(beg,end,success);
     if(main_token < 0) {
       *success = false;
