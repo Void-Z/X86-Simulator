@@ -244,6 +244,7 @@ uint32_t eval(int beg,int end,bool *success) {
     return eval(beg + 1,end - 1,success);
   } else {
     int main_token = found_mainToken(beg,end,success);
+    printf("%d",main_token);
     if(main_token < 0) {
       *success = false;
       return 0;
