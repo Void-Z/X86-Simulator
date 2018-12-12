@@ -33,7 +33,7 @@ static struct rule {
   {"==", TK_EQ},                // equal
   {"!=", TK_NEQ},               // non-equal
   {"&&", TK_AND},               // and
-  {"0x[0-9|a-f|A-F]+", TK_HEX}, // hexadecimal number   
+  {"0[x,X][0-9|a-f|A-F]+", TK_HEX}, // hexadecimal number   
   {"0|[1-9][0-9]*", TK_DEC},    // decimal number
   {"\\$[a-z|A-Z]+", TK_REG}       // reg name
 
