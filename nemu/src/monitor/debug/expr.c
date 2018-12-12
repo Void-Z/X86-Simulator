@@ -8,7 +8,8 @@
 #include <stdlib.h>
 
 enum {
-  TK_NOTYPE = 256, TK_EQ, TK_DEC, TK_HEX, TK_REG, TK_NEQ, TK_AND, TK_DEREF, TK_NEG
+  TK_NOTYPE = 256, TK_EQ, TK_DEC, TK_HEX, TK_REG, TK_NEQ, TK_AND, TK_DEREF, TK_NEG, TK_GE, 
+              TK_LE, TK_LS, TK_RS, TK_BAND, TK_BOR, TK_XOR, TK_BNE
 
   /* TODO: Add more token types */
 
@@ -33,6 +34,14 @@ static struct rule {
   {"==", TK_EQ},                // equal
   {"!=", TK_NEQ},               // non-equal
   {"&&", TK_AND},               // and
+  {">=", TK_GE},
+  {"<=", TK_LE},
+  {"<<", TK_LS},
+  {">>", TK_RS},
+  {"&", TK_BAND},
+  {"\\|", TK_BOR},
+  {"^", TK_XOR},
+  {"~", TK_BNE},
   {"0[x,X][0-9|a-f|A-F]+", TK_HEX}, // hexadecimal number   
   {"0|[1-9][0-9]*", TK_DEC},    // decimal number
   {"\\$[a-z|A-Z]+", TK_REG}       // reg name
@@ -65,7 +74,7 @@ typedef struct token {
   char str[32];
 } Token;
 
-Token tokens[1024];
+Token tokens[512];
 int nr_token;
 
 inline bool check_type(int type) {
@@ -120,6 +129,14 @@ static bool make_token(char *e) {
           case '/':
           case '(':
           case ')':
+          case TK_GE:
+          case TK_LE:
+          case TK_LS:
+          case TK_RS:
+          case TK_BAND:
+          case TK_BOR:
+          case TK_XOR:
+          case TK_BNE:
           case TK_AND:
           case TK_NEQ:
           case TK_EQ: {
@@ -171,9 +188,47 @@ inline bool check_parentheses(int beg,int end) {
   }
 }
 
-inline bool check_operator(int type) {return type == '+' || type == '-' || type == '*' || type == '/';}
+inline int check_binocular_operator(int type) {
+  switch(type) {
+    case '+':
+    case '-':{
+      return 4;
+    }
+    case '*':
+    case '/': {
+      return 3;
+    }
+    case TK_EQ:
+    case TK_NEQ: {
+      return 7;
+    }
+    case TK_AND: {
+      return 11;
+    }
+    case TK_GE:
+    case TK_LE: {
+      return 6;
+    }
+    case TK_LS:
+    case TK_RS: {
+      return 5;
+    }
+    case TK_BAND: {
+      return 8;
+    }
+    case TK_BOR: {
+      return 10;
+    }
+    case TK_XOR: {
+      return 9;
+    }
+    default: {
+      return -1;
+    }
+  }
+}
 
-int found_mainToken(int beg,int end,bool *success) {
+int found_main_token(int beg,int end,bool *success) {
   // int high_level_token = -1,low_level_token = -1;
   // while(tokens[end].type != ')' && end > beg) {
   //   if(check_operator(tokens[end].type)) {
@@ -196,22 +251,21 @@ int found_mainToken(int beg,int end,bool *success) {
   //   ++beg;
   // }
   // return low_level_token > 0 ? low_level_token : high_level_token;
-  int rp = 0,token_mulordiv = -1;
+  int rp = 0,main_token_pos = -1,token_level = 0,now_level = 0;
   while(end > beg) {
     if(tokens[end].type == ')') {
       ++rp;
     } else if(tokens[end].type == '(') {
       --rp;
-    } else if(!rp && check_operator(tokens[end].type)){
-      if(tokens[end].type == '+' || tokens[end].type == '-') {
-        return end;
-      } else {
-        if(token_mulordiv < 0) token_mulordiv = end;
+    } else if(!rp && (now_level = check_binocular_operator(tokens[end].type)) != -1){
+      if(now_level > token_level) {
+        token_level = now_level;
+        main_token_pos = end;
       }
     }
     --end;
   }
-  return token_mulordiv;
+  return main_token_pos;
 }
 
 //debug tracer
@@ -255,25 +309,22 @@ uint32_t _eval(int beg,int end,bool *success) {
     }
   } else if(check_parentheses(beg,end)) {
     return eval(beg + 1,end - 1,success);
-  } else if((tokens[beg].type == TK_NEG || tokens[beg].type == TK_DEREF) && (beg == end - 1 || check_parentheses(beg + 1,end))) {
+  } else if((tokens[beg].type == TK_NEG || tokens[beg].type == TK_DEREF || tokens[beg].type == TK_BNE) && (beg == end - 1 || check_parentheses(beg + 1,end))) {
     uint32_t val;
-    if(tokens[beg].type == TK_NEG) {
-      val = eval(beg + 1,end,success);
-      if(!*success) {
-        return 0;
-      }
+    val = eval(beg + 1,end,success);
+    if(!*success) {
+      return 0;
+    }
+    if(tokens[beg].type == TK_NEG) { 
       val = ~val + 1;
-      return val;
     } else if(tokens[beg].type == TK_DEREF) {
-      val = eval(beg + 1,end,success);
-      if(!*success) {
-        return 0;
-      }
       val = *(uint32_t *)guest_to_host(val);
+    } else if(tokens[beg].type == TK_BNE) {
+      val = ~val;
+    }
       return val;
-    } 
   } else {
-    int main_token = found_mainToken(beg,end,success);
+    int main_token = found_main_token(beg,end,success);
     if(main_token < 0) {
       *success = false;
       return 0;
@@ -305,6 +356,27 @@ uint32_t _eval(int beg,int end,bool *success) {
         }
         case TK_AND: {
           return (uint32_t)(val_left != 0 && val_right != 0) ? 0x1 : 0x0;
+        }
+        case TK_GE: {
+          return (uint32_t)(val_left >= val_right) ? 0x1 : 0x0;
+        }
+        case TK_LE: {
+          return (uint32_t)(val_left < val_right) ? 0x1 : 0x0;
+        }
+        case TK_LS: {
+          return (uint32_t)(val_left << val_right);
+        }
+        case TK_RS: {
+          return (uint32_t)(val_left >> val_right);
+        }
+        case TK_BAND: {
+          return (uint32_t)(val_left & val_right);
+        }
+        case TK_BOR: {
+          return (uint32_t)(val_left | val_right);
+        }
+        case TK_XOR: {
+          return (uint32_t)(val_left ^ val_right);
         }
         default: assert(0);     // Unexcepted situation!
       }
