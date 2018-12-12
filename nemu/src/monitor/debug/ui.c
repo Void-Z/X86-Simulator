@@ -94,6 +94,10 @@ static int cmd_p(char *args) {
   return 0; 
 }
 
+static int cmd_w(char *args) {
+  new_wp(args);
+}
+
 static int cmd_help(char *args);
 
 static struct {
@@ -106,10 +110,12 @@ static struct {
   { "q", "Exit NEMU", cmd_q },
 
   /* TODO: Add more commands */
-  { "si", "Format : si [N], Description : Let the program suspend execution after stepping through N instructions. When N is not given, the default is 1", cmd_si},
-  { "info", "Format : info SUBCMD, Description : r-Print registers status,w-Print watchpoint infomation", cmd_info},
-  { "x", "Format : x N EXPR, Description : Find the value of the expression EXPR, and use the result as the starting memory address to output consecutive N 4 bytes in hexadecimal format.", cmd_x},
-  { "p", "Format : p EXPR, Description : Expression evaluation", cmd_p},
+  { "si", "Execution n step(s)", cmd_si},
+  { "info", "Show register and watchpoint infomation", cmd_info},
+  { "x", "Print memory", cmd_x},
+  { "p", "Expression evaluation", cmd_p},
+  { "w", "Set watchpoint", cmd_w},
+  { "d", "Delete watchpoint", cmd_d}
 };
 
 #define NR_CMD (sizeof(cmd_table) / sizeof(cmd_table[0]))

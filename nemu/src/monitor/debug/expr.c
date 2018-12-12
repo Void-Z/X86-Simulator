@@ -49,7 +49,7 @@ static struct rule {
 };
 
 #define NR_REGEX (sizeof(rules) / sizeof(rules[0]) )
-#define NR_TOKENS 1024
+#define NR_TOKENS 64
 
 static regex_t re[NR_REGEX];
 
