@@ -271,7 +271,7 @@ int found_main_token(int beg,int end,bool *success) {
 }
 
 //debug tracer
-
+/*
 uint32_t _eval(int beg,int end,bool *success);
 uint32_t eval(int beg,int end,bool *success) {
   printf("in,beg %d,end %d \n",beg,end);
@@ -279,11 +279,11 @@ uint32_t eval(int beg,int end,bool *success) {
   printf("out:%u,0x%08x,beg %d,end %d\n",val,val,beg,end);
   return val;
 }
+*/
 
 
 
-
-uint32_t _eval(int beg,int end,bool *success) {
+uint32_t eval(int beg,int end,bool *success) {
   if(beg > end) {
     return 0;
   } else if(beg == end) {
@@ -331,7 +331,7 @@ uint32_t _eval(int beg,int end,bool *success) {
       *success = false;
       return 0;
     } else {
-      printflog("Expression %d to %d, main token position : %d,type : %c\n",beg,end,main_token,tokens[main_token].type);
+      // printflog("Expression %d to %d, main token position : %d,type : %c\n",beg,end,main_token,tokens[main_token].type);
       uint32_t val_left = eval(beg,main_token - 1,success);
       if(!*success) return 0;
       uint32_t val_right = eval(main_token + 1,end,success);
@@ -390,7 +390,7 @@ uint32_t _eval(int beg,int end,bool *success) {
 uint32_t expr(char *e, bool *success) {
   assert(e != NULL && success != NULL);
   *success = true;
-  _.log("Begin make tokens for expression : %s\n",e);
+  // _.log("Begin make tokens for expression : %s\n",e);
   
   if (!make_token(e)) {
     *success = false;
@@ -399,6 +399,6 @@ uint32_t expr(char *e, bool *success) {
   /* TODO: Insert codes to evaluate the expression. */
   
   uint32_t expr_val = eval(0,nr_token - 1,success);
-  printf("expr return value:%d,%u,%x\n",expr_val,expr_val,expr_val);
+  // printf("expr return value:%d,%u,%x\n",expr_val,expr_val,expr_val);
   return expr_val;
 }
