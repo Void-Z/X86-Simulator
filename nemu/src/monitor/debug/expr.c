@@ -40,7 +40,7 @@ static struct rule {
   {">>", TK_RS},
   {"&", TK_BAND},
   {"\\|", TK_BOR},
-  {"^", TK_XOR},
+  {"\\^", TK_XOR},
   {"~", TK_BNE},
   {"0[x,X][0-9|a-f|A-F]+", TK_HEX}, // hexadecimal number   
   {"0|[1-9][0-9]*", TK_DEC},    // decimal number
