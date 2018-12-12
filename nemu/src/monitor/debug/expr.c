@@ -255,20 +255,23 @@ uint32_t _eval(int beg,int end,bool *success) {
     }
   } else if(check_parentheses(beg,end)) {
     return eval(beg + 1,end - 1,success);
-  } else if(tokens[beg].type == TK_NEG) {
-    uint32_t val = eval(beg + 1,end,success);
-    if(!*success) {
-      return 0;
-    }
-    val = ~val + 1;
-    return val;
-  } else if(tokens[beg].type == TK_DEREF) {
-    uint32_t val = eval(beg + 1,end,success);
-    if(!*success) {
-      return 0;
-    }
-    val = *(uint32_t *)guest_to_host(val);
-    return val;
+  } else if((tokens[beg].type == TK_NEG || tokens[beg].type == TK_DEREF) && (beg == end - 1 || check_parentheses(beg + 1,end))) {
+    uint32_t val;
+    if(tokens[beg].type == TK_NEG) {
+      val = eval(beg + 1,end,success);
+      if(!*success) {
+        return 0;
+      }
+      val = ~val + 1;
+      return val;
+    } else if(tokens[beg].type == TK_DEREF) {
+      val = eval(beg + 1,end,success);
+      if(!*success) {
+        return 0;
+      }
+      val = *(uint32_t *)guest_to_host(val);
+      return val;
+    } 
   } else {
     int main_token = found_mainToken(beg,end,success);
     if(main_token < 0) {
@@ -307,6 +310,7 @@ uint32_t _eval(int beg,int end,bool *success) {
       }
     }
   }
+  return 0;
 }
 
 uint32_t expr(char *e, bool *success) {
