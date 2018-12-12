@@ -51,6 +51,21 @@ WP * found_wp(int id) {
   }
   return NULL;
 }
+bool hit_wp_check() {
+  WP *ptr = head;
+  bool result = false;
+  bool *success = (bool *)malloc(sizeof(bool));
+  while(ptr) {
+    uint32_t val = expr(ptr->wp_str,success);
+    if(val != ptr->wp_value) {
+      Log("Hit watchpoint %d:value from 0x%08x to 0x%08x.\n",ptr->NO,ptr->wp_value,val);
+      result = true;
+    }
+    ptr = ptr->next;
+  }
+  free(success);
+  return result;
+}
 
 /* TODO: Implement the functionality of watchpoint */
 
