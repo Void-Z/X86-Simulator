@@ -34,10 +34,14 @@ WP * new_wp(char *str) {
 }
 void free_wp(WP *wp) {
   WP *ptr = head;
-  while(ptr->next != wp) {
-    ptr = ptr->next;
+  if(wp == head) {
+    head = head->next;
+  } else {
+    while(ptr->next != wp) {
+      ptr = ptr->next;
+    }
+    ptr->next = wp->next;
   }
-  ptr->next = wp->next;
   wp->next = free_;
   free_ = wp;
 }
@@ -65,6 +69,13 @@ bool hit_wp_check() {
   }
   free(success);
   return result;
+}
+void print_wp() {
+  WP *ptr = free_;
+  while(ptr) {
+    Log("Watchpoint NO.%d %s 0x%08x\n",ptr->NO,ptr->wp_str,ptr->wp_value);
+    ptr = ptr->next;
+  }
 }
 
 /* TODO: Implement the functionality of watchpoint */

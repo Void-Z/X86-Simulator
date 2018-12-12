@@ -8,9 +8,12 @@
 #include <readline/history.h>
 
 void cpu_exec(uint64_t);
+
 WP * new_wp(char *);
 void free_wp(WP *);
 WP * found_wp(int);
+void print_wp();
+
 uint32_t expr(char *, bool *);
 /* We use the `readline' library to provide more flexibility to read from stdin. */
 char* rl_gets() {
@@ -78,7 +81,7 @@ static int cmd_info(char *args) {
     printflog("ebx : 0x%08x ,edi : 0x%08x\n",cpu.ebx,cpu.edi);
     printflog("eip : 0x%08x\n",cpu.eip);
   } else if(!strcmp("w",args)) {
-    printf("Watchpoint mods has no implemention.\n");
+    print_wp();
   } else {
     printf("Invalid Commands!\n");
   }
