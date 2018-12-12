@@ -23,7 +23,7 @@ void init_wp_pool() {
 WP * new_wp(char *str) {
   assert(free_ != NULL);
   WP *ptr = free_->next;
-  ptr->next = head;
+  free_->next = head;
   head = free_;
   free_ = ptr;
   strncpy(head->wp_str,str,sizeof(head->wp_str) - 1);
