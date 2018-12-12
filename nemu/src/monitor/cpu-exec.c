@@ -1,5 +1,6 @@
 #include "nemu.h"
 #include "monitor/monitor.h"
+#include "monitor/watchpoint.h"
 
 /* The assembly code of instructions executed is only output to the screen
  * when the number of instructions executed is less than this value.
@@ -7,6 +8,7 @@
  * You can modify this value as you want.
  */
 #define MAX_INSTR_TO_PRINT 10
+bool hit_wp_check();
 
 int nemu_state = NEMU_STOP;
 
@@ -40,6 +42,10 @@ void cpu_exec(uint64_t n) {
 
 #ifdef DEBUG
     /* TODO: check watchpoints here. */
+    if(hit_wp_check()) {
+      nemu_state = NEMU_STOP;
+    }
+
 
 #endif
 
@@ -59,6 +65,10 @@ void cpu_exec(uint64_t n) {
         printflog("\33[1;31mnemu: ABORT\33[0m at eip = 0x%08x\n\n", cpu.eip);
         return;
       }
+    }
+
+    if(nemu_state == NEMU_STOP) {
+      break;
     }
   }
 
