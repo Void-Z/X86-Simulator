@@ -71,7 +71,7 @@ bool hit_wp_check() {
   return result;
 }
 void print_wp() {
-  WP *ptr = free_;
+  WP *ptr = head;
   while(ptr) {
     Log("Watchpoint NO.%d %s 0x%08x\n",ptr->NO,ptr->wp_str,ptr->wp_value);
     ptr = ptr->next;
