@@ -49,6 +49,7 @@ static struct rule {
 };
 
 #define NR_REGEX (sizeof(rules) / sizeof(rules[0]) )
+#define NR_TOKENS 1024
 
 static regex_t re[NR_REGEX];
 
@@ -74,7 +75,7 @@ typedef struct token {
   char str[32];
 } Token;
 
-Token tokens[10240];
+Token tokens[NR_TOKENS];
 int nr_token;
 
 inline bool check_type(int type) {
@@ -102,6 +103,7 @@ static bool make_token(char *e) {
 
   while (e[position] != '\0') {
     /* Try all rules one by one. */
+    assert(nr_token < NR_TOKENS);
     for (i = 0; i < NR_REGEX; i ++) {
       if (regexec(&re[i], e + position, 1, &pmatch, 0) == 0 && pmatch.rm_so == 0) {
         char *substr_start = e + position;
@@ -318,7 +320,7 @@ uint32_t _eval(int beg,int end,bool *success) {
     if(tokens[beg].type == TK_NEG) { 
       val = ~val + 1;
     } else if(tokens[beg].type == TK_DEREF) {
-      val = *(uint32_t *)guest_to_host(val);
+      val = *(uint32_t *)guest_to_host(val % PMEM_SIZE);
     } else if(tokens[beg].type == TK_BNE) {
       val = ~val;
     }
