@@ -64,6 +64,7 @@ bool hit_wp_check() {
     if(val != ptr->wp_value) {
       Log("Hit watchpoint %d:value from 0x%08x to 0x%08x.\n",ptr->NO,ptr->wp_value,val);
       result = true;
+      ptr->wp_value = val;
     }
     ptr = ptr->next;
   }
