@@ -74,7 +74,7 @@ typedef struct token {
   char str[32];
 } Token;
 
-Token tokens[512];
+Token tokens[1024];
 int nr_token;
 
 inline bool check_type(int type) {
