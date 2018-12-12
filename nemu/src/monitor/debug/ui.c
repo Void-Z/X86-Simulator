@@ -8,6 +8,9 @@
 #include <readline/history.h>
 
 void cpu_exec(uint64_t);
+WP * new_wp(char *);
+void free_wp(WP *);
+WP * found_wp(int);
 uint32_t expr(char *, bool *);
 /* We use the `readline' library to provide more flexibility to read from stdin. */
 char* rl_gets() {
@@ -95,7 +98,17 @@ static int cmd_p(char *args) {
 }
 
 static int cmd_w(char *args) {
-  new_wp(args);
+  WP *wp = new_wp(args);
+  Log("Watchpoint id:%d,now value:0x%08x\n",wp->NO,wp->wp_value);
+  return 0;
+}
+
+static int cmd_d(char *args) {
+  int no = atoi(args);
+  WP *wp = found_wp(no);
+  Log("Watchpoint delete ! id:%d, expr:%s",wp->NO,wp->wp_str);
+  free_wp(wp);
+  return 0;
 }
 
 static int cmd_help(char *args);
