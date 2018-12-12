@@ -49,7 +49,6 @@ static int cmd_si(char *args) {
     n_steps = atoi(args);
     if(n_steps < 1) n_steps = 1;
   }
-  printf("si %d step(s).\n",n_steps);
   cpu_exec(n_steps);
   return 0;
 }
