@@ -220,8 +220,8 @@ make_EHelper(real) {
 }
 
 static inline void update_eip(void) {
-  if (decoding.is_jmp) { decoding.is_jmp = 0; }
-  else { cpu.eip = decoding.seq_eip; }
+  if (decoding.is_jmp) { printf("jmp 0x%08x\n",cpu.eip);decoding.is_jmp = 0; }
+  else { cpu.eip = decoding.seq_eip; printf("update eip to 0x%08x\n",cpu.eip);}
 }
 
 void exec_wrapper(bool print_flag) {
