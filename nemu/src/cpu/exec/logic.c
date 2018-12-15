@@ -16,7 +16,8 @@ make_EHelper(and) {
 make_EHelper(xor) {
   id_dest->val = id_dest->val ^ id_src->val;
   rtl_sr(id_dest->reg,&id_dest->val,id_dest->width);
-
+  cpu.CF = 0;
+  cpu.OF = 0;
   print_asm_template2(xor);
 }
 
