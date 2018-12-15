@@ -12,8 +12,8 @@ make_EHelper(push) {
 }
 
 make_EHelper(pop) {
-  TODO();
-
+  rtl_pop(&id_dest->val);
+  rtl_sr(decoding.opcode - 0x58,&id_dest->val,4);
   print_asm_template1(pop);
 }
 
