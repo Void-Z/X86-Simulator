@@ -220,22 +220,21 @@ make_EHelper(real) {
 }
 
 static inline void update_eip(void) {
-  if (decoding.is_jmp) { printf("jmp 0x%08x\n",cpu.eip);decoding.is_jmp = 0; }
-  else { cpu.eip = decoding.seq_eip; printf("update eip to 0x%08x\n",cpu.eip);}
+  if (decoding.is_jmp) { decoding.is_jmp = 0; }
+  else { cpu.eip = decoding.seq_eip; }
 }
 
 void exec_wrapper(bool print_flag) {
 
 
-    printflog("eax : 0x%08x ,esp : 0x%08x\n",cpu.eax,cpu.esp);
-    printflog("ecx : 0x%08x ,ebp : 0x%08x\n",cpu.ecx,cpu.ebp);
-    printflog("edx : 0x%08x ,esi : 0x%08x\n",cpu.edx,cpu.esi);
-    printflog("ebx : 0x%08x ,edi : 0x%08x\n",cpu.ebx,cpu.edi);
-    printflog("eip : 0x%08x\n",cpu.eip);
+  printflog("eax : 0x%08x ,esp : 0x%08x\n",cpu.eax,cpu.esp);
+  printflog("ecx : 0x%08x ,ebp : 0x%08x\n",cpu.ecx,cpu.ebp);
+  printflog("edx : 0x%08x ,esi : 0x%08x\n",cpu.edx,cpu.esi);
+  printflog("ebx : 0x%08x ,edi : 0x%08x\n",cpu.ebx,cpu.edi);
+  printflog("eip : 0x%08x\n",cpu.eip);
 
 
   vaddr_t ori_eip = cpu.eip;
-  printf("eip : 0x%08x\n",ori_eip);
 #ifdef DEBUG
   decoding.p = decoding.asm_buf;
   decoding.p += sprintf(decoding.p, "%8x:   ", ori_eip);
