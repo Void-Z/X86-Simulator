@@ -226,7 +226,7 @@ static inline void update_eip(void) {
 
 void exec_wrapper(bool print_flag) {
   vaddr_t ori_eip = cpu.eip;
-
+  printf("eip : 0x%08x\n",ori_eip);
 #ifdef DEBUG
   decoding.p = decoding.asm_buf;
   decoding.p += sprintf(decoding.p, "%8x:   ", ori_eip);
