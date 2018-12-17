@@ -173,6 +173,10 @@ static inline void rtl_pop(rtlreg_t* dest) {
   cpu.esp = cpu.esp + 4;
 }
 
+static inline void rtl_sign_extend8to32(rtlreg_t* dest) {
+  *dest = (*dest & 0x80) == 0x80 ? *dest | 0xffffff00 : *dest;
+}
+
 static inline void rtl_setrelopi(uint32_t relop, rtlreg_t *dest,
     const rtlreg_t *src1, int imm) {
   // dest <- (src1 relop imm ? 1 : 0)
