@@ -9,7 +9,7 @@ make_EHelper(test) {
 
 make_EHelper(and) {
   rtl_and(&id_dest->val,&id_dest->val,&id_src->val);
-  rtl_sr(id_dest->reg,&id_dest->val,id_dest->width);
+  rtl_sr(id_dest->reg,&id_dest->val,4);
 
   print_asm_template2(and);
 }
