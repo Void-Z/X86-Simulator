@@ -21,8 +21,9 @@ make_EHelper(cmp) {
 }
 
 make_EHelper(inc) {
-  TODO();
-
+  rtl_lr(&id_dest->val,decoding.opcode - 0x40,4);
+  id_dest->val += 1;
+  rtl_sr(decoding.opcode - 0x40,&id_dest->val,4);
   print_asm_template1(inc);
 }
 
