@@ -8,6 +8,7 @@ make_EHelper(test) {
 }
 
 make_EHelper(and) {
+  // imm8 sign-extended
   if(id_src->width == 1) {
     id_src->val = (id_src->val & 0x80) == 0x80 ? id_src->val | 0xffffff00 : id_src->val;
   }
