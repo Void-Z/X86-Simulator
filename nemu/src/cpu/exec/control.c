@@ -12,10 +12,9 @@ make_EHelper(jne) {
   if(id_dest->width == 1) {
     rtl_sign_extend8to32(&id_dest->val);
   }
-  printf("0x%08x 0x%08x",decoding.seq_eip,id_dest->val);
+  printf("0x%08x 0x%08x %d",decoding.seq_eip,id_dest->val,cpu.ZF);
   if(!cpu.ZF) {
     rtl_j(decoding.seq_eip + id_dest->val);
-    printf("jnz");
   }
 }
 make_EHelper(jcc) {
