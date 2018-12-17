@@ -15,7 +15,7 @@ make_EHelper(sub) {
 }
 
 make_EHelper(cmp) {
-  TODO();
+  cpu.ZF = id_dest->val - id_src->val ? 0 : 1;
 
   print_asm_template2(cmp);
 }
