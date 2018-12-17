@@ -13,7 +13,10 @@ make_EHelper(jne) {
     rtl_sign_extend8to32(&id_dest->val);
   }
   printf("0x%08x 0x%08x",decoding.seq_eip,id_dest->val);
-  if(!cpu.ZF) rtl_j(decoding.seq_eip + id_dest->val);
+  if(!cpu.ZF) {
+    rtl_j(decoding.seq_eip + id_dest->val);
+    printf("jnz");
+  }
 }
 make_EHelper(jcc) {
   // the target address is calculated at the decode stage
