@@ -9,7 +9,7 @@ make_EHelper(jmp) {
 }
 make_EHelper(jne) {
   
-  if(cpu.ZF) rtl_j(decoding.seq_eip + id_dest->val);
+  if(!cpu.ZF) rtl_j(decoding.seq_eip + id_dest->val);
 }
 make_EHelper(jcc) {
   // the target address is calculated at the decode stage
