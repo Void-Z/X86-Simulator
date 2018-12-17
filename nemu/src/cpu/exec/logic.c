@@ -8,7 +8,9 @@ make_EHelper(test) {
 }
 
 make_EHelper(and) {
-  printf("0x%08x 0x%08x\n",id_dest->val,id_src->val);
+  if(id_src->width == 1) {
+    id_src->val = (int)id_src->val;
+  }
   rtl_and(&id_dest->val,&id_dest->val,&id_src->val);
   rtl_sr(id_dest->reg,&id_dest->val,id_dest->width);
 
