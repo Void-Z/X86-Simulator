@@ -15,7 +15,8 @@ make_EHelper(sub);//eflags set wait implement
 make_EHelper(xor);
 make_EHelper(ret);
 
-make_EHelper(and);
+make_EHelper(and);//eflags set wait implement
 make_EHelper(lea);
 make_EHelper(pushl);
 make_EHelper(inc);
+make_EHelper(cmp);//eflags set wait implement
