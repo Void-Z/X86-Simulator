@@ -23,3 +23,4 @@ make_EHelper(pushl);
 make_EHelper(inc);
 make_EHelper(cmp);//eflags set wait implement
 make_EHelper(jne);
+make_EHelper(nop);
