@@ -11,6 +11,11 @@ make_EHelper(push) {
   print_asm_template1(push);
 }
 
+make_EHelper(pushl) {
+  rtl_push(&id_src->val);
+  print_asm_template1(pushl);
+}
+
 make_EHelper(pop) {
   rtl_pop(&id_dest->val);
   rtl_sr(decoding.opcode - 0x58,&id_dest->val,4);
