@@ -251,10 +251,11 @@ void exec_wrapper(bool print_flag) {
   difftest_step(ori_eip);
 #endif
 
-
+  printflog("Executing\n");
   printflog("eax : 0x%08x ,esp : 0x%08x\n",cpu.eax,cpu.esp);
   printflog("ecx : 0x%08x ,ebp : 0x%08x\n",cpu.ecx,cpu.ebp);
   printflog("edx : 0x%08x ,esi : 0x%08x\n",cpu.edx,cpu.esi);
   printflog("ebx : 0x%08x ,edi : 0x%08x\n",cpu.ebx,cpu.edi);
   printflog("eip : 0x%08x\n",cpu.eip);
+  printflog("stack top : 0x%08x\n",*(uint32_t *)guest_to_host(cpu.esp));
 }
