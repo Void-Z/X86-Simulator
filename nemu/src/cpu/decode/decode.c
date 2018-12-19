@@ -164,6 +164,10 @@ make_DHelper(mov_I2E) {
   decode_op_I(eip, id_src, true);
 }
 
+make_DHelper(E2r) {
+  decode_op_rm(eip,id_src,true,NULL,false);
+  decode_op_r(eip,id_dest,true);
+}
 /* XX <- Ib
  * eXX <- Iv
  */
