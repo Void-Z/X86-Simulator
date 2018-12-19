@@ -25,3 +25,4 @@ make_EHelper(cmp);//eflags set wait implement
 make_EHelper(jne);
 make_EHelper(nop);
 make_EHelper(imul2);
+make_EHelper(add);
