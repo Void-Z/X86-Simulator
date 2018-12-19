@@ -34,13 +34,13 @@ make_EHelper(popa) {
 }
 
 make_EHelper(leave) {
-  rtl_lr(&id_dest->val,3,4);
+  rtl_lr(&id_dest->val,5,4);
   rtl_sr(4,&id_dest->val,4);
   rtl_pop(&id_dest->val);
   if(decoding.is_operand_size_16) {
-    rtl_sr(3,&id_dest->val,2);
+    rtl_sr(5,&id_dest->val,2);
   } else {
-    rtl_sr(3,&id_dest->val,4);
+    rtl_sr(5,&id_dest->val,4);
   }
 
   print_asm("leave");
