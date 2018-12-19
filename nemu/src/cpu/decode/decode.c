@@ -155,9 +155,9 @@ make_DHelper(I_E2G) {
  * Ev <- Iv
  */
 make_DHelper(I2E) {
-  printf("asdasd\n\n");
   decode_op_rm(eip, id_dest, true, NULL, false);
   decode_op_I(eip, id_src, true);
+  printf("asdasd\n\n");
 }
 
 make_DHelper(mov_I2E) {
