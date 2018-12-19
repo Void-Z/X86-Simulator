@@ -30,3 +30,4 @@ make_EHelper(add);
 make_EHelper(cltd);// Not sure!!
 
 make_EHelper(idiv);
+make_EHelper(sete);
