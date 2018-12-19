@@ -43,6 +43,15 @@ make_EHelper(call_rm) {
   print_asm("call *%s", id_dest->str);
 }
 
+make_EHelper(je) {
+  if(id_dest->width == 1) {
+    rtl_sign_extend8to32(&id_dest->val);
+  }
+  if(cpu.ZF) {
+    rtl_j(decoding.seq_eip + id_dest->val);
+  }
+}
+
 make_EHelper(jne) {
   
   if(id_dest->width == 1) {
