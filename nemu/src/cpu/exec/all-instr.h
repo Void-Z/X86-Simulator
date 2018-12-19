@@ -13,7 +13,7 @@ make_EHelper(cltd);
 make_EHelper(sete);
 
 // Implement
-// dummy.c
+// dummy.c fine
 make_EHelper(call);
 make_EHelper(push);
 make_EHelper(pop);
@@ -22,7 +22,7 @@ make_EHelper(xor);
 make_EHelper(ret);
 
 
-// div.c
+// div.c fine
 make_EHelper(and);//eflags set wait implement
 make_EHelper(lea);
 make_EHelper(pushl);
@@ -37,5 +37,5 @@ make_EHelper(test);
 make_EHelper(je);
 make_EHelper(leave);
 
-// add.c
+// add.c fine
 make_EHelper(movzx);
