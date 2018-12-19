@@ -156,9 +156,7 @@ make_DHelper(I_E2G) {
  */
 make_DHelper(I2E) {
   decode_op_rm(eip, id_dest, true, NULL, false);
-  printf("asdasd\n\n");
   decode_op_I(eip, id_src, true);
-  
 }
 
 make_DHelper(mov_I2E) {
