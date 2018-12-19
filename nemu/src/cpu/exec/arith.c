@@ -3,8 +3,12 @@
 make_EHelper(add) {
   rtl_sext(&id_src->val,&id_src->val,id_src->width);
   rtl_add(&id_dest->val,&id_dest->val,&id_src->val);
-  printf("%d\n",id_dest->reg);
-  rtl_sr(id_dest->reg,&id_dest->val,id_dest->width);
+  if(id_dest->type == OP_TYPE_REG) {
+    rtl_sr(id_dest->reg,&id_dest->val,id_dest->width);
+  } else {
+    rtl_sm(&id_dest->addr,&id_dest->val,id_dest->width);
+  }
+  
   print_asm_template2(add);
 }
 
