@@ -5,6 +5,11 @@ make_EHelper(test) {
   cpu.CF = 0;
   cpu.OF = 0;
   id_dest->val &= id_src->val;
+  if(id_dest->val) {
+    cpu.ZF = 0;
+  } else {
+    cpu.ZF = 1;
+  }
   rtl_sr(id_dest->reg,&id_dest->val,id_dest->width);
   print_asm_template2(test);
 }
