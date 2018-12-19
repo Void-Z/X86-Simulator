@@ -135,6 +135,7 @@ make_EHelper(imul1) {
 
 // imul with two operands
 make_EHelper(imul2) {
+  printf("reg:%d,%d\nval:0x%08x,0x%08x\n",id_dest->reg,id_src->reg,id_dest->val,id_src->val);
   rtl_sext(&t0, &id_src->val, id_src->width);
   rtl_sext(&t1, &id_dest->val, id_dest->width);
 
