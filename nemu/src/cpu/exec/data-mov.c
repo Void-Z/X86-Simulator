@@ -6,7 +6,6 @@ make_EHelper(mov) {
 }
 
 make_EHelper(push) {
-  rtl_lr(&id_dest->val,decoding.opcode - 0x50,4);
   rtl_push(&id_dest->val);
   print_asm_template1(push);
 }
@@ -18,7 +17,7 @@ make_EHelper(pushl) {
 
 make_EHelper(pop) {
   rtl_pop(&id_dest->val);
-  rtl_sr(decoding.opcode - 0x58,&id_dest->val,4);
+  rtl_sr(id_dest->reg,&id_dest->val,id_dest->width);
   print_asm_template1(pop);
 }
 
