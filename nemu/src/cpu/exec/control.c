@@ -54,5 +54,6 @@ make_EHelper(jne) {
 }
 
 make_EHelper(sete) {
-  
+  id_dest->val = cpu.ZF;
+  rtl_sr(id_dest->reg,&id_dest->val,id_dest->width);
 }
