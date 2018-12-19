@@ -1,7 +1,6 @@
 #include "cpu/exec.h"
 
 make_EHelper(add) {
-  printf("asd\n\n");
   rtl_sext(&id_src->val,&id_src->val,id_src->width);
   printf("0x%08x,0x%08x\n",id_src->val,id_dest->val);
   rtl_add(&id_dest->val,&id_dest->val,&id_src->val);
