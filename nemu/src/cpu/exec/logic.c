@@ -2,8 +2,10 @@
 #include "cpu/cc.h"
 
 make_EHelper(test) {
-  TODO();
-
+  cpu.CF = 0;
+  cpu.OF = 0;
+  id_dest->val &= id_src->val;
+  rtl_sr(id_dest->reg,&id_dest->val,id_dest->width);
   print_asm_template2(test);
 }
 

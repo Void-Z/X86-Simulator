@@ -7,7 +7,13 @@ make_EHelper(operand_size);
 make_EHelper(inv);
 make_EHelper(nemu_trap);
 
-//dummy.c
+// Not sure!!
+// div.c
+make_EHelper(cltd);
+make_EHelper(sete);
+
+// Implement
+// dummy.c
 make_EHelper(call);
 make_EHelper(push);
 make_EHelper(pop);
@@ -16,7 +22,7 @@ make_EHelper(xor);
 make_EHelper(ret);
 
 
-//div.c
+// div.c
 make_EHelper(and);//eflags set wait implement
 make_EHelper(lea);
 make_EHelper(pushl);
@@ -26,8 +32,5 @@ make_EHelper(jne);
 make_EHelper(nop);
 make_EHelper(imul2);
 make_EHelper(add);
-
-make_EHelper(cltd);// Not sure!!
-
 make_EHelper(idiv);
-make_EHelper(sete);
+make_EHelper(test);
