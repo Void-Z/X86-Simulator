@@ -1,7 +1,9 @@
 #include "cpu/exec.h"
 
 make_EHelper(add) {
+  
   rtl_sext(&id_src->val,&id_src->val,id_src->width);
+  printf("0x%08x,0x%08x\n",id_src->val,id_dest->val);
   rtl_add(&id_dest->val,&id_dest->val,&id_src->val);
   rtl_sr(id_dest->reg,&id_dest->val,id_dest->width);
   print_asm_template2(add);
@@ -136,7 +138,7 @@ make_EHelper(imul1) {
 
 // imul with two operands
 make_EHelper(imul2) {
-  printf("reg:%d,%d\nval:0x%08x,0x%08x\n",id_dest->reg,id_src->reg,id_dest->val,id_src->val);
+  // printf("reg:%d,%d\nval:0x%08x,0x%08x\n",id_dest->reg,id_src->reg,id_dest->val,id_src->val);
   rtl_sext(&t0, &id_src->val, id_src->width);
   rtl_sext(&t1, &id_dest->val, id_dest->width);
 
