@@ -26,3 +26,4 @@ make_EHelper(jne);
 make_EHelper(nop);
 make_EHelper(imul2);
 make_EHelper(add);
+make_EHelper(cltd);

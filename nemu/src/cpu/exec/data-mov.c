@@ -42,12 +42,14 @@ make_EHelper(leave) {
 
 make_EHelper(cltd) {
   if (decoding.is_operand_size_16) {
-    TODO();
+    rtl_lr(&id_dest->val,0,2);
+    id_dest->val = (id_dest->val & 0x8000) ? 0xffffffff : 0;
   }
   else {
-    TODO();
+    rtl_lr(&id_dest->val,0,4);
+    id_dest->val = (id_dest->val & 0x80000000) ? 0xffffffff : 0;
   }
-
+  rtl_sr(2,&id_dest->val,4);
   print_asm(decoding.is_operand_size_16 ? "cwtl" : "cltd");
 }
 
