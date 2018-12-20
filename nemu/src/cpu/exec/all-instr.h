@@ -39,3 +39,6 @@ make_EHelper(leave);
 
 // add.c fine
 make_EHelper(movzx);
+
+//add-longlong.c
+make_EHelper(adc);
