@@ -12,7 +12,7 @@ make_EHelper(push) {
 
 make_EHelper(pushl) {
   rtl_push(&id_dest->val);
-  printf("0x%08x 0x%08x\n\n",id_dest->addr,id_dest->val);
+  // printf("0x%08x 0x%08x\n\n",id_dest->addr,id_dest->val);
   print_asm_template1(pushl);
 }
 
