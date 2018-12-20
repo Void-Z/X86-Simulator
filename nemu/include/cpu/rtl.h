@@ -190,12 +190,28 @@ static inline void rtl_setrelopi(uint32_t relop, rtlreg_t *dest,
 
 static inline void rtl_msb(rtlreg_t* dest, const rtlreg_t* src1, int width) {
   // dest <- src1[width * 8 - 1]
-  TODO();
+  switch(width) {
+    case 1: {
+      *dest = *src1 & 0xff;
+      break;
+    }
+    case 2 : {
+      *dest = *src1 & 0xffff;
+      break;
+    }
+    case 4 : {
+      *dest = *src1;
+      break;
+    }
+  }
 }
-
+#define EFLAGS_CF cpu.CF
+#define EFLAGS_SF cpu.SF
+#define EFLAGS_OF cpu.OF
+#define EFLAGS_ZF cpu.ZF
 #define make_rtl_setget_eflags(f) \
   static inline void concat(rtl_set_, f) (const rtlreg_t* src) { \
-    TODO(); \
+    concat(EFLAGS_,f) = 0; \
   } \
   static inline void concat(rtl_get_, f) (rtlreg_t* dest) { \
     TODO(); \
