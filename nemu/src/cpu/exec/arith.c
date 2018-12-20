@@ -1,6 +1,7 @@
 #include "cpu/exec.h"
 
 make_EHelper(add) {
+  printf("0x%08x + 0x%08x\n",id_src->val,id_dest->val);
   t0 = id_src->val & (0x1 << (id_src->width-1));
   t1 = id_dest->val & (0x1 << (id_dest->width-1));
   if(t0 == 1 && t1 == 1) {
