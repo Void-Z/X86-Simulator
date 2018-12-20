@@ -1,6 +1,13 @@
 #include "cpu/exec.h"
 
 make_EHelper(add) {
+  t0 = id_src->val & (0x1 << (id_src->width-1));
+  t1 = id_dest->val & (0x1 << (id_dest->width-1));
+  if(t0 == 1 && t1 == 1) {
+    cpu.CF = 1;
+  } else {
+    cpu.CF = 0;
+  }
   rtl_sext(&id_src->val,&id_src->val,id_src->width);
   rtl_add(&id_dest->val,&id_dest->val,&id_src->val);
   if(id_dest->type == OP_TYPE_REG) {

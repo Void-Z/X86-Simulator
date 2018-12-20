@@ -61,7 +61,7 @@ make_EHelper(jne) {
   if(!cpu.ZF) {
     rtl_j(decoding.seq_eip + id_dest->val);
   }
-  print_asm("je *%s", id_dest->str);
+  print_asm("jne *%s", id_dest->str);
 }
 
 make_EHelper(sete) {
