@@ -258,6 +258,7 @@ void exec_wrapper(bool print_flag) {
   printflog("edx : 0x%08x ,esi : 0x%08x\n",cpu.edx,cpu.esi);
   printflog("ebx : 0x%08x ,edi : 0x%08x\n",cpu.ebx,cpu.edi);
   printflog("zf : %x\n",cpu.ZF);
+  printflog("cf : %x\n",cpu.CF);
   printflog("stack : 0x%08x\n",*(uint32_t *)guest_to_host(cpu.esp % PMEM_SIZE));
   printflog("stack : 0x%08x\n",*(uint32_t *)guest_to_host(cpu.esp % PMEM_SIZE + 4));
   printflog("stack : 0x%08x\n",*(uint32_t *)guest_to_host(cpu.esp % PMEM_SIZE + 8));
