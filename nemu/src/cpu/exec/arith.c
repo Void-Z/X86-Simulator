@@ -42,16 +42,16 @@ make_EHelper(cmp) {
 }
 
 make_EHelper(inc) {
-  rtl_lr(&id_dest->val,decoding.opcode - 0x40,4);
   id_dest->val += 1;
-  rtl_sr(decoding.opcode - 0x40,&id_dest->val,4);
+  operand_write(id_dest,&id_dest->val);
   rtl_update_ZFSF(&id_dest->val,id_dest->width);
   print_asm_template1(inc);
 }
 
 make_EHelper(dec) {
-  TODO();
-
+  id_dest->val -= 1;
+  operand_write(id_dest,&id_dest->val);
+  rtl_update_ZFSF(&id_dest->val,id_dest->width);
   print_asm_template1(dec);
 }
 
