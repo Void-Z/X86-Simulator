@@ -188,6 +188,7 @@ make_DHelper(r) {
 }
 
 make_DHelper(E) {
+  printf("sad\n");
   decode_op_rm(eip, id_dest, true, NULL, false);
 }
 
