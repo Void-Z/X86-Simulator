@@ -42,7 +42,7 @@ make_EHelper(cmp) {
 }
 
 make_EHelper(inc) {
-  id_dest->val += 1;printf("%d %d",id_dest->type==OP_TYPE_REG,id_dest->type==OP_TYPE_MEM);
+  id_dest->val += 1;printf("%d %d\n",id_dest->type==OP_TYPE_REG,id_dest->type==OP_TYPE_MEM);
   operand_write(id_dest,&id_dest->val);
   rtl_update_ZFSF(&id_dest->val,id_dest->width);
   print_asm_template1(inc);
