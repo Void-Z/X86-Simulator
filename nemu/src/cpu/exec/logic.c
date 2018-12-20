@@ -6,7 +6,11 @@ make_EHelper(test) {
   cpu.OF = 0;
   id_dest->val &= id_src->val;
   rtl_update_ZFSF(&id_dest->val,id_dest->width);
-  rtl_sr(id_dest->reg,&id_dest->val,id_dest->width);
+  if(id_dest->type == OP_TYPE_REG) {
+    rtl_sr(id_dest->reg,&id_dest->val,id_dest->width);
+  } else {
+    rtl_sm(&id_dest->addr,&id_dest->val,id_dest->width);
+  }
   print_asm_template2(test);
 }
 
