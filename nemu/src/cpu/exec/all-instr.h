@@ -42,3 +42,4 @@ make_EHelper(movzx);
 
 //add-longlong.c
 make_EHelper(adc);
+make_EHelper(or);
