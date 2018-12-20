@@ -1,13 +1,10 @@
 #include "cpu/exec.h"
 
 make_EHelper(add) {
-  printf("0x%08x + 0x%08x\n",id_src->val,id_dest->val);
-  t0 = id_src->val & (0x1 << (id_src->width*32-1));
-  t1 = id_dest->val & (0x1 << (id_dest->width*32-1));
-  if(t0 != 0 && t1 != 0) {
-    cpu.CF = 1;
-  } else {
+  if(((uint64_t)id_src->val + (uint64_t)id_dest->val) == id_dest->val + id_src->val) {
     cpu.CF = 0;
+  } else {
+    cpu.CF = 1;
   }
   rtl_sext(&id_src->val,&id_src->val,id_src->width);
   rtl_add(&id_dest->val,&id_dest->val,&id_src->val);
