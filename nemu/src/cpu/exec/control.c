@@ -69,3 +69,9 @@ make_EHelper(sete) {
   rtl_sr(id_dest->reg,&id_dest->val,id_dest->width);
   print_asm("sete *%s", id_dest->str);
 }
+
+make_EHelper(setne) {
+  id_dest->val = cpu.ZF == 0 ? 1 : 0;
+  rtl_sr(id_dest->reg,&id_dest->val,id_dest->width);
+  print_asm("setne *%s", id_dest->str);
+}
