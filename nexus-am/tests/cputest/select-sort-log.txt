@@ -9,10 +9,10 @@
 [1;34m[src/monitor/monitor.c,37,welcome] Build time: 18:47:26, Dec 15 2018[0m
   100000:   bd 00 00 00 00                        movl $0x0,%ebp
 eip : 0x00100005
-eax : 0x5d8433cf ,esp : 0x2d809d2d
-ecx : 0x31afe08e ,ebp : 0x00000000
-edx : 0x7d7d4c2e ,esi : 0x2b72c13a
-ebx : 0x25ce7f3d ,edi : 0x7752e8b8
+eax : 0x0e218039 ,esp : 0x116bd8be
+ecx : 0x4f228569 ,ebp : 0x00000000
+edx : 0x1a29e27f ,esi : 0x4aedf8df
+ebx : 0x6f322526 ,edi : 0x62ec9ab6
 zf : 0
 stack : 0x00000000
 stack : 0x00000000
@@ -24,10 +24,10 @@ stack : 0x00000000
 stack : 0x00000000
   100005:   bc 00 7c 00 00                        movl $0x7c00,%esp
 eip : 0x0010000a
-eax : 0x5d8433cf ,esp : 0x00007c00
-ecx : 0x31afe08e ,ebp : 0x00000000
-edx : 0x7d7d4c2e ,esi : 0x2b72c13a
-ebx : 0x25ce7f3d ,edi : 0x7752e8b8
+eax : 0x0e218039 ,esp : 0x00007c00
+ecx : 0x4f228569 ,ebp : 0x00000000
+edx : 0x1a29e27f ,esi : 0x4aedf8df
+ebx : 0x6f322526 ,edi : 0x62ec9ab6
 zf : 0
 stack : 0x00000000
 stack : 0x00000000
@@ -39,10 +39,10 @@ stack : 0x00000000
 stack : 0x00000000
   10000a:   e8 0d 00 00 00                        call 10001c
 eip : 0x0010001c
-eax : 0x5d8433cf ,esp : 0x00007bfc
-ecx : 0x31afe08e ,ebp : 0x00000000
-edx : 0x7d7d4c2e ,esi : 0x2b72c13a
-ebx : 0x25ce7f3d ,edi : 0x7752e8b8
+eax : 0x0e218039 ,esp : 0x00007bfc
+ecx : 0x4f228569 ,ebp : 0x00000000
+edx : 0x1a29e27f ,esi : 0x4aedf8df
+ebx : 0x6f322526 ,edi : 0x62ec9ab6
 zf : 0
 stack : 0x0010000f
 stack : 0x00000000
@@ -54,10 +54,10 @@ stack : 0x00000000
 stack : 0x00000000
   10001c:   55                                    pushl %ebp
 eip : 0x0010001d
-eax : 0x5d8433cf ,esp : 0x00007bf8
-ecx : 0x31afe08e ,ebp : 0x00000000
-edx : 0x7d7d4c2e ,esi : 0x2b72c13a
-ebx : 0x25ce7f3d ,edi : 0x7752e8b8
+eax : 0x0e218039 ,esp : 0x00007bf8
+ecx : 0x4f228569 ,ebp : 0x00000000
+edx : 0x1a29e27f ,esi : 0x4aedf8df
+ebx : 0x6f322526 ,edi : 0x62ec9ab6
 zf : 0
 stack : 0x00000000
 stack : 0x0010000f
@@ -69,10 +69,10 @@ stack : 0x00000000
 stack : 0x00000000
   10001d:   89 e5                                 movl %esp,%ebp
 eip : 0x0010001f
-eax : 0x5d8433cf ,esp : 0x00007bf8
-ecx : 0x31afe08e ,ebp : 0x00007bf8
-edx : 0x7d7d4c2e ,esi : 0x2b72c13a
-ebx : 0x25ce7f3d ,edi : 0x7752e8b8
+eax : 0x0e218039 ,esp : 0x00007bf8
+ecx : 0x4f228569 ,ebp : 0x00007bf8
+edx : 0x1a29e27f ,esi : 0x4aedf8df
+ebx : 0x6f322526 ,edi : 0x62ec9ab6
 zf : 0
 stack : 0x00000000
 stack : 0x0010000f
@@ -84,10 +84,10 @@ stack : 0x00000000
 stack : 0x00000000
   10001f:   83 ec 08                              subl $0x8,%esp
 eip : 0x00100022
-eax : 0x5d8433cf ,esp : 0x00007bf0
-ecx : 0x31afe08e ,ebp : 0x00007bf8
-edx : 0x7d7d4c2e ,esi : 0x2b72c13a
-ebx : 0x25ce7f3d ,edi : 0x7752e8b8
+eax : 0x0e218039 ,esp : 0x00007bf0
+ecx : 0x4f228569 ,ebp : 0x00007bf8
+edx : 0x1a29e27f ,esi : 0x4aedf8df
+ebx : 0x6f322526 ,edi : 0x62ec9ab6
 zf : 0
 stack : 0x00000000
 stack : 0x00000000
@@ -99,10 +99,10 @@ stack : 0x00000000
 stack : 0x00000000
   100022:   e8 35 00 00 00                        call 10005c
 eip : 0x0010005c
-eax : 0x5d8433cf ,esp : 0x00007bec
-ecx : 0x31afe08e ,ebp : 0x00007bf8
-edx : 0x7d7d4c2e ,esi : 0x2b72c13a
-ebx : 0x25ce7f3d ,edi : 0x7752e8b8
+eax : 0x0e218039 ,esp : 0x00007bec
+ecx : 0x4f228569 ,ebp : 0x00007bf8
+edx : 0x1a29e27f ,esi : 0x4aedf8df
+ebx : 0x6f322526 ,edi : 0x62ec9ab6
 zf : 0
 stack : 0x00100027
 stack : 0x00000000
@@ -114,10 +114,10 @@ stack : 0x00000000
 stack : 0x00000000
   10005c:   8d 4c 24 04                           leal 0x4(%esp),%ecx
 eip : 0x00100060
-eax : 0x5d8433cf ,esp : 0x00007bec
+eax : 0x0e218039 ,esp : 0x00007bec
 ecx : 0x00007bf0 ,ebp : 0x00007bf8
-edx : 0x7d7d4c2e ,esi : 0x2b72c13a
-ebx : 0x25ce7f3d ,edi : 0x7752e8b8
+edx : 0x1a29e27f ,esi : 0x4aedf8df
+ebx : 0x6f322526 ,edi : 0x62ec9ab6
 zf : 0
 stack : 0x00100027
 stack : 0x00000000
@@ -129,10 +129,10 @@ stack : 0x00000000
 stack : 0x00000000
   100060:   83 e4 f0                              andl $0xf0,%esp
 eip : 0x00100063
-eax : 0x5d8433cf ,esp : 0x00007be0
+eax : 0x0e218039 ,esp : 0x00007be0
 ecx : 0x00007bf0 ,ebp : 0x00007bf8
-edx : 0x7d7d4c2e ,esi : 0x2b72c13a
-ebx : 0x25ce7f3d ,edi : 0x7752e8b8
+edx : 0x1a29e27f ,esi : 0x4aedf8df
+ebx : 0x6f322526 ,edi : 0x62ec9ab6
 zf : 0
 stack : 0x00000000
 stack : 0x00000000
@@ -144,10 +144,10 @@ stack : 0x00000000
 stack : 0x0010000f
   100063:   ff 71 fc                              pushll -0x4(%ecx)
 eip : 0x00100066
-eax : 0x5d8433cf ,esp : 0x00007bdc
+eax : 0x0e218039 ,esp : 0x00007bdc
 ecx : 0x00007bf0 ,ebp : 0x00007bf8
-edx : 0x7d7d4c2e ,esi : 0x2b72c13a
-ebx : 0x25ce7f3d ,edi : 0x7752e8b8
+edx : 0x1a29e27f ,esi : 0x4aedf8df
+ebx : 0x6f322526 ,edi : 0x62ec9ab6
 zf : 0
 stack : 0xfffffff0
 stack : 0x00000000
@@ -159,10 +159,10 @@ stack : 0x00000000
 stack : 0x00000000
   100066:   55                                    pushl %ebp
 eip : 0x00100067
-eax : 0x5d8433cf ,esp : 0x00007bd8
+eax : 0x0e218039 ,esp : 0x00007bd8
 ecx : 0x00007bf0 ,ebp : 0x00007bf8
-edx : 0x7d7d4c2e ,esi : 0x2b72c13a
-ebx : 0x25ce7f3d ,edi : 0x7752e8b8
+edx : 0x1a29e27f ,esi : 0x4aedf8df
+ebx : 0x6f322526 ,edi : 0x62ec9ab6
 zf : 0
 stack : 0x00007bf8
 stack : 0xfffffff0
@@ -174,10 +174,10 @@ stack : 0x00000000
 stack : 0x00000000
   100067:   89 e5                                 movl %esp,%ebp
 eip : 0x00100069
-eax : 0x5d8433cf ,esp : 0x00007bd8
+eax : 0x0e218039 ,esp : 0x00007bd8
 ecx : 0x00007bf0 ,ebp : 0x00007bd8
-edx : 0x7d7d4c2e ,esi : 0x2b72c13a
-ebx : 0x25ce7f3d ,edi : 0x7752e8b8
+edx : 0x1a29e27f ,esi : 0x4aedf8df
+ebx : 0x6f322526 ,edi : 0x62ec9ab6
 zf : 0
 stack : 0x00007bf8
 stack : 0xfffffff0
@@ -189,12 +189,12 @@ stack : 0x00000000
 stack : 0x00000000
   100069:   57                                    pushl %edi
 eip : 0x0010006a
-eax : 0x5d8433cf ,esp : 0x00007bd4
+eax : 0x0e218039 ,esp : 0x00007bd4
 ecx : 0x00007bf0 ,ebp : 0x00007bd8
-edx : 0x7d7d4c2e ,esi : 0x2b72c13a
-ebx : 0x25ce7f3d ,edi : 0x7752e8b8
+edx : 0x1a29e27f ,esi : 0x4aedf8df
+ebx : 0x6f322526 ,edi : 0x62ec9ab6
 zf : 0
-stack : 0x7752e8b8
+stack : 0x62ec9ab6
 stack : 0x00007bf8
 stack : 0xfffffff0
 stack : 0x00000000
@@ -204,13 +204,13 @@ stack : 0x00100027
 stack : 0x00000000
   10006a:   56                                    pushl %esi
 eip : 0x0010006b
-eax : 0x5d8433cf ,esp : 0x00007bd0
+eax : 0x0e218039 ,esp : 0x00007bd0
 ecx : 0x00007bf0 ,ebp : 0x00007bd8
-edx : 0x7d7d4c2e ,esi : 0x2b72c13a
-ebx : 0x25ce7f3d ,edi : 0x7752e8b8
+edx : 0x1a29e27f ,esi : 0x4aedf8df
+ebx : 0x6f322526 ,edi : 0x62ec9ab6
 zf : 0
-stack : 0x2b72c13a
-stack : 0x7752e8b8
+stack : 0x4aedf8df
+stack : 0x62ec9ab6
 stack : 0x00007bf8
 stack : 0xfffffff0
 stack : 0x00000000
@@ -219,14 +219,14 @@ stack : 0x00000000
 stack : 0x00100027
   10006b:   53                                    pushl %ebx
 eip : 0x0010006c
-eax : 0x5d8433cf ,esp : 0x00007bcc
+eax : 0x0e218039 ,esp : 0x00007bcc
 ecx : 0x00007bf0 ,ebp : 0x00007bd8
-edx : 0x7d7d4c2e ,esi : 0x2b72c13a
-ebx : 0x25ce7f3d ,edi : 0x7752e8b8
+edx : 0x1a29e27f ,esi : 0x4aedf8df
+ebx : 0x6f322526 ,edi : 0x62ec9ab6
 zf : 0
-stack : 0x25ce7f3d
-stack : 0x2b72c13a
-stack : 0x7752e8b8
+stack : 0x6f322526
+stack : 0x4aedf8df
+stack : 0x62ec9ab6
 stack : 0x00007bf8
 stack : 0xfffffff0
 stack : 0x00000000
@@ -234,25 +234,25 @@ stack : 0x00000000
 stack : 0x00000000
   10006c:   51                                    pushl %ecx
 eip : 0x0010006d
-eax : 0x5d8433cf ,esp : 0x00007bc8
+eax : 0x0e218039 ,esp : 0x00007bc8
 ecx : 0x00007bf0 ,ebp : 0x00007bd8
-edx : 0x7d7d4c2e ,esi : 0x2b72c13a
-ebx : 0x25ce7f3d ,edi : 0x7752e8b8
+edx : 0x1a29e27f ,esi : 0x4aedf8df
+ebx : 0x6f322526 ,edi : 0x62ec9ab6
 zf : 0
 stack : 0x00007bf0
-stack : 0x25ce7f3d
-stack : 0x2b72c13a
-stack : 0x7752e8b8
+stack : 0x6f322526
+stack : 0x4aedf8df
+stack : 0x62ec9ab6
 stack : 0x00007bf8
 stack : 0xfffffff0
 stack : 0x00000000
 stack : 0x00000000
   10006d:   83 ec 18                              subl $0x18,%esp
 eip : 0x00100070
-eax : 0x5d8433cf ,esp : 0x00007bb0
+eax : 0x0e218039 ,esp : 0x00007bb0
 ecx : 0x00007bf0 ,ebp : 0x00007bd8
-edx : 0x7d7d4c2e ,esi : 0x2b72c13a
-ebx : 0x25ce7f3d ,edi : 0x7752e8b8
+edx : 0x1a29e27f ,esi : 0x4aedf8df
+ebx : 0x6f322526 ,edi : 0x62ec9ab6
 zf : 0
 stack : 0x00000000
 stack : 0x00000000
@@ -261,13 +261,13 @@ stack : 0x00000000
 stack : 0x00000000
 stack : 0x00000000
 stack : 0x00007bf0
-stack : 0x25ce7f3d
+stack : 0x6f322526
   100070:   31 c9                                 xorl %ecx,%ecx
 eip : 0x00100072
-eax : 0x5d8433cf ,esp : 0x00007bb0
+eax : 0x0e218039 ,esp : 0x00007bb0
 ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x7d7d4c2e ,esi : 0x2b72c13a
-ebx : 0x25ce7f3d ,edi : 0x7752e8b8
+edx : 0x1a29e27f ,esi : 0x4aedf8df
+ebx : 0x6f322526 ,edi : 0x62ec9ab6
 zf : 0
 stack : 0x00000000
 stack : 0x00000000
@@ -276,13 +276,13 @@ stack : 0x00000000
 stack : 0x00000000
 stack : 0x00000000
 stack : 0x00007bf0
-stack : 0x25ce7f3d
+stack : 0x6f322526
   100072:   66 90                                 nop
 eip : 0x00100074
-eax : 0x5d8433cf ,esp : 0x00007bb0
+eax : 0x0e218039 ,esp : 0x00007bb0
 ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x7d7d4c2e ,esi : 0x2b72c13a
-ebx : 0x25ce7f3d ,edi : 0x7752e8b8
+edx : 0x1a29e27f ,esi : 0x4aedf8df
+ebx : 0x6f322526 ,edi : 0x62ec9ab6
 zf : 0
 stack : 0x00000000
 stack : 0x00000000
@@ -291,13 +291,13 @@ stack : 0x00000000
 stack : 0x00000000
 stack : 0x00000000
 stack : 0x00007bf0
-stack : 0x25ce7f3d
+stack : 0x6f322526
   100074:   8b b1 e0 02 10 00                     movl 0x1002e0(%ecx),%esi
 eip : 0x0010007a
-eax : 0x5d8433cf ,esp : 0x00007bb0
+eax : 0x0e218039 ,esp : 0x00007bb0
 ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x7d7d4c2e ,esi : 0x00000000
-ebx : 0x25ce7f3d ,edi : 0x7752e8b8
+edx : 0x1a29e27f ,esi : 0x00000000
+ebx : 0x6f322526 ,edi : 0x62ec9ab6
 zf : 0
 stack : 0x00000000
 stack : 0x00000000
@@ -306,13 +306,13 @@ stack : 0x00000000
 stack : 0x00000000
 stack : 0x00000000
 stack : 0x00007bf0
-stack : 0x25ce7f3d
+stack : 0x6f322526
   10007a:   8b b9 e4 02 10 00                     movl 0x1002e4(%ecx),%edi
 eip : 0x00100080
-eax : 0x5d8433cf ,esp : 0x00007bb0
+eax : 0x0e218039 ,esp : 0x00007bb0
 ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x7d7d4c2e ,esi : 0x00000000
-ebx : 0x25ce7f3d ,edi : 0x00000000
+edx : 0x1a29e27f ,esi : 0x00000000
+ebx : 0x6f322526 ,edi : 0x00000000
 zf : 0
 stack : 0x00000000
 stack : 0x00000000
@@ -321,12 +321,12 @@ stack : 0x00000000
 stack : 0x00000000
 stack : 0x00000000
 stack : 0x00007bf0
-stack : 0x25ce7f3d
+stack : 0x6f322526
   100080:   31 db                                 xorl %ebx,%ebx
 eip : 0x00100082
-eax : 0x5d8433cf ,esp : 0x00007bb0
+eax : 0x0e218039 ,esp : 0x00007bb0
 ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x7d7d4c2e ,esi : 0x00000000
+edx : 0x1a29e27f ,esi : 0x00000000
 ebx : 0x00000000 ,edi : 0x00000000
 zf : 0
 stack : 0x00000000
@@ -336,12 +336,12 @@ stack : 0x00000000
 stack : 0x00000000
 stack : 0x00000000
 stack : 0x00007bf0
-stack : 0x25ce7f3d
+stack : 0x6f322526
   100082:   66 90                                 nop
 eip : 0x00100084
-eax : 0x5d8433cf ,esp : 0x00007bb0
+eax : 0x0e218039 ,esp : 0x00007bb0
 ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x7d7d4c2e ,esi : 0x00000000
+edx : 0x1a29e27f ,esi : 0x00000000
 ebx : 0x00000000 ,edi : 0x00000000
 zf : 0
 stack : 0x00000000
@@ -351,12 +351,12 @@ stack : 0x00000000
 stack : 0x00000000
 stack : 0x00000000
 stack : 0x00007bf0
-stack : 0x25ce7f3d
+stack : 0x6f322526
   100084:   83 ec 0c                              subl $0xc,%esp
 eip : 0x00100087
-eax : 0x5d8433cf ,esp : 0x00007ba4
+eax : 0x0e218039 ,esp : 0x00007ba4
 ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x7d7d4c2e ,esi : 0x00000000
+edx : 0x1a29e27f ,esi : 0x00000000
 ebx : 0x00000000 ,edi : 0x00000000
 zf : 0
 stack : 0x00000000
@@ -371,7 +371,7 @@ stack : 0x00000000
 eip : 0x00100089
 eax : 0x00000000 ,esp : 0x00007ba4
 ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x7d7d4c2e ,esi : 0x00000000
+edx : 0x1a29e27f ,esi : 0x00000000
 ebx : 0x00000000 ,edi : 0x00000000
 zf : 0
 stack : 0x00000000
@@ -711,7 +711,7 @@ stack : 0x00000000
 stack : 0x00000000
 stack : 0x00000000
 stack : 0x00007bf0
-stack : 0x25ce7f3d
+stack : 0x6f322526
   1000bf:   83 c3 08                              addl $0x8,%ebx
 eip : 0x001000c2
 eax : 0x00000001 ,esp : 0x00007bb0
@@ -726,7 +726,7 @@ stack : 0x00000000
 stack : 0x00000000
 stack : 0x00000000
 stack : 0x00007bf0
-stack : 0x25ce7f3d
+stack : 0x6f322526
   1000c2:   83 fb 40                              cmpl $0x40,%ebx
 eip : 0x001000c5
 eax : 0x00000001 ,esp : 0x00007bb0
@@ -741,7 +741,7 @@ stack : 0x00000000
 stack : 0x00000000
 stack : 0x00000000
 stack : 0x00007bf0
-stack : 0x25ce7f3d
+stack : 0x6f322526
   1000c5:   8b 4d e0                              movl -0x20(%ebp),%ecx
 eip : 0x001000c8
 eax : 0x00000001 ,esp : 0x00007bb0
@@ -756,7 +756,7 @@ stack : 0x00000000
 stack : 0x00000000
 stack : 0x00000000
 stack : 0x00007bf0
-stack : 0x25ce7f3d
+stack : 0x6f322526
   1000c8:   75 ba                                 movl -0x20(%ebp),%ecx
 eip : 0x00100084
 eax : 0x00000001 ,esp : 0x00007bb0
@@ -771,7 +771,7 @@ stack : 0x00000000
 stack : 0x00000000
 stack : 0x00000000
 stack : 0x00007bf0
-stack : 0x25ce7f3d
+stack : 0x6f322526
   100084:   83 ec 0c                              subl $0xc,%esp
 eip : 0x00100087
 eax : 0x00000001 ,esp : 0x00007ba4
@@ -1131,7 +1131,7 @@ stack : 0x00000000
 stack : 0x00000000
 stack : 0x00000000
 stack : 0x00007bf0
-stack : 0x25ce7f3d
+stack : 0x6f322526
   1000bf:   83 c3 08                              addl $0x8,%ebx
 eip : 0x001000c2
 eax : 0x00000001 ,esp : 0x00007bb0
@@ -1146,7 +1146,7 @@ stack : 0x00000000
 stack : 0x00000000
 stack : 0x00000000
 stack : 0x00007bf0
-stack : 0x25ce7f3d
+stack : 0x6f322526
   1000c2:   83 fb 40                              cmpl $0x40,%ebx
 eip : 0x001000c5
 eax : 0x00000001 ,esp : 0x00007bb0
@@ -1161,7 +1161,7 @@ stack : 0x00000000
 stack : 0x00000000
 stack : 0x00000000
 stack : 0x00007bf0
-stack : 0x25ce7f3d
+stack : 0x6f322526
   1000c5:   8b 4d e0                              movl -0x20(%ebp),%ecx
 eip : 0x001000c8
 eax : 0x00000001 ,esp : 0x00007bb0
@@ -1176,7 +1176,7 @@ stack : 0x00000000
 stack : 0x00000000
 stack : 0x00000000
 stack : 0x00007bf0
-stack : 0x25ce7f3d
+stack : 0x6f322526
   1000c8:   75 ba                                 movl -0x20(%ebp),%ecx
 eip : 0x00100084
 eax : 0x00000001 ,esp : 0x00007bb0
@@ -1191,7 +1191,7 @@ stack : 0x00000000
 stack : 0x00000000
 stack : 0x00000000
 stack : 0x00007bf0
-stack : 0x25ce7f3d
+stack : 0x6f322526
   100084:   83 ec 0c                              subl $0xc,%esp
 eip : 0x00100087
 eax : 0x00000001 ,esp : 0x00007ba4
@@ -1551,7 +1551,7 @@ stack : 0x00000000
 stack : 0x00000000
 stack : 0x00000000
 stack : 0x00007bf0
-stack : 0x25ce7f3d
+stack : 0x6f322526
   1000bf:   83 c3 08                              addl $0x8,%ebx
 eip : 0x001000c2
 eax : 0x00000001 ,esp : 0x00007bb0
@@ -1566,7 +1566,7 @@ stack : 0x00000000
 stack : 0x00000000
 stack : 0x00000000
 stack : 0x00007bf0
-stack : 0x25ce7f3d
+stack : 0x6f322526
   1000c2:   83 fb 40                              cmpl $0x40,%ebx
 eip : 0x001000c5
 eax : 0x00000001 ,esp : 0x00007bb0
@@ -1581,7 +1581,7 @@ stack : 0x00000000
 stack : 0x00000000
 stack : 0x00000000
 stack : 0x00007bf0
-stack : 0x25ce7f3d
+stack : 0x6f322526
   1000c5:   8b 4d e0                              movl -0x20(%ebp),%ecx
 eip : 0x001000c8
 eax : 0x00000001 ,esp : 0x00007bb0
@@ -1596,7 +1596,7 @@ stack : 0x00000000
 stack : 0x00000000
 stack : 0x00000000
 stack : 0x00007bf0
-stack : 0x25ce7f3d
+stack : 0x6f322526
   1000c8:   75 ba                                 movl -0x20(%ebp),%ecx
 eip : 0x00100084
 eax : 0x00000001 ,esp : 0x00007bb0
@@ -1611,7 +1611,7 @@ stack : 0x00000000
 stack : 0x00000000
 stack : 0x00000000
 stack : 0x00007bf0
-stack : 0x25ce7f3d
+stack : 0x6f322526
   100084:   83 ec 0c                              subl $0xc,%esp
 eip : 0x00100087
 eax : 0x00000001 ,esp : 0x00007ba4
