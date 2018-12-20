@@ -6,7 +6,7 @@ make_EHelper(mov) {
 }
 
 make_EHelper(push) {
-  rtl_push(&id_dest->val);
+  rtl_push(&id_dest->val,id_dest->width);
   print_asm_template1(push);
 }
 
@@ -16,13 +16,13 @@ make_EHelper(pushl) {
       rtl_sign_extend8to32(&id_dest->val);
     }
   }
-  rtl_push(&id_dest->val);
+  rtl_push(&id_dest->val,4);
   // printf("0x%08x 0x%08x\n\n",id_dest->addr,id_dest->val);
   print_asm_template1(pushl);
 }
 
 make_EHelper(pop) {
-  rtl_pop(&id_dest->val);
+  rtl_pop(&id_dest->val,id_dest->width);
   // rtl_sr(id_dest->reg,&id_dest->val,id_dest->width);
   operand_write(id_dest,&id_dest->val);
   print_asm_template1(pop);
@@ -43,7 +43,7 @@ make_EHelper(popa) {
 make_EHelper(leave) {
   rtl_lr(&id_dest->val,5,4);
   rtl_sr(4,&id_dest->val,4);
-  rtl_pop(&id_dest->val);
+  rtl_pop(&id_dest->val,4);
   if(decoding.is_operand_size_16) {
     rtl_sr(5,&id_dest->val,2);
   } else {
