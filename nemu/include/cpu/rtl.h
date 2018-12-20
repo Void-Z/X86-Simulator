@@ -163,39 +163,23 @@ static inline void rtl_sext(rtlreg_t* dest, const rtlreg_t* src1, int width) {
   
 }
 
-static inline void rtl_push(const rtlreg_t* src1,int width) {
+static inline void rtl_push(const rtlreg_t* src1) {
   // esp <- esp - 4
   // M[esp] <- src1
   
-  cpu.esp = cpu.esp - width;
-  switch(width) {
-    case 2: {
-      *(uint16_t *)(guest_to_host(cpu.esp)) = *src1;
-      break;
-    }
-    case 4: {
-      *(uint32_t *)(guest_to_host(cpu.esp)) = *src1;
-      break;
-    }
-  }
+  cpu.esp = cpu.esp - 4;
+  *(uint32_t *)(guest_to_host(cpu.esp)) = *src1;
+  
   
 }
 
-static inline void rtl_pop(rtlreg_t* dest,int width) {
+static inline void rtl_pop(rtlreg_t* dest) {
   // dest <- M[esp]
   // esp <- esp + 4
   
-  switch(width) {
-    case 2: {
-      *dest = *(uint16_t *)(guest_to_host(cpu.esp));
-      break;
-    }
-    case 4: {
-      *dest = *(uint32_t *)(guest_to_host(cpu.esp));
-      break;
-    }
-  }
-  cpu.esp = cpu.esp - width;
+  
+  *dest = *(uint32_t *)(guest_to_host(cpu.esp));
+  cpu.esp = cpu.esp - 4;
 }
 
 static inline void rtl_sign_extend8to32(rtlreg_t* dest) {
