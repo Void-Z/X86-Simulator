@@ -8,7 +8,7 @@ make_EHelper(add) {
   } else {
     rtl_sm(&id_dest->addr,&id_dest->val,id_dest->width);
   }
-  
+  rtl_update_ZFSF(&id_dest->val,id_dest->width);
   print_asm_template2(add);
 }
 
@@ -16,13 +16,13 @@ make_EHelper(sub) {
   rtl_lr(&id_dest->val,id_dest->reg,id_dest->width);
   id_dest->val -= id_src->val;
   rtl_sr(id_dest->reg,&id_dest->val,id_dest->width);
-
+  rtl_update_ZFSF(&id_dest->val,id_dest->width);
   print_asm_template2(sub);
 }
 
 make_EHelper(cmp) {
-  cpu.ZF = id_dest->val == id_src->val ? 1 : 0;
-
+  id_dest->val -= id_src->val;
+  rtl_update_ZFSF(&id_dest->val,id_dest->width);
   print_asm_template2(cmp);
 }
 
@@ -30,6 +30,7 @@ make_EHelper(inc) {
   rtl_lr(&id_dest->val,decoding.opcode - 0x40,4);
   id_dest->val += 1;
   rtl_sr(decoding.opcode - 0x40,&id_dest->val,4);
+  rtl_update_ZFSF(&id_dest->val,id_dest->width);
   print_asm_template1(inc);
 }
 
