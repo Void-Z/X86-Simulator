@@ -18,6 +18,11 @@ make_EHelper(add) {
 }
 
 make_EHelper(sub) {
+  if(((uint64_t)id_dest->val - (uint64_t)id_src->val) == id_dest->val - id_src->val) {
+    cpu.CF = 0;
+  } else {
+    cpu.CF = 1;
+  }
   rtl_lr(&id_dest->val,id_dest->reg,id_dest->width);
   id_dest->val -= id_src->val;
   rtl_sr(id_dest->reg,&id_dest->val,id_dest->width);
@@ -26,6 +31,11 @@ make_EHelper(sub) {
 }
 
 make_EHelper(cmp) {
+  if(((uint64_t)id_dest->val - (uint64_t)id_src->val) == id_dest->val - id_src->val) {
+    cpu.CF = 0;
+  } else {
+    cpu.CF = 1;
+  }
   id_dest->val -= id_src->val;
   rtl_update_ZFSF(&id_dest->val,id_dest->width);
   print_asm_template2(cmp);
