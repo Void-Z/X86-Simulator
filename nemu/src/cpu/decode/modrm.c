@@ -97,6 +97,7 @@ void read_ModR_M(vaddr_t *eip, Operand *rm, bool load_rm_val, Operand *reg, bool
   }
 printf("0x%08x\n",*eip);
   if (m.mod == 3) {
+    printf("asd\n");
     rm->type = OP_TYPE_REG;
     rm->reg = m.R_M;
     if (load_rm_val) {
@@ -109,6 +110,7 @@ printf("0x%08x\n",*eip);
     
   }
   else {
+    printf("asdsad\n");
     load_addr(eip, &m, rm);
     if (load_rm_val) {
       rtl_lm(&rm->val, &rm->addr, rm->width);
