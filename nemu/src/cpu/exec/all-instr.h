@@ -55,3 +55,6 @@ make_EHelper(not);
 //if-else.c
 make_EHelper(jmp);
 make_EHelper(jle);
+
+//mul-longlong.c
+make_EHelper(imul1);
