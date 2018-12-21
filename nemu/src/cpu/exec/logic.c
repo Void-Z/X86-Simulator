@@ -19,7 +19,8 @@ make_EHelper(and) {
   cpu.CF = 0;
   cpu.OF = 0;
   if(id_src->width == 1) {
-    id_src->val = (id_src->val & 0x80) == 0x80 ? id_src->val | 0xffffff00 : id_src->val;
+    // id_src->val = (id_src->val & 0x80) == 0x80 ? id_src->val | 0xffffff00 : id_src->val;
+    rtl_sign_extend8to32(&id_dest->val);
   }
   rtl_and(&id_dest->val,&id_dest->val,&id_src->val);
   rtl_sr(id_dest->reg,&id_dest->val,id_dest->width);
