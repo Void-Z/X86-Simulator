@@ -3,17 +3,18 @@
 
 ===== the original log.txt =====
 
-[1;34m[src/monitor/monitor.c,73,load_img] The image is /home/void/ics2018/nexus-am/tests/cputest/build/add-longlong-x86-nemu.bin[0m
+[1;34m[src/monitor/monitor.c,73,load_img] The image is /home/void/ics2018/nexus-am/tests/cputest/build/bit-x86-nemu.bin[0m
 [1;34m[src/monitor/monitor.c,29,welcome] Debug: [1;32mON[0m[0m
 [1;34m[src/monitor/monitor.c,32,welcome] If debug mode is on, A log file will be generated to record every instruction NEMU executes. This may lead to a large log file. If it is not necessary, you can turn it off in include/common.h.[0m
 [1;34m[src/monitor/monitor.c,37,welcome] Build time: 18:47:26, Dec 15 2018[0m
   100000:   bd 00 00 00 00                        movl $0x0,%ebp
 eip : 0x00100005
-eax : 0x0e218039 ,esp : 0x116bd8be
-ecx : 0x4f228569 ,ebp : 0x00000000
-edx : 0x1a29e27f ,esi : 0x4aedf8df
-ebx : 0x6f322526 ,edi : 0x62ec9ab6
+eax : 0x58fdb033 ,esp : 0x6c6ebd93
+ecx : 0x1f8b1061 ,ebp : 0x00000000
+edx : 0x63b8611e ,esi : 0x34a6acae
+ebx : 0x21c54bc7 ,edi : 0x0d3507ad
 zf : 0
+cf : 0
 stack : 0x00000000
 stack : 0x00000000
 stack : 0x00000000
@@ -24,11 +25,12 @@ stack : 0x00000000
 stack : 0x00000000
   100005:   bc 00 7c 00 00                        movl $0x7c00,%esp
 eip : 0x0010000a
-eax : 0x0e218039 ,esp : 0x00007c00
-ecx : 0x4f228569 ,ebp : 0x00000000
-edx : 0x1a29e27f ,esi : 0x4aedf8df
-ebx : 0x6f322526 ,edi : 0x62ec9ab6
+eax : 0x58fdb033 ,esp : 0x00007c00
+ecx : 0x1f8b1061 ,ebp : 0x00000000
+edx : 0x63b8611e ,esi : 0x34a6acae
+ebx : 0x21c54bc7 ,edi : 0x0d3507ad
 zf : 0
+cf : 0
 stack : 0x00000000
 stack : 0x00000000
 stack : 0x00000000
@@ -39,11 +41,12 @@ stack : 0x00000000
 stack : 0x00000000
   10000a:   e8 0d 00 00 00                        call 10001c
 eip : 0x0010001c
-eax : 0x0e218039 ,esp : 0x00007bfc
-ecx : 0x4f228569 ,ebp : 0x00000000
-edx : 0x1a29e27f ,esi : 0x4aedf8df
-ebx : 0x6f322526 ,edi : 0x62ec9ab6
+eax : 0x58fdb033 ,esp : 0x00007bfc
+ecx : 0x1f8b1061 ,ebp : 0x00000000
+edx : 0x63b8611e ,esi : 0x34a6acae
+ebx : 0x21c54bc7 ,edi : 0x0d3507ad
 zf : 0
+cf : 0
 stack : 0x0010000f
 stack : 0x00000000
 stack : 0x00000000
@@ -54,11 +57,12 @@ stack : 0x00000000
 stack : 0x00000000
   10001c:   55                                    pushl %ebp
 eip : 0x0010001d
-eax : 0x0e218039 ,esp : 0x00007bf8
-ecx : 0x4f228569 ,ebp : 0x00000000
-edx : 0x1a29e27f ,esi : 0x4aedf8df
-ebx : 0x6f322526 ,edi : 0x62ec9ab6
+eax : 0x58fdb033 ,esp : 0x00007bf8
+ecx : 0x1f8b1061 ,ebp : 0x00000000
+edx : 0x63b8611e ,esi : 0x34a6acae
+ebx : 0x21c54bc7 ,edi : 0x0d3507ad
 zf : 0
+cf : 0
 stack : 0x00000000
 stack : 0x0010000f
 stack : 0x00000000
@@ -69,11 +73,12 @@ stack : 0x00000000
 stack : 0x00000000
   10001d:   89 e5                                 movl %esp,%ebp
 eip : 0x0010001f
-eax : 0x0e218039 ,esp : 0x00007bf8
-ecx : 0x4f228569 ,ebp : 0x00007bf8
-edx : 0x1a29e27f ,esi : 0x4aedf8df
-ebx : 0x6f322526 ,edi : 0x62ec9ab6
+eax : 0x58fdb033 ,esp : 0x00007bf8
+ecx : 0x1f8b1061 ,ebp : 0x00007bf8
+edx : 0x63b8611e ,esi : 0x34a6acae
+ebx : 0x21c54bc7 ,edi : 0x0d3507ad
 zf : 0
+cf : 0
 stack : 0x00000000
 stack : 0x0010000f
 stack : 0x00000000
@@ -84,11 +89,12 @@ stack : 0x00000000
 stack : 0x00000000
   10001f:   83 ec 08                              subl $0x8,%esp
 eip : 0x00100022
-eax : 0x0e218039 ,esp : 0x00007bf0
-ecx : 0x4f228569 ,ebp : 0x00007bf8
-edx : 0x1a29e27f ,esi : 0x4aedf8df
-ebx : 0x6f322526 ,edi : 0x62ec9ab6
+eax : 0x58fdb033 ,esp : 0x00007bf0
+ecx : 0x1f8b1061 ,ebp : 0x00007bf8
+edx : 0x63b8611e ,esi : 0x34a6acae
+ebx : 0x21c54bc7 ,edi : 0x0d3507ad
 zf : 0
+cf : 0
 stack : 0x00000000
 stack : 0x00000000
 stack : 0x00000000
@@ -97,13 +103,14 @@ stack : 0x00000000
 stack : 0x00000000
 stack : 0x00000000
 stack : 0x00000000
-  100022:   e8 35 00 00 00                        call 10005c
-eip : 0x0010005c
-eax : 0x0e218039 ,esp : 0x00007bec
-ecx : 0x4f228569 ,ebp : 0x00007bf8
-edx : 0x1a29e27f ,esi : 0x4aedf8df
-ebx : 0x6f322526 ,edi : 0x62ec9ab6
+  100022:   e8 7d 00 00 00                        call 1000a4
+eip : 0x001000a4
+eax : 0x58fdb033 ,esp : 0x00007bec
+ecx : 0x1f8b1061 ,ebp : 0x00007bf8
+edx : 0x63b8611e ,esi : 0x34a6acae
+ebx : 0x21c54bc7 ,edi : 0x0d3507ad
 zf : 0
+cf : 0
 stack : 0x00100027
 stack : 0x00000000
 stack : 0x00000000
@@ -112,1926 +119,4437 @@ stack : 0x0010000f
 stack : 0x00000000
 stack : 0x00000000
 stack : 0x00000000
-  10005c:   8d 4c 24 04                           leal 0x4(%esp),%ecx
+  1000a4:   8d 4c 24 04                           leal 0x4(%esp),%ecx
+eip : 0x001000a8
+eax : 0x58fdb033 ,esp : 0x00007bec
+ecx : 0x00007bf0 ,ebp : 0x00007bf8
+edx : 0x63b8611e ,esi : 0x34a6acae
+ebx : 0x21c54bc7 ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00100027
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x0010000f
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  1000a8:   83 e4 f0                              andl $0xf0,%esp
+eip : 0x001000ab
+eax : 0x58fdb033 ,esp : 0x00007be0
+ecx : 0x00007bf0 ,ebp : 0x00007bf8
+edx : 0x63b8611e ,esi : 0x34a6acae
+ebx : 0x21c54bc7 ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00100027
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x0010000f
+  1000ab:   ff 71 fc                              pushl -0x4(%ecx)
+eip : 0x001000ae
+eax : 0x58fdb033 ,esp : 0x00007bdc
+ecx : 0x00007bf0 ,ebp : 0x00007bf8
+edx : 0x63b8611e ,esi : 0x34a6acae
+ebx : 0x21c54bc7 ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00100027
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00100027
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  1000ae:   55                                    pushl %ebp
+eip : 0x001000af
+eax : 0x58fdb033 ,esp : 0x00007bd8
+ecx : 0x00007bf0 ,ebp : 0x00007bf8
+edx : 0x63b8611e ,esi : 0x34a6acae
+ebx : 0x21c54bc7 ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bf8
+stack : 0x00100027
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00100027
+stack : 0x00000000
+stack : 0x00000000
+  1000af:   89 e5                                 movl %esp,%ebp
+eip : 0x001000b1
+eax : 0x58fdb033 ,esp : 0x00007bd8
+ecx : 0x00007bf0 ,ebp : 0x00007bd8
+edx : 0x63b8611e ,esi : 0x34a6acae
+ebx : 0x21c54bc7 ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bf8
+stack : 0x00100027
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00100027
+stack : 0x00000000
+stack : 0x00000000
+  1000b1:   53                                    pushl %ebx
+eip : 0x001000b2
+eax : 0x58fdb033 ,esp : 0x00007bd4
+ecx : 0x00007bf0 ,ebp : 0x00007bd8
+edx : 0x63b8611e ,esi : 0x34a6acae
+ebx : 0x21c54bc7 ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x21c54bc7
+stack : 0x00007bf8
+stack : 0x00100027
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00100027
+stack : 0x00000000
+  1000b2:   51                                    pushl %ecx
+eip : 0x001000b3
+eax : 0x58fdb033 ,esp : 0x00007bd0
+ecx : 0x00007bf0 ,ebp : 0x00007bd8
+edx : 0x63b8611e ,esi : 0x34a6acae
+ebx : 0x21c54bc7 ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bf0
+stack : 0x21c54bc7
+stack : 0x00007bf8
+stack : 0x00100027
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00100027
+  1000b3:   83 ec 10                              subl $0x10,%esp
+eip : 0x001000b6
+eax : 0x58fdb033 ,esp : 0x00007bc0
+ecx : 0x00007bf0 ,ebp : 0x00007bd8
+edx : 0x63b8611e ,esi : 0x34a6acae
+ebx : 0x21c54bc7 ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bf0
+stack : 0x21c54bc7
+stack : 0x00007bf8
+stack : 0x00100027
+  1000b6:   66 c7 45 f6 aa 00                     movw $0xaa,-0xa(%ebp)
+eip : 0x001000bc
+eax : 0x58fdb033 ,esp : 0x00007bc0
+ecx : 0x00007bf0 ,ebp : 0x00007bd8
+edx : 0x63b8611e ,esi : 0x34a6acae
+ebx : 0x21c54bc7 ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00aa0000
+stack : 0x00007bf0
+stack : 0x21c54bc7
+stack : 0x00007bf8
+stack : 0x00100027
+  1000bc:   6a 00                                 pushlb $0x0
+eip : 0x001000be
+eax : 0x58fdb033 ,esp : 0x00007bbc
+ecx : 0x00007bf0 ,ebp : 0x00007bd8
+edx : 0x63b8611e ,esi : 0x34a6acae
+ebx : 0x21c54bc7 ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00aa0000
+stack : 0x00007bf0
+stack : 0x21c54bc7
+stack : 0x00007bf8
+  1000be:   8d 5d f6                              leal -0xa(%ebp),%ebx
+eip : 0x001000c1
+eax : 0x58fdb033 ,esp : 0x00007bbc
+ecx : 0x00007bf0 ,ebp : 0x00007bd8
+edx : 0x63b8611e ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00aa0000
+stack : 0x00007bf0
+stack : 0x21c54bc7
+stack : 0x00007bf8
+  1000c1:   53                                    pushl %ebx
+eip : 0x001000c2
+eax : 0x58fdb033 ,esp : 0x00007bb8
+ecx : 0x00007bf0 ,ebp : 0x00007bd8
+edx : 0x63b8611e ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00aa0000
+stack : 0x00007bf0
+stack : 0x21c54bc7
+  1000c2:   e8 81 ff ff ff                        call 100048
+eip : 0x00100048
+eax : 0x58fdb033 ,esp : 0x00007bb4
+ecx : 0x00007bf0 ,ebp : 0x00007bd8
+edx : 0x63b8611e ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x001000c7
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00aa0000
+stack : 0x00007bf0
+  100048:   55                                    pushl %ebp
+eip : 0x00100049
+eax : 0x58fdb033 ,esp : 0x00007bb0
+ecx : 0x00007bf0 ,ebp : 0x00007bd8
+edx : 0x63b8611e ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x001000c7
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00aa0000
+  100049:   89 e5                                 movl %esp,%ebp
+eip : 0x0010004b
+eax : 0x58fdb033 ,esp : 0x00007bb0
+ecx : 0x00007bf0 ,ebp : 0x00007bb0
+edx : 0x63b8611e ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x001000c7
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00aa0000
+  10004b:   8b 4d 0c                              movl 0xc(%ebp),%ecx
+eip : 0x0010004e
+eax : 0x58fdb033 ,esp : 0x00007bb0
+ecx : 0x00000000 ,ebp : 0x00007bb0
+edx : 0x63b8611e ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x001000c7
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00aa0000
+  10004e:   89 ca                                 movl %ecx,%edx
+eip : 0x00100050
+eax : 0x58fdb033 ,esp : 0x00007bb0
+ecx : 0x00000000 ,ebp : 0x00007bb0
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x001000c7
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00aa0000
+  100050:   c1 fa 03                              sarl $0x3,%edx
+eip : 0x00100053
+eax : 0x58fdb033 ,esp : 0x00007bb0
+ecx : 0x00000000 ,ebp : 0x00007bb0
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 1
+cf : 0
+stack : 0x00007bd8
+stack : 0x001000c7
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00aa0000
+  100053:   83 e1 07                              andl $0x7,%ecx
+eip : 0x00100056
+eax : 0x58fdb033 ,esp : 0x00007bb0
+ecx : 0x00000000 ,ebp : 0x00007bb0
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 1
+cf : 0
+stack : 0x00007bd8
+stack : 0x001000c7
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00aa0000
+  100056:   b8 01 00 00 00                        movl $0x1,%eax
+eip : 0x0010005b
+eax : 0x00000001 ,esp : 0x00007bb0
+ecx : 0x00000000 ,ebp : 0x00007bb0
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 1
+cf : 0
+stack : 0x00007bd8
+stack : 0x001000c7
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00aa0000
+  10005b:   d3 e0                                 shll %cl,%eax
+eip : 0x0010005d
+eax : 0x00000001 ,esp : 0x00007bb0
+ecx : 0x00000000 ,ebp : 0x00007bb0
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x001000c7
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00aa0000
+  10005d:   8b 4d 08                              movl 0x8(%ebp),%ecx
 eip : 0x00100060
-eax : 0x0e218039 ,esp : 0x00007bec
-ecx : 0x00007bf0 ,ebp : 0x00007bf8
-edx : 0x1a29e27f ,esi : 0x4aedf8df
-ebx : 0x6f322526 ,edi : 0x62ec9ab6
+eax : 0x00000001 ,esp : 0x00007bb0
+ecx : 0x00007bce ,ebp : 0x00007bb0
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
 zf : 0
-stack : 0x00100027
+cf : 0
+stack : 0x00007bd8
+stack : 0x001000c7
+stack : 0x00007bce
 stack : 0x00000000
 stack : 0x00000000
 stack : 0x00000000
-stack : 0x0010000f
 stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  100060:   83 e4 f0                              andl $0xf0,%esp
+stack : 0x00aa0000
+  100060:   84 04 11                              testb %al,(%ecx,%edx,1)
 eip : 0x00100063
-eax : 0x0e218039 ,esp : 0x00007be0
-ecx : 0x00007bf0 ,ebp : 0x00007bf8
-edx : 0x1a29e27f ,esi : 0x4aedf8df
-ebx : 0x6f322526 ,edi : 0x62ec9ab6
-zf : 0
+eax : 0x00000001 ,esp : 0x00007bb0
+ecx : 0x00007bce ,ebp : 0x00007bb0
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 1
+cf : 0
+stack : 0x00007bd8
+stack : 0x001000c7
+stack : 0x00007bce
 stack : 0x00000000
 stack : 0x00000000
 stack : 0x00000000
-stack : 0x00100027
 stack : 0x00000000
 stack : 0x00000000
-stack : 0x00000000
-stack : 0x0010000f
-  100063:   ff 71 fc                              pushll -0x4(%ecx)
+  100063:   0f 95 c0                              setne *%al
 eip : 0x00100066
-eax : 0x0e218039 ,esp : 0x00007bdc
-ecx : 0x00007bf0 ,ebp : 0x00007bf8
-edx : 0x1a29e27f ,esi : 0x4aedf8df
-ebx : 0x6f322526 ,edi : 0x62ec9ab6
-zf : 0
-stack : 0xfffffff0
+eax : 0x00000001 ,esp : 0x00007bb0
+ecx : 0x00007bce ,ebp : 0x00007bb0
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 1
+cf : 0
+stack : 0x00007bd8
+stack : 0x001000c7
+stack : 0x00007bce
 stack : 0x00000000
 stack : 0x00000000
 stack : 0x00000000
-stack : 0x00100027
 stack : 0x00000000
 stack : 0x00000000
-stack : 0x00000000
-  100066:   55                                    pushl %ebp
+  100066:   5d                                    popl %ebp
 eip : 0x00100067
-eax : 0x0e218039 ,esp : 0x00007bd8
-ecx : 0x00007bf0 ,ebp : 0x00007bf8
-edx : 0x1a29e27f ,esi : 0x4aedf8df
-ebx : 0x6f322526 ,edi : 0x62ec9ab6
+eax : 0x00000001 ,esp : 0x00007bb4
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 1
+cf : 0
+stack : 0x001000c7
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bf0
+  100067:   c3                                    ret
+eip : 0x001000c7
+eax : 0x00000001 ,esp : 0x00007bb8
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 1
+cf : 0
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bf0
+stack : 0x21c54bc7
+  1000c7:   52                                    pushl %edx
+eip : 0x001000c8
+eax : 0x00000001 ,esp : 0x00007bb4
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 1
+cf : 0
+stack : 0x00000000
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bf0
+  1000c8:   84 c0                                 testb %al,%al
+eip : 0x001000ca
+eax : 0x00000001 ,esp : 0x00007bb4
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
 zf : 0
+cf : 0
+stack : 0x00000000
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bf0
+  1000ca:   0f 94 c0                              sete *%al
+eip : 0x001000cd
+eax : 0x00000001 ,esp : 0x00007bb4
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000000
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bf0
+  1000cd:   0f b6 c0                              movzxl %eax,%eax
+eip : 0x001000d0
+eax : 0x00000001 ,esp : 0x00007bb4
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000000
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bf0
+  1000d0:   50                                    pushl %eax
+eip : 0x001000d1
+eax : 0x00000001 ,esp : 0x00007bb0
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000001
+stack : 0x00000000
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  1000d1:   e8 56 ff ff ff                        call 10002c
+eip : 0x0010002c
+eax : 0x00000001 ,esp : 0x00007bac
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x001000d6
+stack : 0x00000001
+stack : 0x00000000
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10002c:   55                                    pushl %ebp
+eip : 0x0010002d
+eax : 0x00000001 ,esp : 0x00007ba8
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x001000d6
+stack : 0x00000001
+stack : 0x00000000
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10002d:   89 e5                                 movl %esp,%ebp
+eip : 0x0010002f
+eax : 0x00000001 ,esp : 0x00007ba8
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x001000d6
+stack : 0x00000001
+stack : 0x00000000
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10002f:   83 ec 08                              subl $0x8,%esp
+eip : 0x00100032
+eax : 0x00000001 ,esp : 0x00007ba0
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bd8
+stack : 0x001000d6
+stack : 0x00000001
+stack : 0x00000000
+stack : 0x00007bce
+stack : 0x00000000
+  100032:   8b 45 08                              movl 0x8(%ebp),%eax
+eip : 0x00100035
+eax : 0x00000001 ,esp : 0x00007ba0
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bd8
+stack : 0x001000d6
+stack : 0x00000001
+stack : 0x00000000
+stack : 0x00007bce
+stack : 0x00000000
+  100035:   85 c0                                 testl %eax,%eax
+eip : 0x00100037
+eax : 0x00000001 ,esp : 0x00007ba0
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bd8
+stack : 0x001000d6
+stack : 0x00000001
+stack : 0x00000000
+stack : 0x00007bce
+stack : 0x00000000
+  100037:   74 02                                 je *$0x2
+eip : 0x00100039
+eax : 0x00000001 ,esp : 0x00007ba0
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bd8
+stack : 0x001000d6
+stack : 0x00000001
+stack : 0x00000000
+stack : 0x00007bce
+stack : 0x00000000
+  100039:   c9                                    leave
+eip : 0x0010003a
+eax : 0x00000001 ,esp : 0x00007bac
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x001000d6
+stack : 0x00000001
+stack : 0x00000000
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10003a:   c3                                    ret
+eip : 0x001000d6
+eax : 0x00000001 ,esp : 0x00007bb0
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000001
+stack : 0x00000000
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  1000d6:   59                                    popl %ecx
+eip : 0x001000d7
+eax : 0x00000001 ,esp : 0x00007bb4
+ecx : 0x00000001 ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000000
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bf0
+  1000d7:   58                                    popl %eax
+eip : 0x001000d8
+eax : 0x00000000 ,esp : 0x00007bb8
+ecx : 0x00000001 ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bf0
+stack : 0x21c54bc7
+  1000d8:   6a 01                                 pushlb $0x1
+eip : 0x001000da
+eax : 0x00000000 ,esp : 0x00007bb4
+ecx : 0x00000001 ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000001
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bf0
+  1000da:   53                                    pushl %ebx
+eip : 0x001000db
+eax : 0x00000000 ,esp : 0x00007bb0
+ecx : 0x00000001 ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bce
+stack : 0x00000001
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  1000db:   e8 68 ff ff ff                        call 100048
+eip : 0x00100048
+eax : 0x00000000 ,esp : 0x00007bac
+ecx : 0x00000001 ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x001000e0
+stack : 0x00007bce
+stack : 0x00000001
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100048:   55                                    pushl %ebp
+eip : 0x00100049
+eax : 0x00000000 ,esp : 0x00007ba8
+ecx : 0x00000001 ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x001000e0
+stack : 0x00007bce
+stack : 0x00000001
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100049:   89 e5                                 movl %esp,%ebp
+eip : 0x0010004b
+eax : 0x00000000 ,esp : 0x00007ba8
+ecx : 0x00000001 ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x001000e0
+stack : 0x00007bce
+stack : 0x00000001
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10004b:   8b 4d 0c                              movl 0xc(%ebp),%ecx
+eip : 0x0010004e
+eax : 0x00000000 ,esp : 0x00007ba8
+ecx : 0x00000001 ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x001000e0
+stack : 0x00007bce
+stack : 0x00000001
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10004e:   89 ca                                 movl %ecx,%edx
+eip : 0x00100050
+eax : 0x00000000 ,esp : 0x00007ba8
+ecx : 0x00000001 ,ebp : 0x00007ba8
+edx : 0x00000001 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x001000e0
+stack : 0x00007bce
+stack : 0x00000001
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100050:   c1 fa 03                              sarl $0x3,%edx
+eip : 0x00100053
+eax : 0x00000000 ,esp : 0x00007ba8
+ecx : 0x00000001 ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 1
+cf : 0
+stack : 0x00007bd8
+stack : 0x001000e0
+stack : 0x00007bce
+stack : 0x00000001
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100053:   83 e1 07                              andl $0x7,%ecx
+eip : 0x00100056
+eax : 0x00000000 ,esp : 0x00007ba8
+ecx : 0x00000001 ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x001000e0
+stack : 0x00007bce
+stack : 0x00000001
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100056:   b8 01 00 00 00                        movl $0x1,%eax
+eip : 0x0010005b
+eax : 0x00000001 ,esp : 0x00007ba8
+ecx : 0x00000001 ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x001000e0
+stack : 0x00007bce
+stack : 0x00000001
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10005b:   d3 e0                                 shll %cl,%eax
+eip : 0x0010005d
+eax : 0x00000002 ,esp : 0x00007ba8
+ecx : 0x00000001 ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x001000e0
+stack : 0x00007bce
+stack : 0x00000001
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10005d:   8b 4d 08                              movl 0x8(%ebp),%ecx
+eip : 0x00100060
+eax : 0x00000002 ,esp : 0x00007ba8
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x001000e0
+stack : 0x00007bce
+stack : 0x00000001
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100060:   84 04 11                              testb %al,(%ecx,%edx,1)
+eip : 0x00100063
+eax : 0x00000002 ,esp : 0x00007ba8
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 1
+cf : 0
+stack : 0x00007bd8
+stack : 0x001000e0
+stack : 0x00007bce
+stack : 0x00000001
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100063:   0f 95 c0                              setne *%al
+eip : 0x00100066
+eax : 0x00000002 ,esp : 0x00007ba8
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 1
+cf : 0
+stack : 0x00007bd8
+stack : 0x001000e0
+stack : 0x00007bce
+stack : 0x00000001
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100066:   5d                                    popl %ebp
+eip : 0x00100067
+eax : 0x00000002 ,esp : 0x00007bac
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 1
+cf : 0
+stack : 0x001000e0
+stack : 0x00007bce
+stack : 0x00000001
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100067:   c3                                    ret
+eip : 0x001000e0
+eax : 0x00000002 ,esp : 0x00007bb0
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 1
+cf : 0
+stack : 0x00007bce
+stack : 0x00000001
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  1000e0:   fe c8                                 decb %al
+eip : 0x001000e2
+eax : 0x00000001 ,esp : 0x00007bb0
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bce
+stack : 0x00000001
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  1000e2:   0f 94 c0                              sete *%al
+eip : 0x001000e5
+eax : 0x00000001 ,esp : 0x00007bb0
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bce
+stack : 0x00000001
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  1000e5:   0f b6 c0                              movzxl %eax,%eax
+eip : 0x001000e8
+eax : 0x00000001 ,esp : 0x00007bb0
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bce
+stack : 0x00000001
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  1000e8:   89 04 24                              movl %eax,(%esp)
+eip : 0x001000eb
+eax : 0x00000001 ,esp : 0x00007bb0
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000001
+stack : 0x00000001
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  1000eb:   e8 3c ff ff ff                        call 10002c
+eip : 0x0010002c
+eax : 0x00000001 ,esp : 0x00007bac
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x001000f0
+stack : 0x00000001
+stack : 0x00000001
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10002c:   55                                    pushl %ebp
+eip : 0x0010002d
+eax : 0x00000001 ,esp : 0x00007ba8
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x001000f0
+stack : 0x00000001
+stack : 0x00000001
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10002d:   89 e5                                 movl %esp,%ebp
+eip : 0x0010002f
+eax : 0x00000001 ,esp : 0x00007ba8
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x001000f0
+stack : 0x00000001
+stack : 0x00000001
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10002f:   83 ec 08                              subl $0x8,%esp
+eip : 0x00100032
+eax : 0x00000001 ,esp : 0x00007ba0
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bd8
+stack : 0x001000f0
+stack : 0x00000001
+stack : 0x00000001
+stack : 0x00007bce
+stack : 0x00000000
+  100032:   8b 45 08                              movl 0x8(%ebp),%eax
+eip : 0x00100035
+eax : 0x00000001 ,esp : 0x00007ba0
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bd8
+stack : 0x001000f0
+stack : 0x00000001
+stack : 0x00000001
+stack : 0x00007bce
+stack : 0x00000000
+  100035:   85 c0                                 testl %eax,%eax
+eip : 0x00100037
+eax : 0x00000001 ,esp : 0x00007ba0
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bd8
+stack : 0x001000f0
+stack : 0x00000001
+stack : 0x00000001
+stack : 0x00007bce
+stack : 0x00000000
+  100037:   74 02                                 je *$0x2
+eip : 0x00100039
+eax : 0x00000001 ,esp : 0x00007ba0
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bd8
+stack : 0x001000f0
+stack : 0x00000001
+stack : 0x00000001
+stack : 0x00007bce
+stack : 0x00000000
+  100039:   c9                                    leave
+eip : 0x0010003a
+eax : 0x00000001 ,esp : 0x00007bac
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x001000f0
+stack : 0x00000001
+stack : 0x00000001
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10003a:   c3                                    ret
+eip : 0x001000f0
+eax : 0x00000001 ,esp : 0x00007bb0
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000001
+stack : 0x00000001
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  1000f0:   58                                    popl %eax
+eip : 0x001000f1
+eax : 0x00000001 ,esp : 0x00007bb4
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000001
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bf0
+  1000f1:   5a                                    popl %edx
+eip : 0x001000f2
+eax : 0x00000001 ,esp : 0x00007bb8
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000001 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bf0
+stack : 0x21c54bc7
+  1000f2:   6a 02                                 pushlb $0x2
+eip : 0x001000f4
+eax : 0x00000001 ,esp : 0x00007bb4
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000001 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000002
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bf0
+  1000f4:   53                                    pushl %ebx
+eip : 0x001000f5
+eax : 0x00000001 ,esp : 0x00007bb0
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000001 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bce
+stack : 0x00000002
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  1000f5:   e8 4e ff ff ff                        call 100048
+eip : 0x00100048
+eax : 0x00000001 ,esp : 0x00007bac
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000001 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x001000fa
+stack : 0x00007bce
+stack : 0x00000002
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100048:   55                                    pushl %ebp
+eip : 0x00100049
+eax : 0x00000001 ,esp : 0x00007ba8
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000001 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x001000fa
+stack : 0x00007bce
+stack : 0x00000002
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100049:   89 e5                                 movl %esp,%ebp
+eip : 0x0010004b
+eax : 0x00000001 ,esp : 0x00007ba8
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000001 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x001000fa
+stack : 0x00007bce
+stack : 0x00000002
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10004b:   8b 4d 0c                              movl 0xc(%ebp),%ecx
+eip : 0x0010004e
+eax : 0x00000001 ,esp : 0x00007ba8
+ecx : 0x00000002 ,ebp : 0x00007ba8
+edx : 0x00000001 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x001000fa
+stack : 0x00007bce
+stack : 0x00000002
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10004e:   89 ca                                 movl %ecx,%edx
+eip : 0x00100050
+eax : 0x00000001 ,esp : 0x00007ba8
+ecx : 0x00000002 ,ebp : 0x00007ba8
+edx : 0x00000002 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x001000fa
+stack : 0x00007bce
+stack : 0x00000002
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100050:   c1 fa 03                              sarl $0x3,%edx
+eip : 0x00100053
+eax : 0x00000001 ,esp : 0x00007ba8
+ecx : 0x00000002 ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 1
+cf : 0
+stack : 0x00007bd8
+stack : 0x001000fa
+stack : 0x00007bce
+stack : 0x00000002
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100053:   83 e1 07                              andl $0x7,%ecx
+eip : 0x00100056
+eax : 0x00000001 ,esp : 0x00007ba8
+ecx : 0x00000002 ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x001000fa
+stack : 0x00007bce
+stack : 0x00000002
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100056:   b8 01 00 00 00                        movl $0x1,%eax
+eip : 0x0010005b
+eax : 0x00000001 ,esp : 0x00007ba8
+ecx : 0x00000002 ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x001000fa
+stack : 0x00007bce
+stack : 0x00000002
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10005b:   d3 e0                                 shll %cl,%eax
+eip : 0x0010005d
+eax : 0x00000004 ,esp : 0x00007ba8
+ecx : 0x00000002 ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x001000fa
+stack : 0x00007bce
+stack : 0x00000002
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10005d:   8b 4d 08                              movl 0x8(%ebp),%ecx
+eip : 0x00100060
+eax : 0x00000004 ,esp : 0x00007ba8
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x001000fa
+stack : 0x00007bce
+stack : 0x00000002
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100060:   84 04 11                              testb %al,(%ecx,%edx,1)
+eip : 0x00100063
+eax : 0x00000004 ,esp : 0x00007ba8
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 1
+cf : 0
+stack : 0x00007bd8
+stack : 0x001000fa
+stack : 0x00007bce
+stack : 0x00000002
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100063:   0f 95 c0                              setne *%al
+eip : 0x00100066
+eax : 0x00000004 ,esp : 0x00007ba8
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 1
+cf : 0
+stack : 0x00007bd8
+stack : 0x001000fa
+stack : 0x00007bce
+stack : 0x00000002
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100066:   5d                                    popl %ebp
+eip : 0x00100067
+eax : 0x00000004 ,esp : 0x00007bac
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 1
+cf : 0
+stack : 0x001000fa
+stack : 0x00007bce
+stack : 0x00000002
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100067:   c3                                    ret
+eip : 0x001000fa
+eax : 0x00000004 ,esp : 0x00007bb0
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 1
+cf : 0
+stack : 0x00007bce
+stack : 0x00000002
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  1000fa:   84 c0                                 testb %al,%al
+eip : 0x001000fc
+eax : 0x00000004 ,esp : 0x00007bb0
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bce
+stack : 0x00000002
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  1000fc:   0f 94 c0                              sete *%al
+eip : 0x001000ff
+eax : 0x00000004 ,esp : 0x00007bb0
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bce
+stack : 0x00000002
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  1000ff:   0f b6 c0                              movzxl %eax,%eax
+eip : 0x00100102
+eax : 0x00000004 ,esp : 0x00007bb0
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bce
+stack : 0x00000002
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100102:   89 04 24                              movl %eax,(%esp)
+eip : 0x00100105
+eax : 0x00000004 ,esp : 0x00007bb0
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000004
+stack : 0x00000002
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100105:   e8 22 ff ff ff                        call 10002c
+eip : 0x0010002c
+eax : 0x00000004 ,esp : 0x00007bac
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x0010010a
+stack : 0x00000004
+stack : 0x00000002
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10002c:   55                                    pushl %ebp
+eip : 0x0010002d
+eax : 0x00000004 ,esp : 0x00007ba8
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x0010010a
+stack : 0x00000004
+stack : 0x00000002
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10002d:   89 e5                                 movl %esp,%ebp
+eip : 0x0010002f
+eax : 0x00000004 ,esp : 0x00007ba8
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x0010010a
+stack : 0x00000004
+stack : 0x00000002
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10002f:   83 ec 08                              subl $0x8,%esp
+eip : 0x00100032
+eax : 0x00000004 ,esp : 0x00007ba0
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bd8
+stack : 0x0010010a
+stack : 0x00000004
+stack : 0x00000002
+stack : 0x00007bce
+stack : 0x00000000
+  100032:   8b 45 08                              movl 0x8(%ebp),%eax
+eip : 0x00100035
+eax : 0x00000004 ,esp : 0x00007ba0
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bd8
+stack : 0x0010010a
+stack : 0x00000004
+stack : 0x00000002
+stack : 0x00007bce
+stack : 0x00000000
+  100035:   85 c0                                 testl %eax,%eax
+eip : 0x00100037
+eax : 0x00000004 ,esp : 0x00007ba0
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bd8
+stack : 0x0010010a
+stack : 0x00000004
+stack : 0x00000002
+stack : 0x00007bce
+stack : 0x00000000
+  100037:   74 02                                 je *$0x2
+eip : 0x00100039
+eax : 0x00000004 ,esp : 0x00007ba0
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bd8
+stack : 0x0010010a
+stack : 0x00000004
+stack : 0x00000002
+stack : 0x00007bce
+stack : 0x00000000
+  100039:   c9                                    leave
+eip : 0x0010003a
+eax : 0x00000004 ,esp : 0x00007bac
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x0010010a
+stack : 0x00000004
+stack : 0x00000002
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10003a:   c3                                    ret
+eip : 0x0010010a
+eax : 0x00000004 ,esp : 0x00007bb0
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000004
+stack : 0x00000002
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10010a:   59                                    popl %ecx
+eip : 0x0010010b
+eax : 0x00000004 ,esp : 0x00007bb4
+ecx : 0x00000004 ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000002
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bf0
+  10010b:   58                                    popl %eax
+eip : 0x0010010c
+eax : 0x00000002 ,esp : 0x00007bb8
+ecx : 0x00000004 ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bf0
+stack : 0x21c54bc7
+  10010c:   6a 03                                 pushlb $0x3
+eip : 0x0010010e
+eax : 0x00000002 ,esp : 0x00007bb4
+ecx : 0x00000004 ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000003
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bf0
+  10010e:   53                                    pushl %ebx
+eip : 0x0010010f
+eax : 0x00000002 ,esp : 0x00007bb0
+ecx : 0x00000004 ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bce
+stack : 0x00000003
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10010f:   e8 34 ff ff ff                        call 100048
+eip : 0x00100048
+eax : 0x00000002 ,esp : 0x00007bac
+ecx : 0x00000004 ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00100114
+stack : 0x00007bce
+stack : 0x00000003
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100048:   55                                    pushl %ebp
+eip : 0x00100049
+eax : 0x00000002 ,esp : 0x00007ba8
+ecx : 0x00000004 ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x00100114
+stack : 0x00007bce
+stack : 0x00000003
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100049:   89 e5                                 movl %esp,%ebp
+eip : 0x0010004b
+eax : 0x00000002 ,esp : 0x00007ba8
+ecx : 0x00000004 ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x00100114
+stack : 0x00007bce
+stack : 0x00000003
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10004b:   8b 4d 0c                              movl 0xc(%ebp),%ecx
+eip : 0x0010004e
+eax : 0x00000002 ,esp : 0x00007ba8
+ecx : 0x00000003 ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x00100114
+stack : 0x00007bce
+stack : 0x00000003
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10004e:   89 ca                                 movl %ecx,%edx
+eip : 0x00100050
+eax : 0x00000002 ,esp : 0x00007ba8
+ecx : 0x00000003 ,ebp : 0x00007ba8
+edx : 0x00000003 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x00100114
+stack : 0x00007bce
+stack : 0x00000003
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100050:   c1 fa 03                              sarl $0x3,%edx
+eip : 0x00100053
+eax : 0x00000002 ,esp : 0x00007ba8
+ecx : 0x00000003 ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 1
+cf : 0
+stack : 0x00007bd8
+stack : 0x00100114
+stack : 0x00007bce
+stack : 0x00000003
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100053:   83 e1 07                              andl $0x7,%ecx
+eip : 0x00100056
+eax : 0x00000002 ,esp : 0x00007ba8
+ecx : 0x00000003 ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x00100114
+stack : 0x00007bce
+stack : 0x00000003
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100056:   b8 01 00 00 00                        movl $0x1,%eax
+eip : 0x0010005b
+eax : 0x00000001 ,esp : 0x00007ba8
+ecx : 0x00000003 ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x00100114
+stack : 0x00007bce
+stack : 0x00000003
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10005b:   d3 e0                                 shll %cl,%eax
+eip : 0x0010005d
+eax : 0x00000008 ,esp : 0x00007ba8
+ecx : 0x00000003 ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x00100114
+stack : 0x00007bce
+stack : 0x00000003
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10005d:   8b 4d 08                              movl 0x8(%ebp),%ecx
+eip : 0x00100060
+eax : 0x00000008 ,esp : 0x00007ba8
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x00100114
+stack : 0x00007bce
+stack : 0x00000003
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100060:   84 04 11                              testb %al,(%ecx,%edx,1)
+eip : 0x00100063
+eax : 0x00000008 ,esp : 0x00007ba8
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 1
+cf : 0
+stack : 0x00007bd8
+stack : 0x00100114
+stack : 0x00007bce
+stack : 0x00000003
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100063:   0f 95 c0                              setne *%al
+eip : 0x00100066
+eax : 0x00000008 ,esp : 0x00007ba8
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 1
+cf : 0
+stack : 0x00007bd8
+stack : 0x00100114
+stack : 0x00007bce
+stack : 0x00000003
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100066:   5d                                    popl %ebp
+eip : 0x00100067
+eax : 0x00000008 ,esp : 0x00007bac
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 1
+cf : 0
+stack : 0x00100114
+stack : 0x00007bce
+stack : 0x00000003
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100067:   c3                                    ret
+eip : 0x00100114
+eax : 0x00000008 ,esp : 0x00007bb0
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 1
+cf : 0
+stack : 0x00007bce
+stack : 0x00000003
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100114:   fe c8                                 decb %al
+eip : 0x00100116
+eax : 0x00000007 ,esp : 0x00007bb0
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bce
+stack : 0x00000003
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100116:   0f 94 c0                              sete *%al
+eip : 0x00100119
+eax : 0x00000007 ,esp : 0x00007bb0
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bce
+stack : 0x00000003
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100119:   0f b6 c0                              movzxl %eax,%eax
+eip : 0x0010011c
+eax : 0x00000007 ,esp : 0x00007bb0
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bce
+stack : 0x00000003
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10011c:   89 04 24                              movl %eax,(%esp)
+eip : 0x0010011f
+eax : 0x00000007 ,esp : 0x00007bb0
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000007
+stack : 0x00000003
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10011f:   e8 08 ff ff ff                        call 10002c
+eip : 0x0010002c
+eax : 0x00000007 ,esp : 0x00007bac
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00100124
+stack : 0x00000007
+stack : 0x00000003
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10002c:   55                                    pushl %ebp
+eip : 0x0010002d
+eax : 0x00000007 ,esp : 0x00007ba8
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x00100124
+stack : 0x00000007
+stack : 0x00000003
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10002d:   89 e5                                 movl %esp,%ebp
+eip : 0x0010002f
+eax : 0x00000007 ,esp : 0x00007ba8
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x00100124
+stack : 0x00000007
+stack : 0x00000003
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10002f:   83 ec 08                              subl $0x8,%esp
+eip : 0x00100032
+eax : 0x00000007 ,esp : 0x00007ba0
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bd8
+stack : 0x00100124
+stack : 0x00000007
+stack : 0x00000003
+stack : 0x00007bce
+stack : 0x00000000
+  100032:   8b 45 08                              movl 0x8(%ebp),%eax
+eip : 0x00100035
+eax : 0x00000007 ,esp : 0x00007ba0
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bd8
+stack : 0x00100124
+stack : 0x00000007
+stack : 0x00000003
+stack : 0x00007bce
+stack : 0x00000000
+  100035:   85 c0                                 testl %eax,%eax
+eip : 0x00100037
+eax : 0x00000007 ,esp : 0x00007ba0
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bd8
+stack : 0x00100124
+stack : 0x00000007
+stack : 0x00000003
+stack : 0x00007bce
+stack : 0x00000000
+  100037:   74 02                                 je *$0x2
+eip : 0x00100039
+eax : 0x00000007 ,esp : 0x00007ba0
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bd8
+stack : 0x00100124
+stack : 0x00000007
+stack : 0x00000003
+stack : 0x00007bce
+stack : 0x00000000
+  100039:   c9                                    leave
+eip : 0x0010003a
+eax : 0x00000007 ,esp : 0x00007bac
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00100124
+stack : 0x00000007
+stack : 0x00000003
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10003a:   c3                                    ret
+eip : 0x00100124
+eax : 0x00000007 ,esp : 0x00007bb0
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000007
+stack : 0x00000003
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100124:   58                                    popl %eax
+eip : 0x00100125
+eax : 0x00000007 ,esp : 0x00007bb4
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000003
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bf0
+  100125:   5a                                    popl %edx
+eip : 0x00100126
+eax : 0x00000007 ,esp : 0x00007bb8
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000003 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bf0
+stack : 0x21c54bc7
+  100126:   6a 04                                 pushlb $0x4
+eip : 0x00100128
+eax : 0x00000007 ,esp : 0x00007bb4
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000003 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000004
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bf0
+  100128:   53                                    pushl %ebx
+eip : 0x00100129
+eax : 0x00000007 ,esp : 0x00007bb0
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000003 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bce
+stack : 0x00000004
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100129:   e8 1a ff ff ff                        call 100048
+eip : 0x00100048
+eax : 0x00000007 ,esp : 0x00007bac
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000003 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x0010012e
+stack : 0x00007bce
+stack : 0x00000004
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100048:   55                                    pushl %ebp
+eip : 0x00100049
+eax : 0x00000007 ,esp : 0x00007ba8
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000003 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x0010012e
+stack : 0x00007bce
+stack : 0x00000004
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100049:   89 e5                                 movl %esp,%ebp
+eip : 0x0010004b
+eax : 0x00000007 ,esp : 0x00007ba8
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000003 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x0010012e
+stack : 0x00007bce
+stack : 0x00000004
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10004b:   8b 4d 0c                              movl 0xc(%ebp),%ecx
+eip : 0x0010004e
+eax : 0x00000007 ,esp : 0x00007ba8
+ecx : 0x00000004 ,ebp : 0x00007ba8
+edx : 0x00000003 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x0010012e
+stack : 0x00007bce
+stack : 0x00000004
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10004e:   89 ca                                 movl %ecx,%edx
+eip : 0x00100050
+eax : 0x00000007 ,esp : 0x00007ba8
+ecx : 0x00000004 ,ebp : 0x00007ba8
+edx : 0x00000004 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x0010012e
+stack : 0x00007bce
+stack : 0x00000004
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100050:   c1 fa 03                              sarl $0x3,%edx
+eip : 0x00100053
+eax : 0x00000007 ,esp : 0x00007ba8
+ecx : 0x00000004 ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 1
+cf : 0
+stack : 0x00007bd8
+stack : 0x0010012e
+stack : 0x00007bce
+stack : 0x00000004
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100053:   83 e1 07                              andl $0x7,%ecx
+eip : 0x00100056
+eax : 0x00000007 ,esp : 0x00007ba8
+ecx : 0x00000004 ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x0010012e
+stack : 0x00007bce
+stack : 0x00000004
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100056:   b8 01 00 00 00                        movl $0x1,%eax
+eip : 0x0010005b
+eax : 0x00000001 ,esp : 0x00007ba8
+ecx : 0x00000004 ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x0010012e
+stack : 0x00007bce
+stack : 0x00000004
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10005b:   d3 e0                                 shll %cl,%eax
+eip : 0x0010005d
+eax : 0x00000010 ,esp : 0x00007ba8
+ecx : 0x00000004 ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x0010012e
+stack : 0x00007bce
+stack : 0x00000004
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10005d:   8b 4d 08                              movl 0x8(%ebp),%ecx
+eip : 0x00100060
+eax : 0x00000010 ,esp : 0x00007ba8
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x0010012e
+stack : 0x00007bce
+stack : 0x00000004
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100060:   84 04 11                              testb %al,(%ecx,%edx,1)
+eip : 0x00100063
+eax : 0x00000010 ,esp : 0x00007ba8
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 1
+cf : 0
+stack : 0x00007bd8
+stack : 0x0010012e
+stack : 0x00007bce
+stack : 0x00000004
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100063:   0f 95 c0                              setne *%al
+eip : 0x00100066
+eax : 0x00000010 ,esp : 0x00007ba8
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 1
+cf : 0
+stack : 0x00007bd8
+stack : 0x0010012e
+stack : 0x00007bce
+stack : 0x00000004
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100066:   5d                                    popl %ebp
+eip : 0x00100067
+eax : 0x00000010 ,esp : 0x00007bac
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 1
+cf : 0
+stack : 0x0010012e
+stack : 0x00007bce
+stack : 0x00000004
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100067:   c3                                    ret
+eip : 0x0010012e
+eax : 0x00000010 ,esp : 0x00007bb0
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 1
+cf : 0
+stack : 0x00007bce
+stack : 0x00000004
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10012e:   84 c0                                 testb %al,%al
+eip : 0x00100130
+eax : 0x00000010 ,esp : 0x00007bb0
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bce
+stack : 0x00000004
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100130:   0f 94 c0                              sete *%al
+eip : 0x00100133
+eax : 0x00000010 ,esp : 0x00007bb0
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bce
+stack : 0x00000004
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100133:   0f b6 c0                              movzxl %eax,%eax
+eip : 0x00100136
+eax : 0x00000010 ,esp : 0x00007bb0
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bce
+stack : 0x00000004
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100136:   89 04 24                              movl %eax,(%esp)
+eip : 0x00100139
+eax : 0x00000010 ,esp : 0x00007bb0
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000010
+stack : 0x00000004
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100139:   e8 ee fe ff ff                        call 10002c
+eip : 0x0010002c
+eax : 0x00000010 ,esp : 0x00007bac
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x0010013e
+stack : 0x00000010
+stack : 0x00000004
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10002c:   55                                    pushl %ebp
+eip : 0x0010002d
+eax : 0x00000010 ,esp : 0x00007ba8
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x0010013e
+stack : 0x00000010
+stack : 0x00000004
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10002d:   89 e5                                 movl %esp,%ebp
+eip : 0x0010002f
+eax : 0x00000010 ,esp : 0x00007ba8
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x0010013e
+stack : 0x00000010
+stack : 0x00000004
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10002f:   83 ec 08                              subl $0x8,%esp
+eip : 0x00100032
+eax : 0x00000010 ,esp : 0x00007ba0
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bd8
+stack : 0x0010013e
+stack : 0x00000010
+stack : 0x00000004
+stack : 0x00007bce
+stack : 0x00000000
+  100032:   8b 45 08                              movl 0x8(%ebp),%eax
+eip : 0x00100035
+eax : 0x00000010 ,esp : 0x00007ba0
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bd8
+stack : 0x0010013e
+stack : 0x00000010
+stack : 0x00000004
+stack : 0x00007bce
+stack : 0x00000000
+  100035:   85 c0                                 testl %eax,%eax
+eip : 0x00100037
+eax : 0x00000010 ,esp : 0x00007ba0
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bd8
+stack : 0x0010013e
+stack : 0x00000010
+stack : 0x00000004
+stack : 0x00007bce
+stack : 0x00000000
+  100037:   74 02                                 je *$0x2
+eip : 0x00100039
+eax : 0x00000010 ,esp : 0x00007ba0
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bd8
+stack : 0x0010013e
+stack : 0x00000010
+stack : 0x00000004
+stack : 0x00007bce
+stack : 0x00000000
+  100039:   c9                                    leave
+eip : 0x0010003a
+eax : 0x00000010 ,esp : 0x00007bac
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x0010013e
+stack : 0x00000010
+stack : 0x00000004
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10003a:   c3                                    ret
+eip : 0x0010013e
+eax : 0x00000010 ,esp : 0x00007bb0
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000010
+stack : 0x00000004
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10013e:   59                                    popl %ecx
+eip : 0x0010013f
+eax : 0x00000010 ,esp : 0x00007bb4
+ecx : 0x00000010 ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000004
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bf0
+  10013f:   58                                    popl %eax
+eip : 0x00100140
+eax : 0x00000004 ,esp : 0x00007bb8
+ecx : 0x00000010 ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bf0
+stack : 0x21c54bc7
+  100140:   6a 05                                 pushlb $0x5
+eip : 0x00100142
+eax : 0x00000004 ,esp : 0x00007bb4
+ecx : 0x00000010 ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000005
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bf0
+  100142:   53                                    pushl %ebx
+eip : 0x00100143
+eax : 0x00000004 ,esp : 0x00007bb0
+ecx : 0x00000010 ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bce
+stack : 0x00000005
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100143:   e8 00 ff ff ff                        call 100048
+eip : 0x00100048
+eax : 0x00000004 ,esp : 0x00007bac
+ecx : 0x00000010 ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00100148
+stack : 0x00007bce
+stack : 0x00000005
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100048:   55                                    pushl %ebp
+eip : 0x00100049
+eax : 0x00000004 ,esp : 0x00007ba8
+ecx : 0x00000010 ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x00100148
+stack : 0x00007bce
+stack : 0x00000005
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100049:   89 e5                                 movl %esp,%ebp
+eip : 0x0010004b
+eax : 0x00000004 ,esp : 0x00007ba8
+ecx : 0x00000010 ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x00100148
+stack : 0x00007bce
+stack : 0x00000005
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10004b:   8b 4d 0c                              movl 0xc(%ebp),%ecx
+eip : 0x0010004e
+eax : 0x00000004 ,esp : 0x00007ba8
+ecx : 0x00000005 ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x00100148
+stack : 0x00007bce
+stack : 0x00000005
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10004e:   89 ca                                 movl %ecx,%edx
+eip : 0x00100050
+eax : 0x00000004 ,esp : 0x00007ba8
+ecx : 0x00000005 ,ebp : 0x00007ba8
+edx : 0x00000005 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x00100148
+stack : 0x00007bce
+stack : 0x00000005
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100050:   c1 fa 03                              sarl $0x3,%edx
+eip : 0x00100053
+eax : 0x00000004 ,esp : 0x00007ba8
+ecx : 0x00000005 ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 1
+cf : 0
+stack : 0x00007bd8
+stack : 0x00100148
+stack : 0x00007bce
+stack : 0x00000005
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100053:   83 e1 07                              andl $0x7,%ecx
+eip : 0x00100056
+eax : 0x00000004 ,esp : 0x00007ba8
+ecx : 0x00000005 ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x00100148
+stack : 0x00007bce
+stack : 0x00000005
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100056:   b8 01 00 00 00                        movl $0x1,%eax
+eip : 0x0010005b
+eax : 0x00000001 ,esp : 0x00007ba8
+ecx : 0x00000005 ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x00100148
+stack : 0x00007bce
+stack : 0x00000005
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10005b:   d3 e0                                 shll %cl,%eax
+eip : 0x0010005d
+eax : 0x00000020 ,esp : 0x00007ba8
+ecx : 0x00000005 ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x00100148
+stack : 0x00007bce
+stack : 0x00000005
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10005d:   8b 4d 08                              movl 0x8(%ebp),%ecx
+eip : 0x00100060
+eax : 0x00000020 ,esp : 0x00007ba8
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x00100148
+stack : 0x00007bce
+stack : 0x00000005
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100060:   84 04 11                              testb %al,(%ecx,%edx,1)
+eip : 0x00100063
+eax : 0x00000020 ,esp : 0x00007ba8
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 1
+cf : 0
+stack : 0x00007bd8
+stack : 0x00100148
+stack : 0x00007bce
+stack : 0x00000005
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100063:   0f 95 c0                              setne *%al
+eip : 0x00100066
+eax : 0x00000020 ,esp : 0x00007ba8
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 1
+cf : 0
+stack : 0x00007bd8
+stack : 0x00100148
+stack : 0x00007bce
+stack : 0x00000005
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100066:   5d                                    popl %ebp
+eip : 0x00100067
+eax : 0x00000020 ,esp : 0x00007bac
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 1
+cf : 0
+stack : 0x00100148
+stack : 0x00007bce
+stack : 0x00000005
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100067:   c3                                    ret
+eip : 0x00100148
+eax : 0x00000020 ,esp : 0x00007bb0
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 1
+cf : 0
+stack : 0x00007bce
+stack : 0x00000005
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100148:   fe c8                                 decb %al
+eip : 0x0010014a
+eax : 0x0000001f ,esp : 0x00007bb0
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bce
+stack : 0x00000005
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10014a:   0f 94 c0                              sete *%al
+eip : 0x0010014d
+eax : 0x0000001f ,esp : 0x00007bb0
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bce
+stack : 0x00000005
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10014d:   0f b6 c0                              movzxl %eax,%eax
+eip : 0x00100150
+eax : 0x0000001f ,esp : 0x00007bb0
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bce
+stack : 0x00000005
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100150:   89 04 24                              movl %eax,(%esp)
+eip : 0x00100153
+eax : 0x0000001f ,esp : 0x00007bb0
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x0000001f
+stack : 0x00000005
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100153:   e8 d4 fe ff ff                        call 10002c
+eip : 0x0010002c
+eax : 0x0000001f ,esp : 0x00007bac
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00100158
+stack : 0x0000001f
+stack : 0x00000005
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10002c:   55                                    pushl %ebp
+eip : 0x0010002d
+eax : 0x0000001f ,esp : 0x00007ba8
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x00100158
+stack : 0x0000001f
+stack : 0x00000005
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10002d:   89 e5                                 movl %esp,%ebp
+eip : 0x0010002f
+eax : 0x0000001f ,esp : 0x00007ba8
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x00100158
+stack : 0x0000001f
+stack : 0x00000005
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10002f:   83 ec 08                              subl $0x8,%esp
+eip : 0x00100032
+eax : 0x0000001f ,esp : 0x00007ba0
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bd8
+stack : 0x00100158
+stack : 0x0000001f
+stack : 0x00000005
+stack : 0x00007bce
+stack : 0x00000000
+  100032:   8b 45 08                              movl 0x8(%ebp),%eax
+eip : 0x00100035
+eax : 0x0000001f ,esp : 0x00007ba0
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bd8
+stack : 0x00100158
+stack : 0x0000001f
+stack : 0x00000005
+stack : 0x00007bce
+stack : 0x00000000
+  100035:   85 c0                                 testl %eax,%eax
+eip : 0x00100037
+eax : 0x0000001f ,esp : 0x00007ba0
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bd8
+stack : 0x00100158
+stack : 0x0000001f
+stack : 0x00000005
+stack : 0x00007bce
+stack : 0x00000000
+  100037:   74 02                                 je *$0x2
+eip : 0x00100039
+eax : 0x0000001f ,esp : 0x00007ba0
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bd8
+stack : 0x00100158
+stack : 0x0000001f
+stack : 0x00000005
+stack : 0x00007bce
+stack : 0x00000000
+  100039:   c9                                    leave
+eip : 0x0010003a
+eax : 0x0000001f ,esp : 0x00007bac
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00100158
+stack : 0x0000001f
+stack : 0x00000005
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10003a:   c3                                    ret
+eip : 0x00100158
+eax : 0x0000001f ,esp : 0x00007bb0
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x0000001f
+stack : 0x00000005
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100158:   58                                    popl %eax
+eip : 0x00100159
+eax : 0x0000001f ,esp : 0x00007bb4
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000005
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bf0
+  100159:   5a                                    popl %edx
+eip : 0x0010015a
+eax : 0x0000001f ,esp : 0x00007bb8
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000005 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bf0
+stack : 0x21c54bc7
+  10015a:   6a 06                                 pushlb $0x6
+eip : 0x0010015c
+eax : 0x0000001f ,esp : 0x00007bb4
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000005 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000006
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bf0
+  10015c:   53                                    pushl %ebx
+eip : 0x0010015d
+eax : 0x0000001f ,esp : 0x00007bb0
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000005 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bce
+stack : 0x00000006
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10015d:   e8 e6 fe ff ff                        call 100048
+eip : 0x00100048
+eax : 0x0000001f ,esp : 0x00007bac
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000005 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00100162
+stack : 0x00007bce
+stack : 0x00000006
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100048:   55                                    pushl %ebp
+eip : 0x00100049
+eax : 0x0000001f ,esp : 0x00007ba8
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000005 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x00100162
+stack : 0x00007bce
+stack : 0x00000006
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100049:   89 e5                                 movl %esp,%ebp
+eip : 0x0010004b
+eax : 0x0000001f ,esp : 0x00007ba8
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000005 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x00100162
+stack : 0x00007bce
+stack : 0x00000006
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10004b:   8b 4d 0c                              movl 0xc(%ebp),%ecx
+eip : 0x0010004e
+eax : 0x0000001f ,esp : 0x00007ba8
+ecx : 0x00000006 ,ebp : 0x00007ba8
+edx : 0x00000005 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x00100162
+stack : 0x00007bce
+stack : 0x00000006
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10004e:   89 ca                                 movl %ecx,%edx
+eip : 0x00100050
+eax : 0x0000001f ,esp : 0x00007ba8
+ecx : 0x00000006 ,ebp : 0x00007ba8
+edx : 0x00000006 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x00100162
+stack : 0x00007bce
+stack : 0x00000006
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100050:   c1 fa 03                              sarl $0x3,%edx
+eip : 0x00100053
+eax : 0x0000001f ,esp : 0x00007ba8
+ecx : 0x00000006 ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 1
+cf : 0
+stack : 0x00007bd8
+stack : 0x00100162
+stack : 0x00007bce
+stack : 0x00000006
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100053:   83 e1 07                              andl $0x7,%ecx
+eip : 0x00100056
+eax : 0x0000001f ,esp : 0x00007ba8
+ecx : 0x00000006 ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x00100162
+stack : 0x00007bce
+stack : 0x00000006
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100056:   b8 01 00 00 00                        movl $0x1,%eax
+eip : 0x0010005b
+eax : 0x00000001 ,esp : 0x00007ba8
+ecx : 0x00000006 ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x00100162
+stack : 0x00007bce
+stack : 0x00000006
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10005b:   d3 e0                                 shll %cl,%eax
+eip : 0x0010005d
+eax : 0x00000040 ,esp : 0x00007ba8
+ecx : 0x00000006 ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x00100162
+stack : 0x00007bce
+stack : 0x00000006
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10005d:   8b 4d 08                              movl 0x8(%ebp),%ecx
+eip : 0x00100060
+eax : 0x00000040 ,esp : 0x00007ba8
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x00100162
+stack : 0x00007bce
+stack : 0x00000006
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100060:   84 04 11                              testb %al,(%ecx,%edx,1)
+eip : 0x00100063
+eax : 0x00000040 ,esp : 0x00007ba8
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 1
+cf : 0
+stack : 0x00007bd8
+stack : 0x00100162
+stack : 0x00007bce
+stack : 0x00000006
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100063:   0f 95 c0                              setne *%al
+eip : 0x00100066
+eax : 0x00000040 ,esp : 0x00007ba8
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 1
+cf : 0
+stack : 0x00007bd8
+stack : 0x00100162
+stack : 0x00007bce
+stack : 0x00000006
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100066:   5d                                    popl %ebp
+eip : 0x00100067
+eax : 0x00000040 ,esp : 0x00007bac
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 1
+cf : 0
+stack : 0x00100162
+stack : 0x00007bce
+stack : 0x00000006
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100067:   c3                                    ret
+eip : 0x00100162
+eax : 0x00000040 ,esp : 0x00007bb0
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 1
+cf : 0
+stack : 0x00007bce
+stack : 0x00000006
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100162:   84 c0                                 testb %al,%al
+eip : 0x00100164
+eax : 0x00000040 ,esp : 0x00007bb0
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bce
+stack : 0x00000006
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100164:   0f 94 c0                              sete *%al
+eip : 0x00100167
+eax : 0x00000040 ,esp : 0x00007bb0
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bce
+stack : 0x00000006
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100167:   0f b6 c0                              movzxl %eax,%eax
+eip : 0x0010016a
+eax : 0x00000040 ,esp : 0x00007bb0
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bce
+stack : 0x00000006
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10016a:   89 04 24                              movl %eax,(%esp)
+eip : 0x0010016d
+eax : 0x00000040 ,esp : 0x00007bb0
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000040
+stack : 0x00000006
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10016d:   e8 ba fe ff ff                        call 10002c
+eip : 0x0010002c
+eax : 0x00000040 ,esp : 0x00007bac
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00100172
+stack : 0x00000040
+stack : 0x00000006
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10002c:   55                                    pushl %ebp
+eip : 0x0010002d
+eax : 0x00000040 ,esp : 0x00007ba8
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x00100172
+stack : 0x00000040
+stack : 0x00000006
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10002d:   89 e5                                 movl %esp,%ebp
+eip : 0x0010002f
+eax : 0x00000040 ,esp : 0x00007ba8
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x00100172
+stack : 0x00000040
+stack : 0x00000006
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10002f:   83 ec 08                              subl $0x8,%esp
+eip : 0x00100032
+eax : 0x00000040 ,esp : 0x00007ba0
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bd8
+stack : 0x00100172
+stack : 0x00000040
+stack : 0x00000006
+stack : 0x00007bce
+stack : 0x00000000
+  100032:   8b 45 08                              movl 0x8(%ebp),%eax
+eip : 0x00100035
+eax : 0x00000040 ,esp : 0x00007ba0
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bd8
+stack : 0x00100172
+stack : 0x00000040
+stack : 0x00000006
+stack : 0x00007bce
+stack : 0x00000000
+  100035:   85 c0                                 testl %eax,%eax
+eip : 0x00100037
+eax : 0x00000040 ,esp : 0x00007ba0
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bd8
+stack : 0x00100172
+stack : 0x00000040
+stack : 0x00000006
+stack : 0x00007bce
+stack : 0x00000000
+  100037:   74 02                                 je *$0x2
+eip : 0x00100039
+eax : 0x00000040 ,esp : 0x00007ba0
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bd8
+stack : 0x00100172
+stack : 0x00000040
+stack : 0x00000006
+stack : 0x00007bce
+stack : 0x00000000
+  100039:   c9                                    leave
+eip : 0x0010003a
+eax : 0x00000040 ,esp : 0x00007bac
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00100172
+stack : 0x00000040
+stack : 0x00000006
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10003a:   c3                                    ret
+eip : 0x00100172
+eax : 0x00000040 ,esp : 0x00007bb0
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000040
+stack : 0x00000006
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100172:   59                                    popl %ecx
+eip : 0x00100173
+eax : 0x00000040 ,esp : 0x00007bb4
+ecx : 0x00000040 ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000006
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bf0
+  100173:   58                                    popl %eax
+eip : 0x00100174
+eax : 0x00000006 ,esp : 0x00007bb8
+ecx : 0x00000040 ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bf0
+stack : 0x21c54bc7
+  100174:   6a 07                                 pushlb $0x7
+eip : 0x00100176
+eax : 0x00000006 ,esp : 0x00007bb4
+ecx : 0x00000040 ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000007
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bf0
+  100176:   53                                    pushl %ebx
+eip : 0x00100177
+eax : 0x00000006 ,esp : 0x00007bb0
+ecx : 0x00000040 ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bce
+stack : 0x00000007
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100177:   e8 cc fe ff ff                        call 100048
+eip : 0x00100048
+eax : 0x00000006 ,esp : 0x00007bac
+ecx : 0x00000040 ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x0010017c
+stack : 0x00007bce
+stack : 0x00000007
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100048:   55                                    pushl %ebp
+eip : 0x00100049
+eax : 0x00000006 ,esp : 0x00007ba8
+ecx : 0x00000040 ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x0010017c
+stack : 0x00007bce
+stack : 0x00000007
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100049:   89 e5                                 movl %esp,%ebp
+eip : 0x0010004b
+eax : 0x00000006 ,esp : 0x00007ba8
+ecx : 0x00000040 ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x0010017c
+stack : 0x00007bce
+stack : 0x00000007
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10004b:   8b 4d 0c                              movl 0xc(%ebp),%ecx
+eip : 0x0010004e
+eax : 0x00000006 ,esp : 0x00007ba8
+ecx : 0x00000007 ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x0010017c
+stack : 0x00007bce
+stack : 0x00000007
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10004e:   89 ca                                 movl %ecx,%edx
+eip : 0x00100050
+eax : 0x00000006 ,esp : 0x00007ba8
+ecx : 0x00000007 ,ebp : 0x00007ba8
+edx : 0x00000007 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x0010017c
+stack : 0x00007bce
+stack : 0x00000007
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100050:   c1 fa 03                              sarl $0x3,%edx
+eip : 0x00100053
+eax : 0x00000006 ,esp : 0x00007ba8
+ecx : 0x00000007 ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 1
+cf : 0
+stack : 0x00007bd8
+stack : 0x0010017c
+stack : 0x00007bce
+stack : 0x00000007
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100053:   83 e1 07                              andl $0x7,%ecx
+eip : 0x00100056
+eax : 0x00000006 ,esp : 0x00007ba8
+ecx : 0x00000007 ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x0010017c
+stack : 0x00007bce
+stack : 0x00000007
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100056:   b8 01 00 00 00                        movl $0x1,%eax
+eip : 0x0010005b
+eax : 0x00000001 ,esp : 0x00007ba8
+ecx : 0x00000007 ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x0010017c
+stack : 0x00007bce
+stack : 0x00000007
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10005b:   d3 e0                                 shll %cl,%eax
+eip : 0x0010005d
+eax : 0x00000080 ,esp : 0x00007ba8
+ecx : 0x00000007 ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x0010017c
+stack : 0x00007bce
+stack : 0x00000007
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10005d:   8b 4d 08                              movl 0x8(%ebp),%ecx
+eip : 0x00100060
+eax : 0x00000080 ,esp : 0x00007ba8
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x0010017c
+stack : 0x00007bce
+stack : 0x00000007
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100060:   84 04 11                              testb %al,(%ecx,%edx,1)
+eip : 0x00100063
+eax : 0x00000080 ,esp : 0x00007ba8
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 1
+cf : 0
+stack : 0x00007bd8
+stack : 0x0010017c
+stack : 0x00007bce
+stack : 0x00000007
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100063:   0f 95 c0                              setne *%al
+eip : 0x00100066
+eax : 0x00000080 ,esp : 0x00007ba8
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 1
+cf : 0
+stack : 0x00007bd8
+stack : 0x0010017c
+stack : 0x00007bce
+stack : 0x00000007
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100066:   5d                                    popl %ebp
+eip : 0x00100067
+eax : 0x00000080 ,esp : 0x00007bac
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 1
+cf : 0
+stack : 0x0010017c
+stack : 0x00007bce
+stack : 0x00000007
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100067:   c3                                    ret
+eip : 0x0010017c
+eax : 0x00000080 ,esp : 0x00007bb0
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 1
+cf : 0
+stack : 0x00007bce
+stack : 0x00000007
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10017c:   fe c8                                 decb %al
+eip : 0x0010017e
+eax : 0x0000007f ,esp : 0x00007bb0
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bce
+stack : 0x00000007
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10017e:   0f 94 c0                              sete *%al
+eip : 0x00100181
+eax : 0x0000007f ,esp : 0x00007bb0
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bce
+stack : 0x00000007
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100181:   0f b6 c0                              movzxl %eax,%eax
+eip : 0x00100184
+eax : 0x0000007f ,esp : 0x00007bb0
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bce
+stack : 0x00000007
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100184:   89 04 24                              movl %eax,(%esp)
+eip : 0x00100187
+eax : 0x0000007f ,esp : 0x00007bb0
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x0000007f
+stack : 0x00000007
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100187:   e8 a0 fe ff ff                        call 10002c
+eip : 0x0010002c
+eax : 0x0000007f ,esp : 0x00007bac
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x0010018c
+stack : 0x0000007f
+stack : 0x00000007
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10002c:   55                                    pushl %ebp
+eip : 0x0010002d
+eax : 0x0000007f ,esp : 0x00007ba8
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x0010018c
+stack : 0x0000007f
+stack : 0x00000007
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10002d:   89 e5                                 movl %esp,%ebp
+eip : 0x0010002f
+eax : 0x0000007f ,esp : 0x00007ba8
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bd8
+stack : 0x0010018c
+stack : 0x0000007f
+stack : 0x00000007
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10002f:   83 ec 08                              subl $0x8,%esp
+eip : 0x00100032
+eax : 0x0000007f ,esp : 0x00007ba0
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bd8
+stack : 0x0010018c
+stack : 0x0000007f
+stack : 0x00000007
+stack : 0x00007bce
+stack : 0x00000000
+  100032:   8b 45 08                              movl 0x8(%ebp),%eax
+eip : 0x00100035
+eax : 0x0000007f ,esp : 0x00007ba0
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bd8
+stack : 0x0010018c
+stack : 0x0000007f
+stack : 0x00000007
+stack : 0x00007bce
+stack : 0x00000000
+  100035:   85 c0                                 testl %eax,%eax
+eip : 0x00100037
+eax : 0x0000007f ,esp : 0x00007ba0
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bd8
+stack : 0x0010018c
+stack : 0x0000007f
+stack : 0x00000007
+stack : 0x00007bce
+stack : 0x00000000
+  100037:   74 02                                 je *$0x2
+eip : 0x00100039
+eax : 0x0000007f ,esp : 0x00007ba0
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bd8
+stack : 0x0010018c
+stack : 0x0000007f
+stack : 0x00000007
+stack : 0x00007bce
+stack : 0x00000000
+  100039:   c9                                    leave
+eip : 0x0010003a
+eax : 0x0000007f ,esp : 0x00007bac
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x0010018c
+stack : 0x0000007f
+stack : 0x00000007
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10003a:   c3                                    ret
+eip : 0x0010018c
+eax : 0x0000007f ,esp : 0x00007bb0
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x0000007f
+stack : 0x00000007
+stack : 0x00007bce
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  10018c:   83 c4 0c                              addl $0xc,%esp
+eip : 0x0010018f
+eax : 0x0000007f ,esp : 0x00007bbc
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bf0
+stack : 0x21c54bc7
 stack : 0x00007bf8
-stack : 0xfffffff0
+  10018f:   6a 01                                 pushlb $0x1
+eip : 0x00100191
+eax : 0x0000007f ,esp : 0x00007bb8
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000001
 stack : 0x00000000
 stack : 0x00000000
 stack : 0x00000000
-stack : 0x00100027
 stack : 0x00000000
 stack : 0x00000000
-  100067:   89 e5                                 movl %esp,%ebp
+stack : 0x00007bf0
+stack : 0x21c54bc7
+  100191:   6a 08                                 pushlb $0x8
+eip : 0x00100193
+eax : 0x0000007f ,esp : 0x00007bb4
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00000008
+stack : 0x00000001
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bf0
+  100193:   53                                    pushl %ebx
+eip : 0x00100194
+eax : 0x0000007f ,esp : 0x00007bb0
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00007bce
+stack : 0x00000008
+stack : 0x00000001
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100194:   e8 cf fe ff ff                        call 100068
+eip : 0x00100068
+eax : 0x0000007f ,esp : 0x00007bac
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
+stack : 0x00100199
+stack : 0x00007bce
+stack : 0x00000008
+stack : 0x00000001
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+  100068:   55                                    pushl %ebp
 eip : 0x00100069
-eax : 0x0e218039 ,esp : 0x00007bd8
-ecx : 0x00007bf0 ,ebp : 0x00007bd8
-edx : 0x1a29e27f ,esi : 0x4aedf8df
-ebx : 0x6f322526 ,edi : 0x62ec9ab6
+eax : 0x0000007f ,esp : 0x00007ba8
+ecx : 0x00007bce ,ebp : 0x00007bd8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
 zf : 0
-stack : 0x00007bf8
-stack : 0xfffffff0
+cf : 0
+stack : 0x00007bd8
+stack : 0x00100199
+stack : 0x00007bce
+stack : 0x00000008
+stack : 0x00000001
 stack : 0x00000000
 stack : 0x00000000
 stack : 0x00000000
-stack : 0x00100027
-stack : 0x00000000
-stack : 0x00000000
-  100069:   57                                    pushl %edi
-eip : 0x0010006a
-eax : 0x0e218039 ,esp : 0x00007bd4
-ecx : 0x00007bf0 ,ebp : 0x00007bd8
-edx : 0x1a29e27f ,esi : 0x4aedf8df
-ebx : 0x6f322526 ,edi : 0x62ec9ab6
-zf : 0
-stack : 0x62ec9ab6
-stack : 0x00007bf8
-stack : 0xfffffff0
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00100027
-stack : 0x00000000
-  10006a:   56                                    pushl %esi
+  100069:   89 e5                                 movl %esp,%ebp
 eip : 0x0010006b
-eax : 0x0e218039 ,esp : 0x00007bd0
-ecx : 0x00007bf0 ,ebp : 0x00007bd8
-edx : 0x1a29e27f ,esi : 0x4aedf8df
-ebx : 0x6f322526 ,edi : 0x62ec9ab6
+eax : 0x0000007f ,esp : 0x00007ba8
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
 zf : 0
-stack : 0x4aedf8df
-stack : 0x62ec9ab6
-stack : 0x00007bf8
-stack : 0xfffffff0
+cf : 0
+stack : 0x00007bd8
+stack : 0x00100199
+stack : 0x00007bce
+stack : 0x00000008
+stack : 0x00000001
 stack : 0x00000000
 stack : 0x00000000
 stack : 0x00000000
-stack : 0x00100027
-  10006b:   53                                    pushl %ebx
-eip : 0x0010006c
-eax : 0x0e218039 ,esp : 0x00007bcc
-ecx : 0x00007bf0 ,ebp : 0x00007bd8
-edx : 0x1a29e27f ,esi : 0x4aedf8df
-ebx : 0x6f322526 ,edi : 0x62ec9ab6
+  10006b:   83 ec 10                              subl $0x10,%esp
+eip : 0x0010006e
+eax : 0x0000007f ,esp : 0x00007b98
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
 zf : 0
-stack : 0x6f322526
-stack : 0x4aedf8df
-stack : 0x62ec9ab6
-stack : 0x00007bf8
-stack : 0xfffffff0
+cf : 0
 stack : 0x00000000
 stack : 0x00000000
 stack : 0x00000000
-  10006c:   51                                    pushl %ecx
-eip : 0x0010006d
-eax : 0x0e218039 ,esp : 0x00007bc8
-ecx : 0x00007bf0 ,ebp : 0x00007bd8
-edx : 0x1a29e27f ,esi : 0x4aedf8df
-ebx : 0x6f322526 ,edi : 0x62ec9ab6
+stack : 0x00000000
+stack : 0x00007bd8
+stack : 0x00100199
+stack : 0x00007bce
+stack : 0x00000008
+  10006e:   8b 45 0c                              movl 0xc(%ebp),%eax
+eip : 0x00100071
+eax : 0x00000008 ,esp : 0x00007b98
+ecx : 0x00007bce ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
 zf : 0
-stack : 0x00007bf0
-stack : 0x6f322526
-stack : 0x4aedf8df
-stack : 0x62ec9ab6
-stack : 0x00007bf8
-stack : 0xfffffff0
+cf : 0
 stack : 0x00000000
 stack : 0x00000000
-  10006d:   83 ec 18                              subl $0x18,%esp
-eip : 0x00100070
-eax : 0x0e218039 ,esp : 0x00007bb0
-ecx : 0x00007bf0 ,ebp : 0x00007bd8
-edx : 0x1a29e27f ,esi : 0x4aedf8df
-ebx : 0x6f322526 ,edi : 0x62ec9ab6
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bd8
+stack : 0x00100199
+stack : 0x00007bce
+stack : 0x00000008
+  100071:   89 c1                                 movl %eax,%ecx
+eip : 0x00100073
+eax : 0x00000008 ,esp : 0x00007b98
+ecx : 0x00000008 ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
 zf : 0
+cf : 0
 stack : 0x00000000
 stack : 0x00000000
 stack : 0x00000000
 stack : 0x00000000
+stack : 0x00007bd8
+stack : 0x00100199
+stack : 0x00007bce
+stack : 0x00000008
+  100073:   83 e1 07                              andl $0x7,%ecx
+eip : 0x00100076
+eax : 0x00000008 ,esp : 0x00007b98
+ecx : 0x00000000 ,ebp : 0x00007ba8
+edx : 0x00000000 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 1
+cf : 0
 stack : 0x00000000
 stack : 0x00000000
-stack : 0x00007bf0
-stack : 0x6f322526
-  100070:   31 c9                                 xorl %ecx,%ecx
-eip : 0x00100072
-eax : 0x0e218039 ,esp : 0x00007bb0
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x1a29e27f ,esi : 0x4aedf8df
-ebx : 0x6f322526 ,edi : 0x62ec9ab6
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bd8
+stack : 0x00100199
+stack : 0x00007bce
+stack : 0x00000008
+  100076:   ba 01 00 00 00                        movl $0x1,%edx
+eip : 0x0010007b
+eax : 0x00000008 ,esp : 0x00007b98
+ecx : 0x00000000 ,ebp : 0x00007ba8
+edx : 0x00000001 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 1
+cf : 0
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00000000
+stack : 0x00007bd8
+stack : 0x00100199
+stack : 0x00007bce
+stack : 0x00000008
+  10007b:   d3 e2                                 shll %cl,%edx
+eip : 0x0010007d
+eax : 0x00000008 ,esp : 0x00007b98
+ecx : 0x00000000 ,ebp : 0x00007ba8
+edx : 0x00000001 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
 zf : 0
+cf : 0
 stack : 0x00000000
 stack : 0x00000000
 stack : 0x00000000
 stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00007bf0
-stack : 0x6f322526
-  100072:   66 90                                 nop
-eip : 0x00100074
-eax : 0x0e218039 ,esp : 0x00007bb0
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x1a29e27f ,esi : 0x4aedf8df
-ebx : 0x6f322526 ,edi : 0x62ec9ab6
-zf : 0
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00007bf0
-stack : 0x6f322526
-  100074:   8b b1 e0 02 10 00                     movl 0x1002e0(%ecx),%esi
-eip : 0x0010007a
-eax : 0x0e218039 ,esp : 0x00007bb0
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x1a29e27f ,esi : 0x00000000
-ebx : 0x6f322526 ,edi : 0x62ec9ab6
-zf : 0
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00007bf0
-stack : 0x6f322526
-  10007a:   8b b9 e4 02 10 00                     movl 0x1002e4(%ecx),%edi
+stack : 0x00007bd8
+stack : 0x00100199
+stack : 0x00007bce
+stack : 0x00000008
+  10007d:   c1 f8 03                              sarl $0x3,%eax
 eip : 0x00100080
-eax : 0x0e218039 ,esp : 0x00007bb0
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x1a29e27f ,esi : 0x00000000
-ebx : 0x6f322526 ,edi : 0x00000000
+eax : 0x00000001 ,esp : 0x00007b98
+ecx : 0x00000000 ,ebp : 0x00007ba8
+edx : 0x00000001 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
 zf : 0
+cf : 0
 stack : 0x00000000
 stack : 0x00000000
 stack : 0x00000000
 stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00007bf0
-stack : 0x6f322526
-  100080:   31 db                                 xorl %ebx,%ebx
-eip : 0x00100082
-eax : 0x0e218039 ,esp : 0x00007bb0
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x1a29e27f ,esi : 0x00000000
-ebx : 0x00000000 ,edi : 0x00000000
+stack : 0x00007bd8
+stack : 0x00100199
+stack : 0x00007bce
+stack : 0x00000008
+  100080:   03 45 08                              addl 0x8(%ebp),%eax
+eip : 0x00100083
+eax : 0x00007bcf ,esp : 0x00007b98
+ecx : 0x00000000 ,ebp : 0x00007ba8
+edx : 0x00000001 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
 zf : 0
+cf : 0
 stack : 0x00000000
 stack : 0x00000000
 stack : 0x00000000
 stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00007bf0
-stack : 0x6f322526
-  100082:   66 90                                 nop
-eip : 0x00100084
-eax : 0x0e218039 ,esp : 0x00007bb0
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x1a29e27f ,esi : 0x00000000
-ebx : 0x00000000 ,edi : 0x00000000
+stack : 0x00007bd8
+stack : 0x00100199
+stack : 0x00007bce
+stack : 0x00000008
+  100083:   89 45 fc                              movl %eax,-0x4(%ebp)
+eip : 0x00100086
+eax : 0x00007bcf ,esp : 0x00007b98
+ecx : 0x00000000 ,ebp : 0x00007ba8
+edx : 0x00000001 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
 zf : 0
+cf : 0
 stack : 0x00000000
 stack : 0x00000000
 stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00007bf0
-stack : 0x6f322526
-  100084:   83 ec 0c                              subl $0xc,%esp
-eip : 0x00100087
-eax : 0x0e218039 ,esp : 0x00007ba4
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x1a29e27f ,esi : 0x00000000
-ebx : 0x00000000 ,edi : 0x00000000
+stack : 0x00007bcf
+stack : 0x00007bd8
+stack : 0x00100199
+stack : 0x00007bce
+stack : 0x00000008
+  100086:   80 7d 10 00                           cmpb $0x0,0x10(%ebp)
+eip : 0x0010008a
+eax : 0x00007bcf ,esp : 0x00007b98
+ecx : 0x00000000 ,ebp : 0x00007ba8
+edx : 0x00000001 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
 zf : 0
+cf : 0
 stack : 0x00000000
 stack : 0x00000000
 stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  100087:   89 f0                                 movl %esi,%eax
-eip : 0x00100089
-eax : 0x00000000 ,esp : 0x00007ba4
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x1a29e27f ,esi : 0x00000000
-ebx : 0x00000000 ,edi : 0x00000000
+stack : 0x00007bcf
+stack : 0x00007bd8
+stack : 0x00100199
+stack : 0x00007bce
+stack : 0x00000008
+  10008a:   8b 45 fc                              movl -0x4(%ebp),%eax
+eip : 0x0010008d
+eax : 0x00007bcf ,esp : 0x00007b98
+ecx : 0x00000000 ,ebp : 0x00007ba8
+edx : 0x00000001 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
 zf : 0
+cf : 0
 stack : 0x00000000
 stack : 0x00000000
 stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  100089:   89 fa                                 movl %edi,%edx
-eip : 0x0010008b
-eax : 0x00000000 ,esp : 0x00007ba4
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000000 ,edi : 0x00000000
+stack : 0x00007bcf
+stack : 0x00007bd8
+stack : 0x00100199
+stack : 0x00007bce
+stack : 0x00000008
+  10008d:   74 09                                 je *$0x9
+eip : 0x0010008f
+eax : 0x00007bcf ,esp : 0x00007b98
+ecx : 0x00000000 ,ebp : 0x00007ba8
+edx : 0x00000001 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
 zf : 0
+cf : 0
 stack : 0x00000000
 stack : 0x00000000
 stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  10008b:   03 83 e0 02 10 00                     addl 0x1002e0(%ebx),%eax
-eip : 0x00100091
-eax : 0x00000000 ,esp : 0x00007ba4
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000000 ,edi : 0x00000000
-zf : 0
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  100091:   13 93 e4 02 10 00                     adcl 0x1002e4(%ebx),%edx
+stack : 0x00007bcf
+stack : 0x00007bd8
+stack : 0x00100199
+stack : 0x00007bce
+stack : 0x00000008
+  10008f:   0a 0a 10 8b 45 fc 88 10 c9               invalid opcode
 eip : 0x00100097
-eax : 0x00000000 ,esp : 0x00007ba4
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000000 ,edi : 0x00000000
-zf : 1
+eax : 0x00007bcf ,esp : 0x00007b98
+ecx : 0x00000000 ,ebp : 0x00007ba8
+edx : 0x00000001 ,esi : 0x34a6acae
+ebx : 0x00007bce ,edi : 0x0d3507ad
+zf : 0
+cf : 0
 stack : 0x00000000
 stack : 0x00000000
 stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  100097:   89 55 e4                              movl %edx,-0x1c(%ebp)
-eip : 0x0010009a
-eax : 0x00000000 ,esp : 0x00007ba4
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000000 ,edi : 0x00000000
-zf : 1
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  10009a:   33 84 cb e0 00 10 00                  xorl 0x1000e0(%ebx,%ecx,8),%eax
-eip : 0x001000a1
-eax : 0x00000000 ,esp : 0x00007ba4
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000000 ,edi : 0x00000000
-zf : 1
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  1000a1:   8b 55 e4                              movl -0x1c(%ebp),%edx
-eip : 0x001000a4
-eax : 0x00000000 ,esp : 0x00007ba4
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000000 ,edi : 0x00000000
-zf : 1
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  1000a4:   33 94 cb e4 00 10 00                  xorl 0x1000e4(%ebx,%ecx,8),%edx
-eip : 0x001000ab
-eax : 0x00000000 ,esp : 0x00007ba4
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000000 ,edi : 0x00000000
-zf : 1
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  1000ab:   89 4d e0                              movl %ecx,-0x20(%ebp)
-eip : 0x001000ae
-eax : 0x00000000 ,esp : 0x00007ba4
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000000 ,edi : 0x00000000
-zf : 1
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  1000ae:   09 d0                                 orl %edx,%eax
-eip : 0x001000b0
-eax : 0x00000000 ,esp : 0x00007ba4
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000000 ,edi : 0x00000000
-zf : 1
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  1000b0:   0f 94 c0                              orl %edx,%eax
-eip : 0x001000b3
-eax : 0x00000001 ,esp : 0x00007ba4
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000000 ,edi : 0x00000000
-zf : 1
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  1000b3:   0f b6 c0                              movzxl %eax,%eax
-eip : 0x001000b6
-eax : 0x00000001 ,esp : 0x00007ba4
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000000 ,edi : 0x00000000
-zf : 1
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  1000b6:   50                                    pushl %eax
-eip : 0x001000b7
-eax : 0x00000001 ,esp : 0x00007ba0
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000000 ,edi : 0x00000000
-zf : 1
-stack : 0x00000001
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  1000b7:   e8 70 ff ff ff                        call 10002c
-eip : 0x0010002c
-eax : 0x00000001 ,esp : 0x00007b9c
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000000 ,edi : 0x00000000
-zf : 1
-stack : 0x001000bc
-stack : 0x00000001
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  10002c:   55                                    pushl %ebp
-eip : 0x0010002d
-eax : 0x00000001 ,esp : 0x00007b98
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000000 ,edi : 0x00000000
-zf : 1
+stack : 0x00007bcf
 stack : 0x00007bd8
-stack : 0x001000bc
-stack : 0x00000001
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  10002d:   89 e5                                 movl %esp,%ebp
-eip : 0x0010002f
-eax : 0x00000001 ,esp : 0x00007b98
-ecx : 0x00000000 ,ebp : 0x00007b98
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000000 ,edi : 0x00000000
-zf : 1
-stack : 0x00007bd8
-stack : 0x001000bc
-stack : 0x00000001
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  10002f:   83 ec 08                              subl $0x8,%esp
-eip : 0x00100032
-eax : 0x00000001 ,esp : 0x00007b90
-ecx : 0x00000000 ,ebp : 0x00007b98
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000000 ,edi : 0x00000000
-zf : 1
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00007bd8
-stack : 0x001000bc
-stack : 0x00000001
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  100032:   8b 45 08                              movl 0x8(%ebp),%eax
-eip : 0x00100035
-eax : 0x00000001 ,esp : 0x00007b90
-ecx : 0x00000000 ,ebp : 0x00007b98
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000000 ,edi : 0x00000000
-zf : 1
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00007bd8
-stack : 0x001000bc
-stack : 0x00000001
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  100035:   85 c0                                 testl %eax,%eax
-eip : 0x00100037
-eax : 0x00000001 ,esp : 0x00007b90
-ecx : 0x00000000 ,ebp : 0x00007b98
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000000 ,edi : 0x00000000
-zf : 0
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00007bd8
-stack : 0x001000bc
-stack : 0x00000001
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  100037:   74 02                                 testl %eax,%eax
-eip : 0x00100039
-eax : 0x00000001 ,esp : 0x00007b90
-ecx : 0x00000000 ,ebp : 0x00007b98
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000000 ,edi : 0x00000000
-zf : 0
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00007bd8
-stack : 0x001000bc
-stack : 0x00000001
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  100039:   c9                                    leave
-eip : 0x0010003a
-eax : 0x00000001 ,esp : 0x00007b9c
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000000 ,edi : 0x00000000
-zf : 0
-stack : 0x001000bc
-stack : 0x00000001
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  10003a:   c3                                    ret
-eip : 0x001000bc
-eax : 0x00000001 ,esp : 0x00007ba0
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000000 ,edi : 0x00000000
-zf : 0
-stack : 0x00000001
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  1000bc:   83 c4 10                              addl $0x10,%esp
-eip : 0x001000bf
-eax : 0x00000001 ,esp : 0x00007bb0
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000000 ,edi : 0x00000000
-zf : 0
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00007bf0
-stack : 0x6f322526
-  1000bf:   83 c3 08                              addl $0x8,%ebx
-eip : 0x001000c2
-eax : 0x00000001 ,esp : 0x00007bb0
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000008 ,edi : 0x00000000
-zf : 0
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00007bf0
-stack : 0x6f322526
-  1000c2:   83 fb 40                              cmpl $0x40,%ebx
-eip : 0x001000c5
-eax : 0x00000001 ,esp : 0x00007bb0
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000008 ,edi : 0x00000000
-zf : 0
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00007bf0
-stack : 0x6f322526
-  1000c5:   8b 4d e0                              movl -0x20(%ebp),%ecx
-eip : 0x001000c8
-eax : 0x00000001 ,esp : 0x00007bb0
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000008 ,edi : 0x00000000
-zf : 0
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00007bf0
-stack : 0x6f322526
-  1000c8:   75 ba                                 movl -0x20(%ebp),%ecx
-eip : 0x00100084
-eax : 0x00000001 ,esp : 0x00007bb0
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000008 ,edi : 0x00000000
-zf : 0
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00007bf0
-stack : 0x6f322526
-  100084:   83 ec 0c                              subl $0xc,%esp
-eip : 0x00100087
-eax : 0x00000001 ,esp : 0x00007ba4
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000008 ,edi : 0x00000000
-zf : 0
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  100087:   89 f0                                 movl %esi,%eax
-eip : 0x00100089
-eax : 0x00000000 ,esp : 0x00007ba4
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000008 ,edi : 0x00000000
-zf : 0
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  100089:   89 fa                                 movl %edi,%edx
-eip : 0x0010008b
-eax : 0x00000000 ,esp : 0x00007ba4
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000008 ,edi : 0x00000000
-zf : 0
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  10008b:   03 83 e0 02 10 00                     addl 0x1002e0(%ebx),%eax
-eip : 0x00100091
-eax : 0x00000001 ,esp : 0x00007ba4
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000008 ,edi : 0x00000000
-zf : 0
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  100091:   13 93 e4 02 10 00                     adcl 0x1002e4(%ebx),%edx
-eip : 0x00100097
-eax : 0x00000001 ,esp : 0x00007ba4
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000008 ,edi : 0x00000000
-zf : 1
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  100097:   89 55 e4                              movl %edx,-0x1c(%ebp)
-eip : 0x0010009a
-eax : 0x00000001 ,esp : 0x00007ba4
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000008 ,edi : 0x00000000
-zf : 1
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  10009a:   33 84 cb e0 00 10 00                  xorl 0x1000e0(%ebx,%ecx,8),%eax
-eip : 0x001000a1
-eax : 0x00000000 ,esp : 0x00007ba4
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000008 ,edi : 0x00000000
-zf : 1
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  1000a1:   8b 55 e4                              movl -0x1c(%ebp),%edx
-eip : 0x001000a4
-eax : 0x00000000 ,esp : 0x00007ba4
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000008 ,edi : 0x00000000
-zf : 1
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  1000a4:   33 94 cb e4 00 10 00                  xorl 0x1000e4(%ebx,%ecx,8),%edx
-eip : 0x001000ab
-eax : 0x00000000 ,esp : 0x00007ba4
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000008 ,edi : 0x00000000
-zf : 1
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  1000ab:   89 4d e0                              movl %ecx,-0x20(%ebp)
-eip : 0x001000ae
-eax : 0x00000000 ,esp : 0x00007ba4
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000008 ,edi : 0x00000000
-zf : 1
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  1000ae:   09 d0                                 orl %edx,%eax
-eip : 0x001000b0
-eax : 0x00000000 ,esp : 0x00007ba4
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000008 ,edi : 0x00000000
-zf : 1
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  1000b0:   0f 94 c0                              orl %edx,%eax
-eip : 0x001000b3
-eax : 0x00000001 ,esp : 0x00007ba4
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000008 ,edi : 0x00000000
-zf : 1
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  1000b3:   0f b6 c0                              movzxl %eax,%eax
-eip : 0x001000b6
-eax : 0x00000001 ,esp : 0x00007ba4
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000008 ,edi : 0x00000000
-zf : 1
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  1000b6:   50                                    pushl %eax
-eip : 0x001000b7
-eax : 0x00000001 ,esp : 0x00007ba0
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000008 ,edi : 0x00000000
-zf : 1
-stack : 0x00000001
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  1000b7:   e8 70 ff ff ff                        call 10002c
-eip : 0x0010002c
-eax : 0x00000001 ,esp : 0x00007b9c
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000008 ,edi : 0x00000000
-zf : 1
-stack : 0x001000bc
-stack : 0x00000001
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  10002c:   55                                    pushl %ebp
-eip : 0x0010002d
-eax : 0x00000001 ,esp : 0x00007b98
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000008 ,edi : 0x00000000
-zf : 1
-stack : 0x00007bd8
-stack : 0x001000bc
-stack : 0x00000001
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  10002d:   89 e5                                 movl %esp,%ebp
-eip : 0x0010002f
-eax : 0x00000001 ,esp : 0x00007b98
-ecx : 0x00000000 ,ebp : 0x00007b98
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000008 ,edi : 0x00000000
-zf : 1
-stack : 0x00007bd8
-stack : 0x001000bc
-stack : 0x00000001
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  10002f:   83 ec 08                              subl $0x8,%esp
-eip : 0x00100032
-eax : 0x00000001 ,esp : 0x00007b90
-ecx : 0x00000000 ,ebp : 0x00007b98
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000008 ,edi : 0x00000000
-zf : 1
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00007bd8
-stack : 0x001000bc
-stack : 0x00000001
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  100032:   8b 45 08                              movl 0x8(%ebp),%eax
-eip : 0x00100035
-eax : 0x00000001 ,esp : 0x00007b90
-ecx : 0x00000000 ,ebp : 0x00007b98
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000008 ,edi : 0x00000000
-zf : 1
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00007bd8
-stack : 0x001000bc
-stack : 0x00000001
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  100035:   85 c0                                 testl %eax,%eax
-eip : 0x00100037
-eax : 0x00000001 ,esp : 0x00007b90
-ecx : 0x00000000 ,ebp : 0x00007b98
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000008 ,edi : 0x00000000
-zf : 0
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00007bd8
-stack : 0x001000bc
-stack : 0x00000001
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  100037:   74 02                                 testl %eax,%eax
-eip : 0x00100039
-eax : 0x00000001 ,esp : 0x00007b90
-ecx : 0x00000000 ,ebp : 0x00007b98
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000008 ,edi : 0x00000000
-zf : 0
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00007bd8
-stack : 0x001000bc
-stack : 0x00000001
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  100039:   c9                                    leave
-eip : 0x0010003a
-eax : 0x00000001 ,esp : 0x00007b9c
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000008 ,edi : 0x00000000
-zf : 0
-stack : 0x001000bc
-stack : 0x00000001
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  10003a:   c3                                    ret
-eip : 0x001000bc
-eax : 0x00000001 ,esp : 0x00007ba0
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000008 ,edi : 0x00000000
-zf : 0
-stack : 0x00000001
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  1000bc:   83 c4 10                              addl $0x10,%esp
-eip : 0x001000bf
-eax : 0x00000001 ,esp : 0x00007bb0
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000008 ,edi : 0x00000000
-zf : 0
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00007bf0
-stack : 0x6f322526
-  1000bf:   83 c3 08                              addl $0x8,%ebx
-eip : 0x001000c2
-eax : 0x00000001 ,esp : 0x00007bb0
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000010 ,edi : 0x00000000
-zf : 0
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00007bf0
-stack : 0x6f322526
-  1000c2:   83 fb 40                              cmpl $0x40,%ebx
-eip : 0x001000c5
-eax : 0x00000001 ,esp : 0x00007bb0
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000010 ,edi : 0x00000000
-zf : 0
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00007bf0
-stack : 0x6f322526
-  1000c5:   8b 4d e0                              movl -0x20(%ebp),%ecx
-eip : 0x001000c8
-eax : 0x00000001 ,esp : 0x00007bb0
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000010 ,edi : 0x00000000
-zf : 0
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00007bf0
-stack : 0x6f322526
-  1000c8:   75 ba                                 movl -0x20(%ebp),%ecx
-eip : 0x00100084
-eax : 0x00000001 ,esp : 0x00007bb0
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000010 ,edi : 0x00000000
-zf : 0
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00007bf0
-stack : 0x6f322526
-  100084:   83 ec 0c                              subl $0xc,%esp
-eip : 0x00100087
-eax : 0x00000001 ,esp : 0x00007ba4
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000010 ,edi : 0x00000000
-zf : 0
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  100087:   89 f0                                 movl %esi,%eax
-eip : 0x00100089
-eax : 0x00000000 ,esp : 0x00007ba4
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000010 ,edi : 0x00000000
-zf : 0
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  100089:   89 fa                                 movl %edi,%edx
-eip : 0x0010008b
-eax : 0x00000000 ,esp : 0x00007ba4
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000010 ,edi : 0x00000000
-zf : 0
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  10008b:   03 83 e0 02 10 00                     addl 0x1002e0(%ebx),%eax
-eip : 0x00100091
-eax : 0x00000002 ,esp : 0x00007ba4
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000010 ,edi : 0x00000000
-zf : 0
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  100091:   13 93 e4 02 10 00                     adcl 0x1002e4(%ebx),%edx
-eip : 0x00100097
-eax : 0x00000002 ,esp : 0x00007ba4
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000010 ,edi : 0x00000000
-zf : 1
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  100097:   89 55 e4                              movl %edx,-0x1c(%ebp)
-eip : 0x0010009a
-eax : 0x00000002 ,esp : 0x00007ba4
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000010 ,edi : 0x00000000
-zf : 1
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  10009a:   33 84 cb e0 00 10 00                  xorl 0x1000e0(%ebx,%ecx,8),%eax
-eip : 0x001000a1
-eax : 0x00000000 ,esp : 0x00007ba4
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000010 ,edi : 0x00000000
-zf : 1
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  1000a1:   8b 55 e4                              movl -0x1c(%ebp),%edx
-eip : 0x001000a4
-eax : 0x00000000 ,esp : 0x00007ba4
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000010 ,edi : 0x00000000
-zf : 1
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  1000a4:   33 94 cb e4 00 10 00                  xorl 0x1000e4(%ebx,%ecx,8),%edx
-eip : 0x001000ab
-eax : 0x00000000 ,esp : 0x00007ba4
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000010 ,edi : 0x00000000
-zf : 1
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  1000ab:   89 4d e0                              movl %ecx,-0x20(%ebp)
-eip : 0x001000ae
-eax : 0x00000000 ,esp : 0x00007ba4
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000010 ,edi : 0x00000000
-zf : 1
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  1000ae:   09 d0                                 orl %edx,%eax
-eip : 0x001000b0
-eax : 0x00000000 ,esp : 0x00007ba4
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000010 ,edi : 0x00000000
-zf : 1
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  1000b0:   0f 94 c0                              orl %edx,%eax
-eip : 0x001000b3
-eax : 0x00000001 ,esp : 0x00007ba4
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000010 ,edi : 0x00000000
-zf : 1
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  1000b3:   0f b6 c0                              movzxl %eax,%eax
-eip : 0x001000b6
-eax : 0x00000001 ,esp : 0x00007ba4
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000010 ,edi : 0x00000000
-zf : 1
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  1000b6:   50                                    pushl %eax
-eip : 0x001000b7
-eax : 0x00000001 ,esp : 0x00007ba0
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000010 ,edi : 0x00000000
-zf : 1
-stack : 0x00000001
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  1000b7:   e8 70 ff ff ff                        call 10002c
-eip : 0x0010002c
-eax : 0x00000001 ,esp : 0x00007b9c
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000010 ,edi : 0x00000000
-zf : 1
-stack : 0x001000bc
-stack : 0x00000001
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  10002c:   55                                    pushl %ebp
-eip : 0x0010002d
-eax : 0x00000001 ,esp : 0x00007b98
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000010 ,edi : 0x00000000
-zf : 1
-stack : 0x00007bd8
-stack : 0x001000bc
-stack : 0x00000001
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  10002d:   89 e5                                 movl %esp,%ebp
-eip : 0x0010002f
-eax : 0x00000001 ,esp : 0x00007b98
-ecx : 0x00000000 ,ebp : 0x00007b98
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000010 ,edi : 0x00000000
-zf : 1
-stack : 0x00007bd8
-stack : 0x001000bc
-stack : 0x00000001
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  10002f:   83 ec 08                              subl $0x8,%esp
-eip : 0x00100032
-eax : 0x00000001 ,esp : 0x00007b90
-ecx : 0x00000000 ,ebp : 0x00007b98
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000010 ,edi : 0x00000000
-zf : 1
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00007bd8
-stack : 0x001000bc
-stack : 0x00000001
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  100032:   8b 45 08                              movl 0x8(%ebp),%eax
-eip : 0x00100035
-eax : 0x00000001 ,esp : 0x00007b90
-ecx : 0x00000000 ,ebp : 0x00007b98
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000010 ,edi : 0x00000000
-zf : 1
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00007bd8
-stack : 0x001000bc
-stack : 0x00000001
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  100035:   85 c0                                 testl %eax,%eax
-eip : 0x00100037
-eax : 0x00000001 ,esp : 0x00007b90
-ecx : 0x00000000 ,ebp : 0x00007b98
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000010 ,edi : 0x00000000
-zf : 0
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00007bd8
-stack : 0x001000bc
-stack : 0x00000001
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  100037:   74 02                                 testl %eax,%eax
-eip : 0x00100039
-eax : 0x00000001 ,esp : 0x00007b90
-ecx : 0x00000000 ,ebp : 0x00007b98
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000010 ,edi : 0x00000000
-zf : 0
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00007bd8
-stack : 0x001000bc
-stack : 0x00000001
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  100039:   c9                                    leave
-eip : 0x0010003a
-eax : 0x00000001 ,esp : 0x00007b9c
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000010 ,edi : 0x00000000
-zf : 0
-stack : 0x001000bc
-stack : 0x00000001
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  10003a:   c3                                    ret
-eip : 0x001000bc
-eax : 0x00000001 ,esp : 0x00007ba0
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000010 ,edi : 0x00000000
-zf : 0
-stack : 0x00000001
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  1000bc:   83 c4 10                              addl $0x10,%esp
-eip : 0x001000bf
-eax : 0x00000001 ,esp : 0x00007bb0
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000010 ,edi : 0x00000000
-zf : 0
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00007bf0
-stack : 0x6f322526
-  1000bf:   83 c3 08                              addl $0x8,%ebx
-eip : 0x001000c2
-eax : 0x00000001 ,esp : 0x00007bb0
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000018 ,edi : 0x00000000
-zf : 0
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00007bf0
-stack : 0x6f322526
-  1000c2:   83 fb 40                              cmpl $0x40,%ebx
-eip : 0x001000c5
-eax : 0x00000001 ,esp : 0x00007bb0
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000018 ,edi : 0x00000000
-zf : 0
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00007bf0
-stack : 0x6f322526
-  1000c5:   8b 4d e0                              movl -0x20(%ebp),%ecx
-eip : 0x001000c8
-eax : 0x00000001 ,esp : 0x00007bb0
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000018 ,edi : 0x00000000
-zf : 0
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00007bf0
-stack : 0x6f322526
-  1000c8:   75 ba                                 movl -0x20(%ebp),%ecx
-eip : 0x00100084
-eax : 0x00000001 ,esp : 0x00007bb0
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000018 ,edi : 0x00000000
-zf : 0
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00007bf0
-stack : 0x6f322526
-  100084:   83 ec 0c                              subl $0xc,%esp
-eip : 0x00100087
-eax : 0x00000001 ,esp : 0x00007ba4
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000018 ,edi : 0x00000000
-zf : 0
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  100087:   89 f0                                 movl %esi,%eax
-eip : 0x00100089
-eax : 0x00000000 ,esp : 0x00007ba4
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000018 ,edi : 0x00000000
-zf : 0
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  100089:   89 fa                                 movl %edi,%edx
-eip : 0x0010008b
-eax : 0x00000000 ,esp : 0x00007ba4
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000018 ,edi : 0x00000000
-zf : 0
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  10008b:   03 83 e0 02 10 00                     addl 0x1002e0(%ebx),%eax
-eip : 0x00100091
-eax : 0xffffffff ,esp : 0x00007ba4
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000018 ,edi : 0x00000000
-zf : 0
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  100091:   13 93 e4 02 10 00                     adcl 0x1002e4(%ebx),%edx
-eip : 0x00100097
-eax : 0xffffffff ,esp : 0x00007ba4
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x7fffffff ,esi : 0x00000000
-ebx : 0x00000018 ,edi : 0x00000000
-zf : 0
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  100097:   89 55 e4                              movl %edx,-0x1c(%ebp)
-eip : 0x0010009a
-eax : 0xffffffff ,esp : 0x00007ba4
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x7fffffff ,esi : 0x00000000
-ebx : 0x00000018 ,edi : 0x00000000
-zf : 0
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x7fffffff
-stack : 0x00000000
-  10009a:   33 84 cb e0 00 10 00                  xorl 0x1000e0(%ebx,%ecx,8),%eax
-eip : 0x001000a1
-eax : 0x00000000 ,esp : 0x00007ba4
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x7fffffff ,esi : 0x00000000
-ebx : 0x00000018 ,edi : 0x00000000
-zf : 0
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x7fffffff
-stack : 0x00000000
-  1000a1:   8b 55 e4                              movl -0x1c(%ebp),%edx
-eip : 0x001000a4
-eax : 0x00000000 ,esp : 0x00007ba4
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x7fffffff ,esi : 0x00000000
-ebx : 0x00000018 ,edi : 0x00000000
-zf : 0
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x7fffffff
-stack : 0x00000000
-  1000a4:   33 94 cb e4 00 10 00                  xorl 0x1000e4(%ebx,%ecx,8),%edx
-eip : 0x001000ab
-eax : 0x00000000 ,esp : 0x00007ba4
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000018 ,edi : 0x00000000
-zf : 0
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x7fffffff
-stack : 0x00000000
-  1000ab:   89 4d e0                              movl %ecx,-0x20(%ebp)
-eip : 0x001000ae
-eax : 0x00000000 ,esp : 0x00007ba4
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000018 ,edi : 0x00000000
-zf : 0
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x7fffffff
-stack : 0x00000000
-  1000ae:   09 d0                                 orl %edx,%eax
-eip : 0x001000b0
-eax : 0x00000000 ,esp : 0x00007ba4
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000018 ,edi : 0x00000000
-zf : 0
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x7fffffff
-stack : 0x00000000
-  1000b0:   0f 94 c0                              orl %edx,%eax
-eip : 0x001000b3
-eax : 0x00000000 ,esp : 0x00007ba4
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000018 ,edi : 0x00000000
-zf : 0
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x7fffffff
-stack : 0x00000000
-  1000b3:   0f b6 c0                              movzxl %eax,%eax
-eip : 0x001000b6
-eax : 0x00000000 ,esp : 0x00007ba4
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000018 ,edi : 0x00000000
-zf : 0
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x7fffffff
-stack : 0x00000000
-  1000b6:   50                                    pushl %eax
-eip : 0x001000b7
-eax : 0x00000000 ,esp : 0x00007ba0
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000018 ,edi : 0x00000000
-zf : 0
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x7fffffff
-  1000b7:   e8 70 ff ff ff                        call 10002c
-eip : 0x0010002c
-eax : 0x00000000 ,esp : 0x00007b9c
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000018 ,edi : 0x00000000
-zf : 0
-stack : 0x001000bc
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  10002c:   55                                    pushl %ebp
-eip : 0x0010002d
-eax : 0x00000000 ,esp : 0x00007b98
-ecx : 0x00000000 ,ebp : 0x00007bd8
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000018 ,edi : 0x00000000
-zf : 0
-stack : 0x00007bd8
-stack : 0x001000bc
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  10002d:   89 e5                                 movl %esp,%ebp
-eip : 0x0010002f
-eax : 0x00000000 ,esp : 0x00007b98
-ecx : 0x00000000 ,ebp : 0x00007b98
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000018 ,edi : 0x00000000
-zf : 0
-stack : 0x00007bd8
-stack : 0x001000bc
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  10002f:   83 ec 08                              subl $0x8,%esp
-eip : 0x00100032
-eax : 0x00000000 ,esp : 0x00007b90
-ecx : 0x00000000 ,ebp : 0x00007b98
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000018 ,edi : 0x00000000
-zf : 0
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00007bd8
-stack : 0x001000bc
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  100032:   8b 45 08                              movl 0x8(%ebp),%eax
-eip : 0x00100035
-eax : 0x00000000 ,esp : 0x00007b90
-ecx : 0x00000000 ,ebp : 0x00007b98
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000018 ,edi : 0x00000000
-zf : 0
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00007bd8
-stack : 0x001000bc
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  100035:   85 c0                                 testl %eax,%eax
-eip : 0x00100037
-eax : 0x00000000 ,esp : 0x00007b90
-ecx : 0x00000000 ,ebp : 0x00007b98
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000018 ,edi : 0x00000000
-zf : 1
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00007bd8
-stack : 0x001000bc
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  100037:   74 02                                 testl %eax,%eax
-eip : 0x0010003b
-eax : 0x00000000 ,esp : 0x00007b90
-ecx : 0x00000000 ,ebp : 0x00007b98
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000018 ,edi : 0x00000000
-zf : 1
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00007bd8
-stack : 0x001000bc
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  10003b:   83 ec 0c                              subl $0xc,%esp
-eip : 0x0010003e
-eax : 0x00000000 ,esp : 0x00007b84
-ecx : 0x00000000 ,ebp : 0x00007b98
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000018 ,edi : 0x00000000
-zf : 1
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00007bd8
-stack : 0x001000bc
-stack : 0x00000000
-  10003e:   6a 01                                 pushb $0x1
-eip : 0x00100040
-eax : 0x00000000 ,esp : 0x00007b80
-ecx : 0x00000000 ,ebp : 0x00007b98
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000018 ,edi : 0x00000000
-zf : 1
-stack : 0x00000001
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00007bd8
-stack : 0x001000bc
-  100040:   e8 cb ff ff ff                        call 100010
-eip : 0x00100010
-eax : 0x00000000 ,esp : 0x00007b7c
-ecx : 0x00000000 ,ebp : 0x00007b98
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000018 ,edi : 0x00000000
-zf : 1
-stack : 0x00100045
-stack : 0x00000001
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00007bd8
-  100010:   55                                    pushl %ebp
-eip : 0x00100011
-eax : 0x00000000 ,esp : 0x00007b78
-ecx : 0x00000000 ,ebp : 0x00007b98
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000018 ,edi : 0x00000000
-zf : 1
-stack : 0x00007b98
-stack : 0x00100045
-stack : 0x00000001
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  100011:   89 e5                                 movl %esp,%ebp
-eip : 0x00100013
-eax : 0x00000000 ,esp : 0x00007b78
-ecx : 0x00000000 ,ebp : 0x00007b78
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000018 ,edi : 0x00000000
-zf : 1
-stack : 0x00007b98
-stack : 0x00100045
-stack : 0x00000001
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  100013:   8b 45 08                              movl 0x8(%ebp),%eax
-eip : 0x00100016
-eax : 0x00000001 ,esp : 0x00007b78
-ecx : 0x00000000 ,ebp : 0x00007b78
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000018 ,edi : 0x00000000
-zf : 1
-stack : 0x00007b98
-stack : 0x00100045
-stack : 0x00000001
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-  100016:   d6                                    nemu trap
-eip : 0x00100017
-eax : 0x00000001 ,esp : 0x00007b78
-ecx : 0x00000000 ,ebp : 0x00007b78
-edx : 0x00000000 ,esi : 0x00000000
-ebx : 0x00000018 ,edi : 0x00000000
-zf : 1
-stack : 0x00007b98
-stack : 0x00100045
-stack : 0x00000001
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-stack : 0x00000000
-[1;31mnemu: HIT BAD TRAP[0m at eip = 0x00100016
+stack : 0x00100199
+stack : 0x00007bce
+stack : 0x00000008
+[1;31mnemu: ABORT[0m at eip = 0x00100097
 
-[1;34m[src/monitor/cpu-exec.c,24,monitor_statistic] total guest instructions = 135[0m
