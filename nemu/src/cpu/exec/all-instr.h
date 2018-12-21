@@ -54,3 +54,4 @@ make_EHelper(not);
 
 //if-else.c
 make_EHelper(jmp);
+make_EHelper(jle);

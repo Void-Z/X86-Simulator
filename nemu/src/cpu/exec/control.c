@@ -8,6 +8,13 @@ make_EHelper(jmp) {
   print_asm("jmp %x", decoding.jmp_eip);
 }
 
+make_EHelper(jle) {
+  if(cpu.ZF == 1 || cpu.SF != cpu.OF) {
+    rtl_j(decoding.jmp_eip);
+  }
+  print_asm("jle %x", decoding.jmp_eip);
+}
+
 make_EHelper(jcc) {
   // the target address is calculated at the decode stage
   uint32_t cc = decoding.opcode & 0xf;
