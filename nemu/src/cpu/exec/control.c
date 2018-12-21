@@ -20,6 +20,16 @@ make_EHelper(jle) {
   print_asm("jle %x", decoding.seq_eip + id_dest->val);
 }
 
+make_EHelper(jge) {
+  if(id_dest->width == 1) {
+    rtl_sign_extend8to32(&id_dest->val);
+  }
+  if(cpu.SF == cpu.OF) {
+    rtl_j(decoding.seq_eip + id_dest->val);
+  }
+  print_asm("jle %x", decoding.seq_eip + id_dest->val);
+}
+
 make_EHelper(jcc) {
   // the target address is calculated at the decode stage
   uint32_t cc = decoding.opcode & 0xf;

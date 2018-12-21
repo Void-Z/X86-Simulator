@@ -58,3 +58,6 @@ make_EHelper(jle);
 
 //mul-longlong.c
 make_EHelper(imul1);
+
+//max.c
+make_EHelper(jge);
