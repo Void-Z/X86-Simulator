@@ -106,7 +106,7 @@ make_EHelper(not) {
       id_dest->val = id_dest->val ^ 0xffff;
       break;
     }
-    case 3: {
+    case 4: {
       id_dest->val = id_dest->val ^ 0xffffffff;
       break;
     }
