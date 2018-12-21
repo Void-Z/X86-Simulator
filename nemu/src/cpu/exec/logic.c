@@ -97,7 +97,20 @@ make_EHelper(setcc) {
 }
 
 make_EHelper(not) {
-  id_dest->val = ~id_dest->val;
+  switch(id_dest->width) {
+    case 1: {
+      id_dest->val = id_dest->val ^ 0xff;
+      break;
+    }
+    case 2: {
+      id_dest->val = id_dest->val ^ 0xffff;
+      break;
+    }
+    case 3: {
+      id_dest->val = id_dest->val ^ 0xffffffff;
+      break;
+    }
+  }
   operand_write(id_dest,&id_dest->val);
   print_asm_template1(not);
 }
