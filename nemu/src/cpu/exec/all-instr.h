@@ -51,3 +51,6 @@ make_EHelper(setne);
 make_EHelper(dec);
 make_EHelper(sbb);
 make_EHelper(not);
+
+//if-else.c
+make_EHelper(jmp);
