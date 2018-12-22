@@ -76,3 +76,6 @@ make_EHelper(neg);
 
 //shuixianhua.c
 make_EHelper(mul);
+
+//recursion.c
+make_EHelper(call_rm);
