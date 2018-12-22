@@ -297,9 +297,10 @@ make_DHelper(J) {
   if(id_dest->width == 1 && (id_dest->simm & 0x80)) {
     id_dest->simm |= 0xffffff00;
   }
-  printf("J simm : 0x%08x\n",id_dest->simm);
+  
   // the target address can be computed in the decode stage
   decoding.jmp_eip = id_dest->simm + *eip;
+  printf("J simm : 0x%08x,jmp_eip:0x%08x\n",id_dest->simm,decoding.jmp_eip);
 }
 
 make_DHelper(push_SI) {
