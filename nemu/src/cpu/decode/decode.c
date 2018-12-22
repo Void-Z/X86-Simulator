@@ -132,8 +132,8 @@ make_DHelper(mov_E2G) {
 }
 
 make_DHelper(movzx_E2G) {
-  printf("0x%08x\n",decoding.opcode);
-  if(decoding.opcode == 0xb6) {
+  // printf("0x%08x\n",decoding.opcode);
+  if((decoding.opcode & 0xff) == 0xb6) {
     id_src->width = 1;
   } else {
     id_src->width = 2;
