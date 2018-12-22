@@ -61,3 +61,6 @@ make_EHelper(imul1);
 
 //max.c
 make_EHelper(jge);
+
+//improve
+make_EHelper(jcc);

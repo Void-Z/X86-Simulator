@@ -27,7 +27,7 @@ make_EHelper(jge) {
   if(cpu.SF == cpu.OF) {
     rtl_j(decoding.seq_eip + id_dest->val);
   }
-  print_asm("jle %x", decoding.seq_eip + id_dest->val);
+  print_asm("jge %x", decoding.seq_eip + id_dest->val);
 }
 
 make_EHelper(jcc) {
