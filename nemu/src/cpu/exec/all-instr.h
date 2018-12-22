@@ -64,3 +64,6 @@ make_EHelper(jge);
 
 //improve
 make_EHelper(jcc);
+
+//shift.c
+make_EHelper(shr);
