@@ -70,3 +70,6 @@ make_EHelper(jcc);
 
 //shift.c
 make_EHelper(shr);
+
+//matrix-mul.c
+make_EHelper(neg);

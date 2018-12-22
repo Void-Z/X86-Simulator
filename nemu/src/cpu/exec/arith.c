@@ -75,8 +75,13 @@ make_EHelper(dec) {
 }
 
 make_EHelper(neg) {
-  TODO();
-
+  if(id_dest->val == 0) {
+    cpu.CF = 0;
+  } else {
+    cpu.CF = 1;
+  }
+  id_dest->val = -id_dest->val;
+  operand_write(id_dest,&id_dest->val);
   print_asm_template1(neg);
 }
 
