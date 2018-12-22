@@ -157,8 +157,8 @@ static inline void rtl_sext(rtlreg_t* dest, const rtlreg_t* src1, int width) {
   // dest <- signext(src1[(width * 8 - 1) .. 0])
   switch(width) {
     case 4: *dest = *src1; break;
-    case 1: *dest = (*src1 & 0x80) == 1 ? *src1 | 0xffffff00 : *src1;break;
-    case 2: *dest = (*src1 & 0x8000) == 1 ? *src1 | 0xffff0000 : *src1;break;
+    case 1: *dest = (*src1 & 0x80)? *src1 | 0xffffff00 : *src1;break;
+    case 2: *dest = (*src1 & 0x8000)? *src1 | 0xffff0000 : *src1;break;
   }
   
 }
