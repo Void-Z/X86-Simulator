@@ -78,6 +78,7 @@ make_EHelper(cwtl) {
 }
 
 make_EHelper(movsx) {
+  printf("\n\n movsx src width:%d,sext-value:0x%08x\n",id_src->width,id_src->val);
   id_dest->width = decoding.is_operand_size_16 ? 2 : 4;
   rtl_sext(&t0, &id_src->val, id_src->width);
   operand_write(id_dest, &t0);
