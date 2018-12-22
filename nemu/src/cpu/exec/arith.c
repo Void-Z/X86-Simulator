@@ -30,19 +30,20 @@ make_EHelper(sub) {
 }
 
 make_EHelper(cmp) {
-  cpu.OF = 0;
-  if(((uint64_t)id_dest->val - (uint64_t)id_src->val) == id_dest->val - id_src->val) {
-    cpu.CF = 0;
-  } else {
-    cpu.CF = 1;
-  }
-  if(cpu.CF) {
-    uint64_t t = (uint64_t)id_dest->val - (uint64_t)id_src->val;
-    if((t & ((uint64_t)0x1 << 63)) == 0) {
-      cpu.OF = 1;
-    }
-  }
-  
+  // cpu.OF = 0;
+  // if(((uint64_t)id_dest->val - (uint64_t)id_src->val) == id_dest->val - id_src->val) {
+  //   cpu.CF = 0;
+  // } else {
+  //   cpu.CF = 1;
+  // }
+  // if(cpu.CF) {
+  //   uint64_t t = (uint64_t)id_dest->val - (uint64_t)id_src->val;
+  //   if((t & ((uint64_t)0x1 << 63)) == 0) {
+  //     cpu.OF = 1;
+  //   }
+  // }
+  cpu.CF = id_src->val > id_dest->val ? 1 : 0;
+  cpu.OF = ((id_src->val & (0x1 << (id_src->width * 8 - 1))) != (id_dest->val & (0x1 << (id_dest->width * 8 - 1)))) ? 1 : 0;
 
   id_dest->val -= id_src->val;
   rtl_update_ZFSF(&id_dest->val,id_dest->width);
