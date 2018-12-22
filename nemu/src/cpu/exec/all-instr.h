@@ -73,3 +73,6 @@ make_EHelper(shr);
 
 //matrix-mul.c
 make_EHelper(neg);
+
+//shuixianhua.c
+make_EHelper(mul);
