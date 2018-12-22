@@ -131,10 +131,12 @@ make_DHelper(mov_E2G) {
   decode_op_rm(eip, id_src, true, id_dest, false);
 }
 
-make_DHelper(movzx_E2G) {
+make_DHelper(movx_E2G) {
   // printf("0x%08x\n",decoding.opcode);
   if((decoding.opcode & 0xff) == 0xb6) {
     id_src->width = 1;
+  } else if((decoding.opcode & 0xff) == 0xbf) {
+    id_src->width = 2;
   } else {
     id_src->width = 2;
   }

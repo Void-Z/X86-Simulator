@@ -62,6 +62,9 @@ make_EHelper(imul1);
 //max.c
 make_EHelper(jge);
 
+//load-store.c
+make_EHelper(movsx);
+
 //improve
 make_EHelper(jcc);
 
