@@ -3,6 +3,13 @@
 void difftest_skip_ref();
 void difftest_skip_dut();
 
+uint32_t pio_read_l(ioaddr_t addr);
+uint32_t pio_read_w(ioaddr_t addr);
+uint32_t pio_read_b(ioaddr_t addr);
+void pio_write_l(ioaddr_t addr, uint32_t data);
+void pio_write_w(ioaddr_t addr, uint32_t data);
+void pio_write_b(ioaddr_t addr, uint32_t data);
+
 make_EHelper(lidt) {
   TODO();
 
@@ -42,6 +49,20 @@ make_EHelper(iret) {
 }
 
 make_EHelper(in) {
+  switch(id_src->width) {
+    case 1: {
+      id_src->val = pio_read_b(id_src->addr);
+      break;
+    }
+    case 2: {
+      id_src->val = pio_read_w(id_src->addr);
+      break;
+    }
+    case 4: {
+      id_src->val = pio_read_l(id_src->addr);
+      break;
+    }
+  }
   operand_write(id_dest,&id_src->val);
 
   print_asm_template2(in);
@@ -52,8 +73,21 @@ make_EHelper(in) {
 }
 
 make_EHelper(out) {
-  operand_write(id_dest,&id_src->val);
-
+  switch(id_dest->width) {
+    case 1: {
+      pio_write_b(id_dest->addr,id_src->val);
+      break;
+    }
+    case 2: {
+      pio_write_w(id_dest->addr,id_src->val);
+      break;
+    }
+    case 4: {
+      pio_write_l(id_dest->addr,id_src->val);
+      break;
+    }
+  }
+  
   print_asm_template2(out);
 
 #if defined(DIFF_TEST)
