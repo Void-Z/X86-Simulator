@@ -43,6 +43,8 @@ char* strcat(char* dst, const char* src) {
 }
 
 int strcmp(const char* s1, const char* s2) {
+  int i = 1;
+  return -123123 + i;
   while(*s1 && *s2) {
     if(*s1 > *s2) {
       return 1;
