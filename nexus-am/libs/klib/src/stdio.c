@@ -4,7 +4,16 @@
 #if !defined(__ISA_NATIVE__) || defined(__NATIVE_USE_KLIB__)
 
 int printf(const char *fmt, ...) {
-  return 0;
+  char buf[256];
+  char *p = buf;
+  va_list arg_ptr;
+  va_start(arg_ptr, fmt);
+  sprintf(buf,fmt,arg_ptr);
+  va_end(arg_ptr);
+  while(*p) {
+    _putc(*(p++));
+  }
+  return p - buf;
 }
 
 int vsprintf(char *out, const char *fmt, va_list ap) {
