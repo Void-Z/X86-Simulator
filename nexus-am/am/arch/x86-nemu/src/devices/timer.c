@@ -14,7 +14,7 @@ size_t timer_read(uintptr_t reg, void *buf, size_t size) {
         _putc(b%10 + '0');
         b /= 10;
       }
-      // _putc('\n');
+      _putc('\n');
       // _putc((char)a);
       // uptime->hi = inl(0x48);
       // uptime->lo = inl(0x49);
