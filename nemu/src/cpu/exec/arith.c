@@ -52,14 +52,14 @@ make_EHelper(cmp) {
   if((id_src->val & (0x1 << (id_src->width * 8 - 1))) == (id_dest->val & (0x1 << (id_dest->width * 8 - 1)))) {
     cpu.OF = 0;
   } else {
-    cpu.OF = (((id_dest->val - id_src->val) & (0x1 << (id_src->width * 8 - 1))) != (id_dest->val & (0x1 << (id_dest->width * 8 - 1)))) ? 1 : 0;  
+    cpu.OF = (((id_dest->val - id_src->val) & (0x1 << (id_dest->width * 8 - 1))) != (id_dest->val & (0x1 << (id_dest->width * 8 - 1)))) ? 1 : 0;  
   }
   
 
   id_dest->val -= id_src->val;
   
   printf("0x%08x\n",id_dest->val);
-  
+
   rtl_update_ZFSF(&id_dest->val,id_dest->width);
   print_asm_template2(cmp);
 }
