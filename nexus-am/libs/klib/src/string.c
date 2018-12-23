@@ -59,8 +59,7 @@ int strcmp(const char* s1, const char* s2) {
     return -1;
   } else {
     return 0;
-  }
-  
+  } 
 }
 
 int strncmp(const char* s1, const char* s2, size_t n) {
