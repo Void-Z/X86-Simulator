@@ -6,11 +6,12 @@ size_t timer_read(uintptr_t reg, void *buf, size_t size) {
   switch (reg) {
     case _DEVREG_TIMER_UPTIME: {
       _UptimeReg *uptime = (_UptimeReg *)buf;
-      uptime->lo = inl(0x48);
-      // if(!a) {
-      //   a = inl(0x48);
-      // }
-      // uint32_t b = inl(0x48) - a;
+      
+      if(!a) {
+        a = inl(0x48);
+      }
+      uint32_t b = inl(0x48) - a;
+      uptime->lo = b;
       // while(b) {
       //   _putc(b%10 + '0');
       //   b /= 10;
