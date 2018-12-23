@@ -18,10 +18,16 @@ make_EHelper(add) {
 }
 
 make_EHelper(sub) {
-  if(((uint64_t)id_dest->val - (uint64_t)id_src->val) == id_dest->val - id_src->val) {
-    cpu.CF = 0;
+  // if(((uint64_t)id_dest->val - (uint64_t)id_src->val) == id_dest->val - id_src->val) {
+  //   cpu.CF = 0;
+  // } else {
+  //   cpu.CF = 1;
+  // }
+   cpu.CF = id_src->val > id_dest->val ? 1 : 0;
+  if((id_src->val & (0x1 << (id_src->width * 8 - 1))) == (id_dest->val & (0x1 << (id_dest->width * 8 - 1)))) {
+    cpu.OF = 0;
   } else {
-    cpu.CF = 1;
+    cpu.OF = (((id_dest->val - id_src->val) & (0x1 << (id_dest->width * 8 - 1))) != (id_dest->val & (0x1 << (id_dest->width * 8 - 1)))) ? 1 : 0;  
   }
   id_dest->val -= id_src->val;
   operand_write(id_dest,&id_dest->val);
