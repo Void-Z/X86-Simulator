@@ -9,15 +9,16 @@ size_t timer_read(uintptr_t reg, void *buf, size_t size) {
       if(!a) {
         a = inl(0x48);
       }
-      // while(a) {
-      //   _putc(a%10 + '0');
-      //   a /= 10;
-      // }
+      uint32_t b = inl(0x48) - a;
+      while(b) {
+        _putc(b%10 + '0');
+        b /= 10;
+      }
       // _putc('\n');
       // _putc((char)a);
       // uptime->hi = inl(0x48);
       // uptime->lo = inl(0x49);
-      return inl(0x48) - a;
+      return b;
     }
     case _DEVREG_TIMER_DATE: {
       _RTCReg *rtc = (_RTCReg *)buf;
