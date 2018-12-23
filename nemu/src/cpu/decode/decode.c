@@ -139,8 +139,10 @@ make_DHelper(movx_E2G) {
     id_src->width = 2;
   } else if((decoding.opcode & 0xff) == 0xb7){
     id_src->width = 2; 
+  } else if((decoding.opcode & 0xff) == 0xbe){
+    id_src->width = 1; 
   } else {
-    id_src->width = 2; 
+    id_src->width = 2;
   }
   decode_op_rm(eip, id_src, true, id_dest, false);
 }
