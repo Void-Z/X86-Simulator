@@ -1,13 +1,17 @@
 #include <am.h>
 #include <x86.h>
 #include <amdev.h>
-int printf(const char *fmt, ...);
+
 size_t timer_read(uintptr_t reg, void *buf, size_t size) {
   switch (reg) {
     case _DEVREG_TIMER_UPTIME: {
       // _UptimeReg *uptime = (_UptimeReg *)buf;
       uint32_t a = inl(0x48);
-      printf("\n%d\n",(int)a);
+      while(a) {
+        _putc(a%10 + '0');
+        a /= 10;
+      }
+      _putc('\n');
       // _putc((char)a);
       // uptime->hi = inl(0x48);
       // uptime->lo = inl(0x49);
