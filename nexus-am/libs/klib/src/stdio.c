@@ -18,13 +18,13 @@ int sprintf(char *out, const char *fmt, ...) {
   va_start(arg_ptr,0);
   while(*fmt) {
     if(f) {
-      if(*fmt == 's') {
+      if(*fmt == 'd') {
         d = va_arg(arg_ptr,int);
         while(d) {
           *(out++) = d % 10 + '0';
           d /= 10;
         }
-      } else if(*fmt == 'd') {
+      } else if(*fmt == 's') {
         s = va_arg(arg_ptr,const char *);
         while(*s) {
           *(out++) = *(s++);
