@@ -9,6 +9,7 @@ int main() {
   for (int i = 0; i < 10; i ++) {
     print("Hello World!\n");
   }
-  printf("asd");
+  char *p = "asdsad";
+  printf("asd%s,,%d",p,1);
   return 0;
 }
