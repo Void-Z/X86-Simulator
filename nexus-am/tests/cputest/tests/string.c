@@ -12,12 +12,8 @@ char *s[] = {
 char str1[] = "Hello";
 char str[20];
 
-int test() {
-	return 1;
-}
-
 int main() {
-	nemu_assert(test() == 0);
+	nemu_assert(strcmp(s[0], s[2]) > 100);
 	nemu_assert(strcmp(s[0], s[2]) == 0);
 	nemu_assert(strcmp(s[0], s[1]) == -1);
 	nemu_assert(strcmp(s[0] + 1, s[1] + 1) == -1);
