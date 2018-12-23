@@ -45,8 +45,6 @@ make_EHelper(cmp) {
   if(id_src->width == 1 && id_dest->width != id_src->width) {
     rtl_sign_extend8to32(&id_src->val);
   }
-  printf("0x%08x\n",id_dest->val);
-  printf("0x%08x\n",id_src->val);
 
   cpu.CF = id_src->val > id_dest->val ? 1 : 0;
   if((id_src->val & (0x1 << (id_src->width * 8 - 1))) == (id_dest->val & (0x1 << (id_dest->width * 8 - 1)))) {
@@ -54,12 +52,7 @@ make_EHelper(cmp) {
   } else {
     cpu.OF = (((id_dest->val - id_src->val) & (0x1 << (id_dest->width * 8 - 1))) != (id_dest->val & (0x1 << (id_dest->width * 8 - 1)))) ? 1 : 0;  
   }
-  
-
   id_dest->val -= id_src->val;
-  
-  printf("0x%08x\n",id_dest->val);
-
   rtl_update_ZFSF(&id_dest->val,id_dest->width);
   print_asm_template2(cmp);
 }
