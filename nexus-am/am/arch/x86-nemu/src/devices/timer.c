@@ -9,7 +9,7 @@ size_t timer_read(uintptr_t reg, void *buf, size_t size) {
       
       uptime->hi = 0;
       uptime->lo = inl(0x48);
-      return sizeof(_UptimeReg);
+      return uptime->lo;
     }
     case _DEVREG_TIMER_DATE: {
       _RTCReg *rtc = (_RTCReg *)buf;
