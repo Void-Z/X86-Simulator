@@ -12,6 +12,35 @@ int vsprintf(char *out, const char *fmt, va_list ap) {
 }
 
 int sprintf(char *out, const char *fmt, ...) {
+  int f = 0,d;
+  const char * s;
+  va_list arg_ptr;
+  va_start(arg_ptr,0);
+  while(*fmt) {
+    if(f) {
+      if(*fmt == 's') {
+        d = va_arg(arg_ptr,int);
+        while(d) {
+          *(out++) = d % 10 + '0';
+          d /= 10;
+        }
+      } else if(*fmt == 'd') {
+        s = va_arg(arg_ptr,const char *);
+        while(*s) {
+          *(out++) = *(s++);
+        }
+      }
+      f = 0;
+    } else {
+      if(*fmt == '%') {
+        f = 1;
+      } else {
+        *(out++) = *fmt;
+      }
+    }
+    ++fmt;
+  }
+  va_end(arg_ptr);
   return 0;
 }
 
