@@ -22,19 +22,6 @@ typedef struct {
           uint16_t _16;
           uint8_t _8[2];
         } gpr[8];
-        struct {
-          uint32_t CF :1;
-          uint32_t :1;
-          uint32_t PF:1;
-          uint32_t :1;
-          uint32_t AF:1;
-          uint32_t :1;
-          uint32_t ZF:1;
-          uint32_t SF:1;
-          uint32_t :3;
-          uint32_t OF:1;
-          uint32_t :20;
-        };
       };
       
 
@@ -44,12 +31,29 @@ typedef struct {
       * in PA2 able to directly access these registers.
       */
       struct {
-        rtlreg_t eax, ecx, edx, ebx, esp, ebp, esi, edi, EFLAGS;
+        rtlreg_t eax, ecx, edx, ebx, esp, ebp, esi, edi;
       };
   };
 
 
   vaddr_t eip;
+  union {
+    struct {
+      uint32_t CF :1;
+      uint32_t :1;
+      uint32_t PF:1;
+      uint32_t :1;
+      uint32_t AF:1;
+      uint32_t :1;
+      uint32_t ZF:1;
+      uint32_t SF:1;
+      uint32_t :3;
+      uint32_t OF:1;
+      uint32_t :20;
+    };
+    rtlreg_t EFLAGS;
+  };
+  
 
 } CPU_state;
 

@@ -9,6 +9,12 @@ static void (*ref_difftest_getregs)(void *c);
 static void (*ref_difftest_setregs)(const void *c);
 static void (*ref_difftest_exec)(uint64_t n);
 
+void difftest_memcpy_from_dut(paddr_t dest, void *src, size_t n);
+void difftest_getregs(void *r);
+void difftest_setregs(const void *r);
+void difftest_exec(uint64_t n);
+void difftest_init(void);
+
 static bool is_skip_ref;
 static bool is_skip_dut;
 
@@ -52,7 +58,7 @@ void init_difftest(char *ref_so_file, long img_size) {
 }
 
 void difftest_step(uint32_t eip) {
-  CPU_state ref_r;
+  CPU_state ref_r,dut_r;
 
   if (is_skip_dut) {
     is_skip_dut = false;
@@ -71,5 +77,8 @@ void difftest_step(uint32_t eip) {
 
   // TODO: Check the registers state with the reference design.
   // Set `nemu_state` to `NEMU_ABORT` if they are not the same.
-  TODO();
+  difftest_getregs(&dut_r);
+  if(memcmp(&ref_r,&dut_r,DIFFTEST_REG_SIZE) != 0) {
+    nemu_state = NEMU_ABORT;
+  }
 }
