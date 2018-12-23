@@ -80,5 +80,7 @@ void difftest_step(uint32_t eip) {
   difftest_getregs(&dut_r);
   if(memcmp(&ref_r,&dut_r,DIFFTEST_REG_SIZE) != 0) {
     nemu_state = NEMU_ABORT;
+  } else {
+    printf("0x%08x success!\n",eip);
   }
 }
