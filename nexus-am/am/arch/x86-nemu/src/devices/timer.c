@@ -1,12 +1,12 @@
 #include <am.h>
 #include <x86.h>
 #include <amdev.h>
-void* memcpy(void* out, const void* in, size_t n);
+int printf(const char *fmt, ...);
 size_t timer_read(uintptr_t reg, void *buf, size_t size) {
   switch (reg) {
     case _DEVREG_TIMER_UPTIME: {
       _UptimeReg *uptime = (_UptimeReg *)buf;
-      
+      printf("%d\n",inl(0x48));
       uptime->hi = inl(0x48);
       uptime->lo = inl(0x49);
       return uptime->lo;
