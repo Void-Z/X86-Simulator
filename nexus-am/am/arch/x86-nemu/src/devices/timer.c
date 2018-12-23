@@ -1,14 +1,15 @@
 #include <am.h>
 #include <x86.h>
 #include <amdev.h>
-
+static uint64_t t = 0;
 size_t timer_read(uintptr_t reg, void *buf, size_t size) {
   switch (reg) {
     case _DEVREG_TIMER_UPTIME: {
+      t += 1;
       _UptimeReg *uptime = (_UptimeReg *)buf;
-      uptime->hi = 0;
-      uptime->lo = 0;
-      return sizeof(_UptimeReg);
+      uptime->hi = t >> 32;
+      uptime->lo = t;
+      return t;
     }
     case _DEVREG_TIMER_DATE: {
       _RTCReg *rtc = (_RTCReg *)buf;
