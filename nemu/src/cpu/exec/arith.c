@@ -23,6 +23,9 @@ make_EHelper(sub) {
   // } else {
   //   cpu.CF = 1;
   // }
+  if(id_src->width == 1) {
+    rtl_sext(&id_src->val,&id_src->val,1);
+  }
    cpu.CF = id_src->val > id_dest->val ? 1 : 0;
   if((id_src->val & (0x1 << (id_src->width * 8 - 1))) == (id_dest->val & (0x1 << (id_dest->width * 8 - 1)))) {
     cpu.OF = 0;
