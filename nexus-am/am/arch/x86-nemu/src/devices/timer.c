@@ -1,17 +1,12 @@
 #include <am.h>
 #include <x86.h>
 #include <amdev.h>
-uint32_t a = 0;
+
 size_t timer_read(uintptr_t reg, void *buf, size_t size) {
   switch (reg) {
     case _DEVREG_TIMER_UPTIME: {
       _UptimeReg *uptime = (_UptimeReg *)buf;
-      
-      if(!a) {
-        a = inl(0x48);
-      }
-      uint32_t b = inl(0x48) - a;
-      uptime->lo = b;
+      uptime->lo = inl(0x48);
       // while(b) {
       //   _putc(b%10 + '0');
       //   b /= 10;
@@ -37,4 +32,5 @@ size_t timer_read(uintptr_t reg, void *buf, size_t size) {
 }
 
 void timer_init() {
+  outl(0x48,0x0);
 }
