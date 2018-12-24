@@ -86,9 +86,12 @@ make_EHelper(shl) {
 }
 
 make_EHelper(shr) {
+  printf("0x%08x >> %d = ",id_dest->val,id_src->val);
   for(t0 = 0;t0 < id_src->val;++t0) {
     id_dest->val = id_dest->val / 2;
+    printf("0x%08x, ",id_dest->val);
   }
+   printf("\n");
   operand_write(id_dest,&id_dest->val);
   rtl_update_ZFSF(&id_dest->val,id_dest->width);
   // unnecessary to update CF and OF in NEMU
