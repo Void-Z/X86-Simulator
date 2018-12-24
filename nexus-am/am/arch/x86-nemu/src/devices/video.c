@@ -24,7 +24,7 @@ size_t video_write(uintptr_t reg, void *buf, size_t size) {
       for(int x = ctl->x;x < ctl->w;++x) {
         for(int y = ctl->y;y < ctl->h;++y) {
           // outl(0x40000 + y * 400 + x,ctl->pixels[x - ctl->w + (y - ctl->h) * 400]);
-          fb[y * 400 + x] = ctl->pixels[x - ctl->w + (y - ctl->h) * 400];
+          // fb[y * 400 + x] = ctl->pixels[x - ctl->w + (y - ctl->h) * 400];
         }
       }
       // int i;
