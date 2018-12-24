@@ -53,6 +53,7 @@ make_EHelper(or) {
 }
 
 make_EHelper(sar) {
+  id_src->val %= 32;
   printf("0x%08x >> %d = ",id_dest->val,id_src->val);
   for(t0 = 0;t0 < id_src->val;++t0) {
     id_dest->val = (uint32_t)(((int)id_dest->val) >> 1);
@@ -71,6 +72,7 @@ make_EHelper(sar) {
 }
 
 make_EHelper(shl) {
+  id_src->val %= 32;
   for(t0 = 0;t0 < id_src->val;++t0) {
     id_dest->val = id_dest->val * 2;
   }
@@ -86,6 +88,7 @@ make_EHelper(shl) {
 }
 
 make_EHelper(shr) {
+  id_src->val %= 32;
   printf("0x%08x >> %d = ",id_dest->val,id_src->val);
   for(t0 = 0;t0 < id_src->val;++t0) {
     id_dest->val = id_dest->val / 2;
