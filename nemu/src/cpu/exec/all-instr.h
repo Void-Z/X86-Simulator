@@ -88,3 +88,5 @@ make_EHelper(div);
 
 make_EHelper(cwtl);
 make_EHelper(setcc);
+
+make_EHelper(rol);

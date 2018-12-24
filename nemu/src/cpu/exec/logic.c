@@ -107,3 +107,31 @@ make_EHelper(not) {
   operand_write(id_dest,&id_dest->val);
   print_asm_template1(not);
 }
+
+make_EHelper(rol) {
+  t0 = id_src->val;
+  while(t0) {
+    switch(id_dest->width) {
+      case 1:t1 = (id_dest->val & 0x80) >> 7;break;
+      case 2:t1 = (id_dest->val & 0x8000) >> 15;break;
+      case 4:t1 = (id_dest->val & 0x80000000) >> 31;break;
+    }
+    id_dest->val = id_dest->val * 2 + t1;
+    --t0;
+  }
+  if(id_src->val == 1) {
+    switch(id_dest->width) {
+      case 1:t1 = (id_dest->val & 0x80) >> 7;break;
+      case 2:t1 = (id_dest->val & 0x8000) >> 15;break;
+      case 4:t1 = (id_dest->val & 0x80000000) >> 31;break;
+    }
+    if(t1 != cpu.CF) {
+      cpu.OF = 1;
+    } else {
+      cpu.OF = 0;
+    }
+  }
+  operand_write(id_dest,&id_dest->val);
+
+  print_asm("rol %s,%s",id_src->str,id_dest->str);
+}
