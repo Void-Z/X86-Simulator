@@ -79,6 +79,17 @@ void difftest_step(uint32_t eip) {
   // Set `nemu_state` to `NEMU_ABORT` if they are not the same.
   difftest_getregs(&dut_r);
   if(memcmp(&ref_r,&dut_r,DIFFTEST_REG_SIZE) != 0) {
+    printflog("REF:\neip : 0x%08x\n",ref_r.eip);
+    printflog("eax : 0x%08x ,esp : 0x%08x\n",ref_r.eax,ref_r.esp);
+    printflog("ecx : 0x%08x ,ebp : 0x%08x\n",ref_r.ecx,ref_r.ebp);
+    printflog("edx : 0x%08x ,esi : 0x%08x\n",ref_r.edx,ref_r.esi);
+    printflog("ebx : 0x%08x ,edi : 0x%08x\n",ref_r.ebx,ref_r.edi);
+
+    printflog("DUT:\neip : 0x%08x\n",dut_r.eip);
+    printflog("eax : 0x%08x ,esp : 0x%08x\n",dut_r.eax,dut_r.esp);
+    printflog("ecx : 0x%08x ,ebp : 0x%08x\n",dut_r.ecx,dut_r.ebp);
+    printflog("edx : 0x%08x ,esi : 0x%08x\n",dut_r.edx,dut_r.esi);
+    printflog("ebx : 0x%08x ,edi : 0x%08x\n",dut_r.ebx,dut_r.edi);
     nemu_state = NEMU_ABORT;
   }
 }
