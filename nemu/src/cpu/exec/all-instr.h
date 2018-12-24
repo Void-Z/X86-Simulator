@@ -90,3 +90,5 @@ make_EHelper(cwtl);
 make_EHelper(setcc);
 
 make_EHelper(rol);
+
+make_EHelper(imul3);
