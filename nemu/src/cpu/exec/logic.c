@@ -54,7 +54,8 @@ make_EHelper(or) {
 
 make_EHelper(sar) {
   for(t0 = 0;t0 < id_src->val;++t0) {
-    id_dest->val = (uint32_t)((int)id_dest->val >> 1);
+    // if(id_dest->val == 0) break;
+    id_dest->val = (uint32_t)(((int)id_dest->val) >> 1);
   }
   if(id_dest->type == OP_TYPE_REG) {
     rtl_sr(id_dest->reg,&id_dest->val,id_dest->width);
