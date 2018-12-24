@@ -68,14 +68,12 @@ make_EHelper(cltd) {
 
 make_EHelper(cwtl) {
   if (decoding.is_operand_size_16) {
+    printf("1to2\n");
+    TODO();
+  } else {
     printf("2to4\n");
     rtl_lr(&id_dest->val,R_AX,2);
     rtl_sext(&id_dest->val,&id_dest->val,2);
-    rtl_sr(R_EAX,&id_dest->val,4);
-  } else {
-    printf("1to4\n");
-    rtl_lr(&id_dest->val,R_AL,1);
-    rtl_sext(&id_dest->val,&id_dest->val,1);
     rtl_sr(R_EAX,&id_dest->val,4);
   }
 
