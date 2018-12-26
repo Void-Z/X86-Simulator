@@ -53,7 +53,7 @@ typedef struct {
     };
     rtlreg_t EFLAGS;
   };
-  
+  rtlreg_t idtr,cs;
 
 } CPU_state;
 

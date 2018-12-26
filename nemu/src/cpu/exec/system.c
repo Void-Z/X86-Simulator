@@ -2,6 +2,7 @@
 
 void difftest_skip_ref();
 void difftest_skip_dut();
+void raise_intr(uint8_t NO, vaddr_t ret_add);
 
 uint32_t pio_read_l(ioaddr_t addr);
 uint32_t pio_read_w(ioaddr_t addr);
@@ -11,8 +12,7 @@ void pio_write_w(ioaddr_t addr, uint32_t data);
 void pio_write_b(ioaddr_t addr, uint32_t data);
 
 make_EHelper(lidt) {
-  TODO();
-
+  cpu.idtr = id_dest->addr;
   print_asm_template1(lidt);
 }
 
@@ -33,7 +33,10 @@ make_EHelper(mov_cr2r) {
 }
 
 make_EHelper(int) {
-  TODO();
+  rtl_push(&cpu.EFLAGS,4);
+  rtl_push(&cpu.cs,4);
+  rtl_push(&decoding.seq_eip,4);
+  raise_intr(id_dest->val,cpu.idtr);
 
   print_asm("int %s", id_dest->str);
 
