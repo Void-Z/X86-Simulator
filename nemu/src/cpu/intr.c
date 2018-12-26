@@ -7,6 +7,7 @@ void raise_intr(uint8_t NO, vaddr_t ret_addr) {
    */
   GateDesc idt;
   idt = (GateDesc)vaddr_read(ret_addr,NO);
+  printf("0x%08x 0x%08x\n",idt.offset_15_0,idt.offset_31_16);
   rtl_j((idt.offset_31_16 << 16) + idt.offset_15_0);
 }
 
