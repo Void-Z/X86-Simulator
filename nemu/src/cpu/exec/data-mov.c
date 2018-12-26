@@ -11,10 +11,13 @@ make_EHelper(push) {
 }
 
 make_EHelper(pushl) {
-  switch(id_dest->width) {
-    case 1: {
-      rtl_sign_extend8to32(&id_dest->val);
-    }
+  // switch(id_dest->width) {
+  //   case 1: {
+  //     rtl_sign_extend8to32(&id_dest->val);
+  //   }
+  // }
+  if(id_dest->width == 1) {
+    rtl_sext(&id_dest->val,&id_dest->val,id_dest->width);
   }
   rtl_push(&id_dest->val,4);
   // printf("0x%08x 0x%08x\n\n",id_dest->addr,id_dest->val);

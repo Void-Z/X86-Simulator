@@ -20,7 +20,7 @@ make_EHelper(and) {
   cpu.OF = 0;
   if(id_src->width == 1) {
     // id_src->val = (id_src->val & 0x80) == 0x80 ? id_src->val | 0xffffff00 : id_src->val;
-    rtl_sign_extend8to32(&id_src->val);
+    rtl_sext(&id_src->val,&id_src->val,id_src->width);
   }
   rtl_and(&id_dest->val,&id_dest->val,&id_src->val);
   operand_write(id_dest,&id_dest->val);
@@ -30,7 +30,7 @@ make_EHelper(and) {
 
 make_EHelper(xor) {
   if(id_src->width == 1) {
-    rtl_sign_extend8to32(&id_src->val);
+    rtl_sext(&id_src->val,&id_src->val,id_src->width);
   }
   id_dest->val = id_dest->val ^ id_src->val;
   operand_write(id_dest,&id_dest->val);
@@ -44,7 +44,7 @@ make_EHelper(or) {
   cpu.CF = 0;
   cpu.OF = 0;
   if(id_src->width == 1) {
-    rtl_sign_extend8to32(&id_src->val);
+    rtl_sext(&id_src->val,&id_src->val,id_src->width);
   }
   id_dest->val |= id_src->val;
   operand_write(id_dest,&id_dest->val);
@@ -60,11 +60,7 @@ make_EHelper(sar) {
     // printf("0x%08x, ",id_dest->val);
   }
   // printf("\n");
-  if(id_dest->type == OP_TYPE_REG) {
-    rtl_sr(id_dest->reg,&id_dest->val,id_dest->width);
-  } else {
-    rtl_sm(&id_dest->addr,&id_dest->val,id_dest->width);
-  }
+  operand_write(id_dest,&id_dest->val);
   rtl_update_ZFSF(&id_dest->val,id_dest->width);
   // unnecessary to update CF and OF in NEMU
 
@@ -76,11 +72,7 @@ make_EHelper(shl) {
   for(t0 = 0;t0 < id_src->val;++t0) {
     id_dest->val = id_dest->val * 2;
   }
-  if(id_dest->type == OP_TYPE_REG) {
-    rtl_sr(id_dest->reg,&id_dest->val,id_dest->width);
-  } else {
-    rtl_sm(&id_dest->addr,&id_dest->val,id_dest->width);
-  }
+  operand_write(id_dest,&id_dest->val);
   rtl_update_ZFSF(&id_dest->val,id_dest->width);
   // unnecessary to update CF and OF in NEMU
 

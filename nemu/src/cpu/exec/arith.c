@@ -8,11 +8,7 @@ make_EHelper(add) {
   }
   rtl_sext(&id_src->val,&id_src->val,id_src->width);
   rtl_add(&id_dest->val,&id_dest->val,&id_src->val);
-  if(id_dest->type == OP_TYPE_REG) {
-    rtl_sr(id_dest->reg,&id_dest->val,id_dest->width);
-  } else {
-    rtl_sm(&id_dest->addr,&id_dest->val,id_dest->width);
-  }
+  operand_write(id_dest,&id_dest->val);
   rtl_update_ZFSF(&id_dest->val,id_dest->width);
   print_asm_template2(add);
 }
@@ -26,7 +22,7 @@ make_EHelper(sub) {
   if(id_src->width == 1) {
     rtl_sext(&id_src->val,&id_src->val,1);
   }
-   cpu.CF = id_src->val > id_dest->val ? 1 : 0;
+  cpu.CF = id_src->val > id_dest->val ? 1 : 0;
   if((id_src->val & (0x1 << (id_src->width * 8 - 1))) == (id_dest->val & (0x1 << (id_dest->width * 8 - 1)))) {
     cpu.OF = 0;
   } else {
