@@ -33,10 +33,8 @@ make_EHelper(mov_cr2r) {
 }
 
 make_EHelper(int) {
-  rtl_push(&cpu.EFLAGS,4);
-  rtl_push(&cpu.cs,4);
-  rtl_push(&decoding.seq_eip,4);
-  raise_intr(id_dest->val,cpu.idtr);
+  
+  raise_intr(id_dest->val,decoding.seq_eip);
 
   print_asm("int %s", id_dest->str);
 
