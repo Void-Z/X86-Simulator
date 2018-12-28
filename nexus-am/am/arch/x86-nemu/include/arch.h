@@ -17,7 +17,7 @@ typedef uint32_t size_t;
 struct _Context {
   int       irq;
   struct _Protect *prot;
-  uintptr_t edi,esi,ebp,esp,ebx,edx,ecx,eax,eip,cs,eflags;
+  uintptr_t edi,esi,ebp,esp,ebx,edx,ecx,eax,eip,cs,eflags,err;
   
 };
 
