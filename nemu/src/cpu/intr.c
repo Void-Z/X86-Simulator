@@ -11,6 +11,7 @@ void raise_intr(uint8_t NO, vaddr_t ret_addr) {
   GateDesc idt;
   *(uint32_t *)&idt = vaddr_read(cpu.idtr + NO * 8,4);
   *((uint32_t *)&idt + 1) = vaddr_read(cpu.idtr + NO * 8 + 4,4);
+  printf("int addr : 0x%08x\n",(idt.offset_31_16 << 16) + idt.offset_15_0);
   rtl_j((idt.offset_31_16 << 16) + idt.offset_15_0);
 }
 
