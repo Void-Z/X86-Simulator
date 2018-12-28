@@ -33,13 +33,28 @@ int vsprintf(char *out, const char *fmt, va_list ap) {
         while(n--) {
           *(out++) = *(buf + n);
         }
+        f = 0;
       } else if(*fmt == 's') {
         s = va_arg(ap,const char *);
         while(*s) {
           *(out++) = *(s++);
         }
-      }
-      f = 0;
+        f = 0;
+      } else if(*fmt == 'x') {
+        d = va_arg(ap,int);
+        n = 0;
+        while(d) {
+          *(buf + n++) = d % 16 + '0';
+          d /= 16;
+        }
+        while(n--) {
+          *(out++) = *(buf + n);
+        }
+        f = 0;
+      } else if(*fmt >= '0' && *fmt <= '9') {
+
+      } 
+      
     } else {
       if(*fmt == '%') {
         f = 1;
