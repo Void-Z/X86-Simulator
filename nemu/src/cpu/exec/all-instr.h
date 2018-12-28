@@ -97,3 +97,4 @@ make_EHelper(lidt);
 make_EHelper(int);
 make_EHelper(pusha);
 make_EHelper(popa);
+make_EHelper(stos);

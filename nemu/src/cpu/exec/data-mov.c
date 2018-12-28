@@ -83,7 +83,11 @@ make_EHelper(cltd) {
   rtl_sr(2,&id_dest->val,4);
   print_asm(decoding.is_operand_size_16 ? "cwtl" : "cltd");
 }
-
+make_EHelper(stos) {
+  rtl_sm(&cpu.edi,&cpu.eax,4);
+  --cpu.edi;
+  print_asm("stos");
+}
 make_EHelper(cwtl) {
   if (decoding.is_operand_size_16) {
     printf("1to2\n");
