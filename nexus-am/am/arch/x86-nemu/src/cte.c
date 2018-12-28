@@ -9,19 +9,19 @@ void vecnull();
 
 _Context* irq_handle(_Context *tf) {
   _Context *next = tf;
-  printf("cs:%d\n",tf->cs);
-  printf("eax:%d\n",tf->eax);
-  printf("ebp:%d\n",tf->ebp);
-  printf("ebx:%d\n",tf->ebx);
-  printf("ecx:%d\n",tf->ecx);
-  printf("edi:%d\n",tf->edi);
-  printf("edx:%d\n",tf->edx);
-  printf("eflags:%d\n",tf->eflags);
-  printf("eip:%d\n",tf->eip);
-  printf("esi:%d\n",tf->esi);
-  printf("esp:%d\n",tf->esp);
-  printf("irq:%d\n",tf->irq);
-  printf("prot:%d\n",tf->prot);
+  printf("cs:0x%x\n",tf->cs);
+  printf("eax:0x%x\n",tf->eax);
+  printf("ebp:0x%x\n",tf->ebp);
+  printf("ebx:0x%x\n",tf->ebx);
+  printf("ecx:0x%x\n",tf->ecx);
+  printf("edi:0x%x\n",tf->edi);
+  printf("edx:0x%x\n",tf->edx);
+  printf("eflags:0x%x\n",tf->eflags);
+  printf("eip:0x%x\n",tf->eip);
+  printf("esi:0x%x\n",tf->esi);
+  printf("esp:0x%x\n",tf->esp);
+  printf("irq:0x%x\n",tf->irq);
+  printf("prot:0x%x\n",tf->prot);
   if (user_handler) {
     _Event ev = {0};
     switch (tf->irq) {
