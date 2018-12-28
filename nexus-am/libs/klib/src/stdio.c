@@ -26,6 +26,9 @@ int vsprintf(char *out, const char *fmt, va_list ap) {
       if(*fmt == 'd') {
         d = va_arg(ap,int);
         n = 0;
+        if(d == 0) {
+          *(buf + n++) = '0';
+        }
         while(d) {
           *(buf + n++) = d % 10 + '0';
           d /= 10;
