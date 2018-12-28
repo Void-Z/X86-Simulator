@@ -44,7 +44,7 @@ int vsprintf(char *out, const char *fmt, va_list ap) {
         d = va_arg(ap,int);
         n = 0;
         while(d) {
-          *(buf + n++) = d % 16 + '0';
+          *(buf + n++) = d % 16 < 10 ? d % 16 + '0' : d % 16 - 10 + 'a';
           d /= 16;
         }
         while(n--) {
