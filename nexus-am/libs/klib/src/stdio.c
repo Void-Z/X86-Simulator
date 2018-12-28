@@ -42,10 +42,11 @@ int vsprintf(char *out, const char *fmt, va_list ap) {
         f = 0;
       } else if(*fmt == 'x') {
         d = va_arg(ap,int);
+        n = 0;
         if(d == 0) {
           *(buf + n++) = '0'; 
         }
-        n = 0;
+        
         while(d) {
           *(buf + n++) = (d % 16) < 10 ? (d % 16) + '0' : (d % 16 - 10) + 'a';
           d /= 16;
