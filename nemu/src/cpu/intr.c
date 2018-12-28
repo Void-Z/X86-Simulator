@@ -8,7 +8,9 @@ void raise_intr(uint8_t NO, vaddr_t ret_addr) {
   rtl_push(&cpu.EFLAGS,4);
   rtl_push(&cpu.cs,4);
   rtl_push(&ret_addr,4);
-  GateDesc idt = (GateDesc)0u;
+  GateDesc idt;
+  *(uint32_t *)&idt = vaddr_read(cpu.idtr + NO * 8,4);
+  *((uint32_t *)&idt + 1) = vaddr_read(cpu.idtr + NO * 8 + 4,4);
   // idt = (((uint64_t)vaddr_read(cpu.idtr + NO * 8,4) << 32) + (uint64_t)vaddr_read(cpu.idtr + NO * 8 + 1,4));
   printf("%d 0x%08x 0x%08x 0x%08x\n",NO,idt.offset_15_0,idt.offset_31_16,cpu.idtr);
   rtl_j((idt.offset_31_16 << 16) + idt.offset_15_0);
