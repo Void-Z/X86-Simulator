@@ -1,6 +1,7 @@
 #include <am.h>
 #include <x86.h>
 
+int printf(const char *fmt, ...);
 static _Context* (*user_handler)(_Event, _Context*) = NULL;
 
 void vectrap();
@@ -8,6 +9,19 @@ void vecnull();
 
 _Context* irq_handle(_Context *tf) {
   _Context *next = tf;
+  printf("cs:0x%08x\n",tf->cs);
+  printf("eax:0x%08x\n",tf->eax);
+  printf("ebp:0x%08x\n",tf->ebp);
+  printf("ebx:0x%08x\n",tf->ebx);
+  printf("ecx:0x%08x\n",tf->ecx);
+  printf("edi:0x%08x\n",tf->edi);
+  printf("edx:0x%08x\n",tf->edx);
+  printf("eflags:0x%08x\n",tf->eflags);
+  printf("eip:0x%08x\n",tf->eip);
+  printf("esi:0x%08x\n",tf->esi);
+  printf("esp:0x%08x\n",tf->esp);
+  printf("irq:0x%08x\n",tf->irq);
+  printf("prot:0x%08x\n",tf->prot);
   if (user_handler) {
     _Event ev = {0};
     switch (tf->irq) {
