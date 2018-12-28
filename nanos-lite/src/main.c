@@ -30,6 +30,6 @@ int main() {
 #ifdef HAS_CTE
   _yield();
 #endif
-
+  Log("'Bye-bye World!' from Nanos-lite");
   panic("Should not reach here");
 }
