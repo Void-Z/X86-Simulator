@@ -95,7 +95,7 @@ void* memset(void* v,int c,size_t n) {
 
 void* memcpy(void* out, const void* in, size_t n) {
   char *p1 = (char *)out,*p2 = (char *)in;
-  while(n-- && *p2) {
+  while(n--) {
     *(p1++) = *(p2++);
   }
   return out;
