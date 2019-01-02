@@ -8,8 +8,8 @@ static _Context* do_event(_Event e, _Context* c) {
       break;
     }
     case _EVENT_YIELD: {
-      printf("yield,id = %d\n",e.event);
-      _yield();
+      printf("event yield\n",e.event);
+      // _yield();
       break;
     }
     case _EVENT_ERROR: {
