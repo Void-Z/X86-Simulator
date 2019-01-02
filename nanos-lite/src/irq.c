@@ -7,7 +7,7 @@ static _Context* do_event(_Event e, _Context* c) {
       break;
     }
     case _EVENT_ERROR: {
-      printf("irq 1\n");
+      printf("error\n");
       break;
     }
     default: panic("Unhandled event ID = %d", e.event);
