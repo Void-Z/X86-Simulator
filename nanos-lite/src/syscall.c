@@ -2,7 +2,7 @@
 #include "syscall.h"
 #include "fs.h"
 #include "proc.h"
-
+// extern end;
 int sys_yield() {
   printf("Sys_yield.\n");
   _yield();
@@ -15,7 +15,6 @@ void sys_exit(int code) {
 }
 
 size_t sys_write(int fd,const void *buf,size_t count) {
-  _putc('a');
   if(fd == 1 || fd == 2) {
     for(size_t n = 0;n < count;++n) {
       _putc(*(const char *)(buf + n));
@@ -25,6 +24,10 @@ size_t sys_write(int fd,const void *buf,size_t count) {
     return -1;
   }
 }
+// int sys_brk(void *addr) {
+  
+// }
+
 
 _Context* do_syscall(_Context *c) {
   uintptr_t a[4],result = -1;
@@ -45,6 +48,9 @@ _Context* do_syscall(_Context *c) {
     case SYS_write: {
       result = sys_write(a[1],(void *)a[2],a[3]);
       break;
+    }
+    case SYS_brk: {
+
     }
     default: panic("Unhandled syscall ID = %d", a[0]);
   }
