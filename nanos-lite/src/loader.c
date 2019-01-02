@@ -1,4 +1,5 @@
 #include "proc.h"
+#include "fs.h"
 
 size_t ramdisk_read(void *buf, size_t offset, size_t len);
 size_t get_ramdisk_size();
@@ -6,7 +7,8 @@ size_t get_ramdisk_size();
 #define DEFAULT_ENTRY 0x4000000
 
 static uintptr_t loader(PCB *pcb, const char *filename) {
-  ramdisk_read((void *)DEFAULT_ENTRY,0,get_ramdisk_size());
+  int fd = fs_open(filename,0,0);
+  ramdisk_read((void *)DEFAULT_ENTRY,fs_disk_offset(fd) ,fs_filesz(fd));
   
   return DEFAULT_ENTRY;
 }
