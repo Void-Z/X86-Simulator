@@ -2,13 +2,13 @@
 #include "syscall.h"
 
 int sys_yield() {
-  printf("Sys_yield.\n");
+  printf("Sys_yield().\n");
   _yield();
   return 1;
 }
 
 void sys_exit(int code) {
-  printf("Sys_exit.\n");
+  printf("Sys_exit().\n");
   _halt(code);
 }
 
