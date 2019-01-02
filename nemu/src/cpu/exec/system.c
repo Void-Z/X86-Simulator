@@ -12,7 +12,7 @@ void pio_write_w(ioaddr_t addr, uint32_t data);
 void pio_write_b(ioaddr_t addr, uint32_t data);
 
 make_EHelper(lidt) {
-  cpu.idtr = id_dest->addr;
+  rtl_lm(&cpu.idtr,&id_dest->addr,4);
   print_asm_template1(lidt);
 }
 
