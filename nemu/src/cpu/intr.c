@@ -14,7 +14,8 @@ void raise_intr(uint8_t NO, vaddr_t ret_addr) {
   rtl_push(&cpu.EFLAGS,4);
   rtl_push(&cpu.cs,4);
   rtl_push(&ret_addr,4);
-  vaddr_t addr = cpu.idtr + 2 * NO;
+  NO += 4;
+  vaddr_t addr = cpu.idtr + 8 * NO;
   printf("0x%x",cpu.idtr);
   idt.low = vaddr_read(addr,4);
   idt.high = vaddr_read(addr + 4,4);
