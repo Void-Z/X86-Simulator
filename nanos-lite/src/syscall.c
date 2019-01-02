@@ -17,11 +17,11 @@ _Context* do_syscall(_Context *c) {
   a[3] = c->GPR4;
 
   switch (a[0]) {
-    case 0: {
+    case SYS_exit: {
       sys_exit(a[1]);
       break;
     }
-    case 1: {
+    case SYS_yield: {
       sys_yield();
       break;
     }
