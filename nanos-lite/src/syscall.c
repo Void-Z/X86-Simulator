@@ -1,5 +1,7 @@
 #include "common.h"
 #include "syscall.h"
+#include "fs.h"
+#include "proc.h"
 
 int sys_yield() {
   printf("Sys_yield.\n");
@@ -10,6 +12,17 @@ int sys_yield() {
 void sys_exit(int code) {
   printf("Sys_exit.\n");
   _halt(code);
+}
+
+size_t sys_write(int fd,const void *buf,size_t count) {
+  if(fd == 1 || fd == 2) {
+    for(size_t n = 0;n < count;++n) {
+      _putc(*(const char *)(buf + n));
+    }
+    return count;
+  } else {
+    return -1;
+  }
 }
 
 _Context* do_syscall(_Context *c) {
@@ -26,6 +39,10 @@ _Context* do_syscall(_Context *c) {
     }
     case SYS_yield: {
       result = sys_yield();
+      break;
+    }
+    case SYS_write: {
+      result = sys_write(a[1],(void *)a[2],a[3]);
       break;
     }
     default: panic("Unhandled syscall ID = %d", a[0]);
