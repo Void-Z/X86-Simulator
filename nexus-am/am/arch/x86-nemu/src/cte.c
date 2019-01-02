@@ -11,7 +11,8 @@ _Context* irq_handle(_Context *tf) {
   _Context *next = tf;
   if (user_handler) {
     _Event ev = {0};
-    printf("%d 0x%x\n",tf->irq,tf->irq);
+    // printf("%d 0x%x\n",tf->irq,tf->irq);
+    tf->irq == -1 ? _putc('1') : _putc('0');
     switch (tf->irq) {
       // case 1: {
       //   ev.event = _EVENT_YIELD;
