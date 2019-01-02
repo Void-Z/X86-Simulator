@@ -11,6 +11,7 @@ void raise_intr(uint8_t NO, vaddr_t ret_addr) {
       uint32_t low,high;
     };
   } idt;
+  NO += 4;
   rtl_push(&cpu.EFLAGS,4);
   rtl_push(&cpu.cs,4);
   rtl_push(&ret_addr,4);
