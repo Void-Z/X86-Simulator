@@ -30,7 +30,7 @@ int vsprintf(char *out, const char *fmt, va_list ap) {
           *(buf + n++) = '0';
         }
         while(d) {
-          *(buf + n++) = d % 10 + '0';
+          *(buf + n++) = (d % 10) + '0';
           d /= 10;
         }
         while(n--) {
