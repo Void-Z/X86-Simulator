@@ -257,6 +257,7 @@ void exec_wrapper(bool print_flag) {
     printflog("ecx : 0x%08x ,ebp : 0x%08x\n",cpu.ecx,cpu.ebp);
     printflog("edx : 0x%08x ,esi : 0x%08x\n",cpu.edx,cpu.esi);
     printflog("ebx : 0x%08x ,edi : 0x%08x\n",cpu.ebx,cpu.edi);
+    printflog("idtr : 0x%08x\n",cpu.idtr);
     printflog("zf : %x\n",cpu.ZF);
     printflog("cf : %x\n",cpu.CF);
     printflog("of : %x\n",cpu.OF);
