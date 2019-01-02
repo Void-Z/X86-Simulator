@@ -12,9 +12,6 @@ void pio_write_w(ioaddr_t addr, uint32_t data);
 void pio_write_b(ioaddr_t addr, uint32_t data);
 
 make_EHelper(lidt) {
-  printf("lidt\n");
-  printf("0x%08x\n",id_dest->val);
-  printf("0x%08x\n",id_dest->addr);
   cpu.idtr = id_dest->addr;
   print_asm_template1(lidt);
 }
