@@ -17,6 +17,7 @@ int printf(const char *fmt, ...) {
 
 int vsprintf(char *out, const char *fmt, va_list ap) {
   int f = 0,d,n;
+  uint32_t u;
   char buf[32];
   const char * s;
   char *p = out;
@@ -28,6 +29,9 @@ int vsprintf(char *out, const char *fmt, va_list ap) {
         n = 0;
         if(d == 0) {
           *(buf + n++) = '0';
+        } else if(d < 0) {
+          *(buf + n++) = '-';
+          d = -d;
         }
         while(d) {
           *(buf + n++) = (d % 10) + '0';
@@ -44,15 +48,15 @@ int vsprintf(char *out, const char *fmt, va_list ap) {
         }
         f = 0;
       } else if(*fmt == 'x') {
-        d = va_arg(ap,int);
+        u = va_arg(ap,int);
         n = 0;
-        if(d == 0) {
+        if(u == 0) {
           *(buf + n++) = '0'; 
         }
         
         while(d) {
-          *(buf + n++) = (d % 16) < 10 ? (d % 16) + '0' : ((d % 16) - 10) + 'a';
-          d /= 16;
+          *(buf + n++) = (u % 16) < 10 ? (u % 16) + '0' : ((u % 16) - 10) + 'a';
+          u /= 16;
         }
         while(n--) {
           *(out++) = *(buf + n);
