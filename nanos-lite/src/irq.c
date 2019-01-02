@@ -2,7 +2,11 @@
 
 static _Context* do_event(_Event e, _Context* c) {
   switch (e.event) {
-    case 1: {
+    case _EVENT_SYSCALL: {
+      printf("syscall\n");
+      break;
+    }
+    case _EVENT_ERROR: {
       printf("irq 1\n");
       break;
     }
