@@ -7,6 +7,10 @@ static _Context* do_event(_Event e, _Context* c) {
       do_syscall(c);
       break;
     }
+    case _EVENT_YIELD: {
+      _yield();
+      break;
+    }
     case _EVENT_ERROR: {
       printf("error,id = %d\n",e.event);
       break;

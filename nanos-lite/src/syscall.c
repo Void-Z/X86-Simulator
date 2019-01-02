@@ -26,10 +26,6 @@ _Context* do_syscall(_Context *c) {
       result = sys_yield();
       break;
     }
-    case SYS_kill: {
-      sys_exit(0);
-      break;
-    }
     default: panic("Unhandled syscall ID = %d", a[0]);
   }
   c->GPRx = result;
