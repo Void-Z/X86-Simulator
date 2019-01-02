@@ -15,6 +15,7 @@ void sys_exit(int code) {
 }
 
 size_t sys_write(int fd,const void *buf,size_t count) {
+  _putc('a');
   if(fd == 1 || fd == 2) {
     for(size_t n = 0;n < count;++n) {
       _putc(*(const char *)(buf + n));
