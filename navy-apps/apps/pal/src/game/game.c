@@ -100,30 +100,30 @@ PAL_GameMain(
          PAL_GameStart();
          gpGlobals->fGameStart = FALSE;
       }
-      printf("before pal_loadresources\n");
+      // printf("before pal_loadresources\n");
       //
       // Load the game resources if needed.
       //
       PAL_LoadResources();
-      printf("before pal_clearkeystate\n");
+      // printf("before pal_clearkeystate\n");
       //
       // Clear the input state of previous frame.
       //
       PAL_ClearKeyState();
-      printf("before pal_processevent\n");
+      // printf("before pal_processevent\n");
       //
       // Wait for the time of one frame. Accept input here.
       //
 
       PAL_ProcessEvent();
-      printf("iiuuu\n");
+      // printf("iiuuu\n");
       while (SDL_GetTicks() <= dwTime)
       {
-         printf("sss\n");
+         // printf("sss\n");
          PAL_ProcessEvent();
          SDL_Delay(1);
       }
-      printf("aaasd\n");
+      // printf("aaasd\n");
       //
       // Set the time of the next frame.
       //
