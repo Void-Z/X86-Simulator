@@ -2,7 +2,6 @@
 #include <amdev.h>
 #include "fs.h"
 size_t serial_write(const void *buf, size_t offset, size_t len) {
-  // return 0;
   for(int i = 0;i < len;++i) {
     _putc(*((char *)buf + i));
   }
@@ -24,22 +23,13 @@ size_t events_read(void *buf, size_t offset, size_t len) {
 static char dispinfo[128] __attribute__((used));
 
 size_t dispinfo_read(void *buf, size_t offset, size_t len) {
-  // return 0;
-  // int i;
-  // for(i = 0;i < len && i + offset < fs_filesz(FD_DISPINFO);++i) {
-  //   *((char *)buf + i) = dispinfo[i];
-  // }
-  // return i;
-  Log("dispinfo:%s",dispinfo);
   strncpy(buf, dispinfo + offset, len);
-  Log("buf:%s,offset:%d,size:%d",buf,offset,len);
   return len;
 }
 
 size_t fb_write(const void *buf, size_t offset, size_t len) {
   draw_rect((uint32_t *)buf,(offset / 4) % screen_width(),(offset / 4) / screen_width(),len / 4,1);
   return len;
-  // return 0;
 }
 
 void init_device() {
