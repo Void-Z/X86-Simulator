@@ -58,7 +58,7 @@ _Context* do_syscall(_Context *c) {
       break;
     }
     case SYS_read: {
-      printf("sys_read\n");
+      
       result = fs_read(a[1],(void *)a[2],a[3]);
       break;
     }

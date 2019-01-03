@@ -95,7 +95,9 @@ int NDL_WaitEvent(NDL_Event *event) {
     while ((ch = getc(evtdev)) != -1) {
       *p ++ = ch;
       printf("p-buf:%d,sizebuf:%d\n",p-buf,sizeof(buf));
-      assert(p - buf < sizeof(buf));
+      printf("ch:%c",ch);
+      // assert(p - buf < sizeof(buf));
+      if(p - buf >= sizeof(buf)) break;
       if (ch == '\n') break;
     }
 
