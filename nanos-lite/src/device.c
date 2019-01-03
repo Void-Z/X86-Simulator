@@ -30,7 +30,9 @@ size_t dispinfo_read(void *buf, size_t offset, size_t len) {
   //   *((char *)buf + i) = dispinfo[i];
   // }
   // return i;
+  Log("dispinfo:%s",dispinfo);
   strncpy(buf, dispinfo + offset, len);
+  Log("buf:%s,offset:%d,size:%d",buf,offset,len);
   return len;
 }
 
