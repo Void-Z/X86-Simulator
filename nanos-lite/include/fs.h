@@ -5,7 +5,7 @@
 
 #define ssize_t size_t
 #define off_t size_t
-enum {FD_STDIN, FD_STDOUT, FD_STDERR, FD_FB, FD_DISPINFO};
+enum {FD_STDIN, FD_STDOUT, FD_STDERR, FD_FB, FD_DISPINFO, FD_EVENTS};
 
 
 #ifndef SEEK_SET
@@ -16,7 +16,7 @@ size_t ramdisk_write(const void *buf, size_t offset, size_t len);
 size_t serial_write(const void *buf, size_t offset, size_t len);
 size_t fb_write(const void *buf, size_t offset, size_t len);
 size_t dispinfo_read(void *buf, size_t offset, size_t len);
-
+size_t events_read(void *buf, size_t offset, size_t len);
 
 off_t fs_disk_offset(int fd);
 size_t fs_filesz(int fd);
