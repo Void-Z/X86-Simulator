@@ -22,14 +22,11 @@ int main() {
 #ifdef HAS_CTE
   init_irq();
 #endif
-
   init_fs();
-
   init_proc();
-
 #ifdef HAS_CTE
   _yield();
 #endif
-
+  Log("'Bye-bye World!' from Nanos-lite");
   panic("Should not reach here");
 }
