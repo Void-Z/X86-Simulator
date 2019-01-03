@@ -102,6 +102,7 @@ ssize_t fs_write(int fd, const void *buf, size_t len) {
   return len;
 }
 ssize_t fs_read(int fd, void *buf, size_t len) {
+  printf("len:%d\n",len);
   switch(fd) {
     case FD_STDIN:
     case FD_STDOUT:
@@ -125,7 +126,7 @@ ssize_t fs_read(int fd, void *buf, size_t len) {
       break;
     }
     default: {
-      printf("len:%d\n",len);
+      
       if(file_table[fd].open_offset + len >= fs_filesz(fd)) {
         len = fs_filesz(fd) - file_table[fd].open_offset - 1;
       }
@@ -138,6 +139,7 @@ ssize_t fs_read(int fd, void *buf, size_t len) {
       return i;
     }
   }
+  printf("return:%d\n",len);
   return len;
 }
 off_t fs_lseek(int fd, off_t offset, int whence) {
