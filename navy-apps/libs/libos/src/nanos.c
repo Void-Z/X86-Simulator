@@ -5,7 +5,9 @@
 #include <assert.h>
 #include <time.h>
 #include "syscall.h"
-extern char *end;
+
+extern char _end;
+intptr_t end = (intptr_t)&_end;
 
 #if defined(__ISA_X86__)
 intptr_t _syscall_(int type, intptr_t a0, intptr_t a1, intptr_t a2){
@@ -41,10 +43,11 @@ int _write(int fd, void *buf, size_t count){
 }
 
 void *_sbrk(intptr_t increment){
-  void *t = end;
-  int n = _syscall_(SYS_brk,(void *)(end + increment),0,0);
+  intptr_t tem = end;
+  int n = _syscall_(SYS_brk,(tem + increment),0,0);
   if(n == 0) {
-    return t;
+    end += increment;
+    return (void *)tem;
   } else {
     return (void *)-1;
   }

@@ -2,7 +2,6 @@
 #include "syscall.h"
 #include "fs.h"
 #include "proc.h"
-extern char *end;
 extern void naive_uload(PCB *pcb, const char *filename);
 int sys_yield() {
   printf("Sys_yield.\n");
@@ -25,8 +24,7 @@ size_t sys_write(int fd,const void *buf,size_t count) {
     return fs_write(fd,buf,count);
   }
 }
-int sys_brk(void *addr) {
-  end = addr;
+inline int sys_brk(void *addr) {
   return 0;
 }
 
