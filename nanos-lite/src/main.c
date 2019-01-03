@@ -22,12 +22,8 @@ int main() {
 #ifdef HAS_CTE
   init_irq();
 #endif
-  Log("Before init_fs()\n");
   init_fs();
-  Log("After init_fs()\n");
-  Log("Before init_proc()\n");
   init_proc();
-  Log("After init_proc()\n");
 #ifdef HAS_CTE
   _yield();
 #endif
