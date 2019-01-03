@@ -25,11 +25,13 @@ static char dispinfo[128] __attribute__((used));
 
 size_t dispinfo_read(void *buf, size_t offset, size_t len) {
   // return 0;
-  int i;
-  for(i = 0;i < len && i + offset < fs_filesz(FD_DISPINFO);++i) {
-    *((char *)buf + i) = dispinfo[i];
-  }
-  return i;
+  // int i;
+  // for(i = 0;i < len && i + offset < fs_filesz(FD_DISPINFO);++i) {
+  //   *((char *)buf + i) = dispinfo[i];
+  // }
+  // return i;
+  strncpy(buf, dispinfo + offset, len);
+  return len;
 }
 
 size_t fb_write(const void *buf, size_t offset, size_t len) {
