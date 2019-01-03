@@ -22,9 +22,9 @@ int main() {
 #ifdef HAS_CTE
   init_irq();
 #endif
-
+  Log("Before init_fs()\n");
   init_fs();
-
+  Log("After init_fs()\n");
   init_proc();
 
 #ifdef HAS_CTE
