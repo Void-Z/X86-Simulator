@@ -116,12 +116,14 @@ PAL_GameMain(
       //
 
       PAL_ProcessEvent();
+      printf("iiuuu\n");
       while (SDL_GetTicks() <= dwTime)
       {
+         printf("sss\n");
          PAL_ProcessEvent();
          SDL_Delay(1);
       }
-
+      printf("aaasd\n");
       //
       // Set the time of the next frame.
       //
