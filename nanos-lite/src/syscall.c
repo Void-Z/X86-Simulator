@@ -3,6 +3,7 @@
 #include "fs.h"
 #include "proc.h"
 extern char *end;
+extern void naive_uload(PCB *pcb, const char *filename);
 int sys_yield() {
   printf("Sys_yield.\n");
   _yield();
@@ -21,7 +22,7 @@ size_t sys_write(int fd,const void *buf,size_t count) {
     }
     return count;
   } else {
-    return -1;
+    return fs_write(fd,buf,count);
   }
 }
 int sys_brk(void *addr) {
@@ -52,6 +53,26 @@ _Context* do_syscall(_Context *c) {
     }
     case SYS_brk: {
       result = sys_brk((void *)a[1]);
+      break;
+    }
+    case SYS_open: {
+      result = fs_open((void *)a[1],a[2],a[3]);
+      break;
+    }
+    case SYS_read: {
+      result = fs_read(a[1],(void *)a[2],a[3]);
+      break;
+    }
+    case SYS_close: {
+      result = fs_close(a[1]);
+      break;
+    }
+    case SYS_lseek: {
+      result = fs_lseek(a[1],a[2],a[3]);
+      break;
+    }
+    case SYS_execve: {
+      naive_uload(NULL,(void *)a[1]);
       break;
     }
     default: panic("Unhandled syscall ID = %d", a[0]);
