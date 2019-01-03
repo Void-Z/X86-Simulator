@@ -121,6 +121,7 @@ ssize_t fs_read(int fd, void *buf, size_t len) {
     }
     case FD_EVENTS: {
       len = file_table[fd].read(buf,0,len);
+      printf("%s",buf);
       break;
     }
     default: {
