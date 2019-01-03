@@ -21,11 +21,12 @@ void raise_intr(uint8_t NO, vaddr_t ret_addr) {
   // idt.high = vaddr_read(addr + 4,4);
   // t0 = ((idt.GD.offset_31_16 & 0xffff) << 16) | (idt.GD.offset_15_0 & 0xffff);
   // rtl_j(t0);
+  Log("\nraise intr\n");
   GateDesc idt;
   rtl_push(&cpu.EFLAGS,4);
   rtl_push(&cpu.cs,4);
   rtl_push(&ret_addr,4);
-  NO += 2;
+  NO += 4;
   *(uint32_t *)&idt = vaddr_read(cpu.idtr + NO * 8,4);
   *((uint32_t *)&idt + 1) = vaddr_read(cpu.idtr + NO * 8 + 4,4);
   rtl_j((idt.offset_31_16 << 16) + idt.offset_15_0);
