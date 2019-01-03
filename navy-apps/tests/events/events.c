@@ -15,6 +15,7 @@ int main() {
           break;
         }
       }
+      printf("receive event: %s", buf);
       j = 0;
     }
   }
@@ -22,4 +23,3 @@ int main() {
   fclose(fp);
   return 0;
 }
-
