@@ -14,16 +14,6 @@ void sys_exit(int code) {
   _halt(code);
 }
 
-size_t sys_write(int fd,const void *buf,size_t count) {
-  if(fd == 1 || fd == 2) {
-    for(size_t n = 0;n < count;++n) {
-      _putc(*(const char *)(buf + n));
-    }
-    return count;
-  } else {
-    return fs_write(fd,buf,count);
-  }
-}
 inline int sys_brk(void *addr) {
   return 0;
 }
@@ -46,7 +36,7 @@ _Context* do_syscall(_Context *c) {
       break;
     }
     case SYS_write: {
-      result = sys_write(a[1],(void *)a[2],a[3]);
+      result = fs_write(a[1],(void *)a[2],a[3]);
       break;
     }
     case SYS_brk: {
