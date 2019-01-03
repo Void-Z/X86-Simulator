@@ -54,6 +54,7 @@ int main() {
   size = ftell(fp);
   printf("55:%d\n",size);
   int i, n;
+  fscanf(fp, "%c", &n);
   for (i = 500; i < 1000; i ++) {
     fscanf(fp, "%d", &n);
     size = ftell(fp);
