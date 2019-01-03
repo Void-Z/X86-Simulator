@@ -6,6 +6,7 @@
 #include <time.h>
 #include "syscall.h"
 
+
 extern char _end;
 intptr_t end = (intptr_t)&_end;
 
@@ -92,4 +93,11 @@ int _kill(int pid, int sig) {
 pid_t _getpid() {
   _exit(-SYS_getpid);
   return 1;
+}
+
+void _wait(int status) {
+
+}
+void _fork(int status) {
+  
 }
