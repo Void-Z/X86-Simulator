@@ -72,8 +72,7 @@ ssize_t fs_read(int fd, void *buf, size_t len) {
   int i = 0;
   for(;(i < len) && (file_table[fd].open_offset < fs_filesz(fd));++i) {
     *((char *)buf + i) = *(p + file_table[fd].open_offset++);
-    _putc(*((char*)buf + i - 1));
-    _putc('\n');
+    printf("%d\n",file_table[fd].open_offset);
   }
   return i;
 }
