@@ -62,6 +62,7 @@ ssize_t fs_read(int fd, void *buf, size_t len) {
   char *p = (char *)file_table[fd].disk_offset;
   int i = 0;
   for(;(i < len) && (file_table[fd].open_offset < fs_filesz(fd));++i) {
+    printf("read one time\n");
     *(p + file_table[fd].open_offset++) = *((char *)buf + i);
   }
   return i;
