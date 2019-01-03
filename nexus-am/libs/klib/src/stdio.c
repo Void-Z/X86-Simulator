@@ -41,6 +41,20 @@ int vsprintf(char *out, const char *fmt, va_list ap) {
           *(out++) = *(buf + n);
         }
         f = 0;
+      } else if(*fmt == 'u') {
+        u = va_arg(ap,uint32_t);
+        n = 0;
+        if(u == 0) {
+          *(buf + n++) = '0';
+        }
+        while(u) {
+          *(buf + n++) = (u % 10) + '0';
+          u /= 10;
+        }
+        while(n--) {
+          *(out++) = *(buf + n);
+        }
+        f = 0;
       } else if(*fmt == 's') {
         s = va_arg(ap,const char *);
         while(*s) {
