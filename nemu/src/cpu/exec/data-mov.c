@@ -1,124 +1,118 @@
 #include "cpu/exec.h"
 
 make_EHelper(mov) {
-  operand_write(id_dest, &id_src->val);
-  print_asm_template2(mov);
+	operand_write(id_dest, &id_src->val);
+	print_asm_template2(mov);
 }
 
 make_EHelper(push) {
-  rtl_push(&id_dest->val,id_dest->width);
-  print_asm_template1(push);
-}
+	// TODO();
+	if(id_dest->width == 1){
+	  	uint8_t utmp = id_dest->val;
+		int8_t temp = utmp;
+		id_dest->val = temp;
+	}
+   	rtl_push(&id_dest->val);  
 
-make_EHelper(pushl) {
-  // switch(id_dest->width) {
-  //   case 1: {
-  //     rtl_sign_extend8to32(&id_dest->val);
-  //   }
-  // }
-  if(id_dest->width == 1) {
-    rtl_sext(&id_dest->val,&id_dest->val,id_dest->width);
-  }
-  rtl_push(&id_dest->val,4);
-  // printf("0x%08x 0x%08x\n\n",id_dest->addr,id_dest->val);
-  print_asm_template1(pushl);
+	print_asm_template1(push);
 }
 
 make_EHelper(pop) {
-  rtl_pop(&id_dest->val,id_dest->width);
-  // rtl_sr(id_dest->reg,&id_dest->val,id_dest->width);
-  operand_write(id_dest,&id_dest->val);
-  print_asm_template1(pop);
+	// TODO();
+	rtl_pop(&t0);
+	
+	
+	if(id_dest->width == 1){
+		uint8_t utemp = t0;
+		int8_t temp = utemp; 
+		id_dest->val = temp;
+	}
+	else 
+	  	id_dest->val = t0;
+	// 写入
+	// printf("%d width %d  0x%x\n",id_dest->type, id_dest->width, id_dest->val);
+	operand_write(id_dest, &id_dest->val);
+	
+	print_asm_template1(pop);
 }
 
 make_EHelper(pusha) {
-  t0 = cpu.esp;
-  rtl_push(&cpu.eax,4);
-  rtl_push(&cpu.ecx,4);
-  rtl_push(&cpu.edx,4);
-  rtl_push(&cpu.ebx,4);
-  rtl_push(&t0,4);
-  rtl_push(&cpu.ebp,4);
-  rtl_push(&cpu.esi,4);
-  rtl_push(&cpu.edi,4);
+	// TODO();
+	t0 = cpu.esp;
+	rtl_push(&cpu.eax);
+	rtl_push(&cpu.ecx);
+	rtl_push(&cpu.edx);
+	rtl_push(&cpu.ebx);
+	rtl_push(&t0);
+	rtl_push(&cpu.ebp);
+	rtl_push(&cpu.esi);
+	rtl_push(&cpu.edi);
 
-  print_asm("pusha");
+	print_asm("pusha");
 }
 
 make_EHelper(popa) {
-  rtl_pop(&cpu.edi,4);
-  rtl_pop(&cpu.esi,4);
-  rtl_pop(&cpu.ebp,4);
-  rtl_pop(&t0,4);
-  rtl_pop(&cpu.ebx,4);
-  rtl_pop(&cpu.edx,4);
-  rtl_pop(&cpu.ecx,4);
-  rtl_pop(&cpu.eax,4);
-
-  print_asm("popa");
+	// TODO();
+	rtl_pop(&cpu.edi);
+	rtl_pop(&cpu.esi);
+	rtl_pop(&cpu.ebp);
+	rtl_pop(&t0);
+	rtl_pop(&cpu.ebx);
+	rtl_pop(&cpu.edx);
+	rtl_pop(&cpu.ecx);
+	rtl_pop(&cpu.eax);
+	
+	print_asm("popa");
 }
 
 make_EHelper(leave) {
-  rtl_lr(&id_dest->val,5,4);
-  rtl_sr(4,&id_dest->val,4);
-  rtl_pop(&id_dest->val,4);
-  if(decoding.is_operand_size_16) {
-    rtl_sr(5,&id_dest->val,2);
-  } else {
-    rtl_sr(5,&id_dest->val,4);
-  }
-
-  print_asm("leave");
+	// TODO();
+	reg_l(4) = reg_l(5);
+	rtl_pop(&t0);
+	reg_w(5) = t0;
+	
+	print_asm("leave");
 }
 
+// Convert Signed Long to Signed Double Long
 make_EHelper(cltd) {
-  if (decoding.is_operand_size_16) {
-    rtl_lr(&id_dest->val,0,2);
-    id_dest->val = (id_dest->val & 0x8000) ? 0xffffffff : 0;
-  }
-  else {
-    rtl_lr(&id_dest->val,0,4);
-    id_dest->val = (id_dest->val & 0x80000000) ? 0xffffffff : 0;
-  }
-  rtl_sr(2,&id_dest->val,4);
-  print_asm(decoding.is_operand_size_16 ? "cwtl" : "cltd");
+	if (decoding.is_operand_size_16) {
+		rtl_sext(&t0, &reg_l(R_EAX), 2);
+		rtl_shri(&reg_l(R_EDX), &t0, 16);
+	}
+	else {
+		rtl_sari(&reg_l(R_EDX), &reg_l(R_EAX), 31);
+	}
+	
+	print_asm(decoding.is_operand_size_16 ? "cwtl" : "cltd");
 }
-make_EHelper(stos) {
-  rtl_sm(&cpu.edi,&cpu.eax,4);
-  --cpu.edi;
-  print_asm("stos");
-}
+// Convert Signed word to Signed Long
 make_EHelper(cwtl) {
-  if (decoding.is_operand_size_16) {
-    printf("1to2\n");
-    TODO();
-  } else {
-    // printf("2to4\n");
-    rtl_lr(&id_dest->val,R_AX,2);
-    rtl_sext(&id_dest->val,&id_dest->val,2);
-    rtl_sr(R_EAX,&id_dest->val,4);
-  }
-
-  print_asm(decoding.is_operand_size_16 ? "cbtw" : "cwtl");
+	if (decoding.is_operand_size_16) {
+		rtl_shli(&reg_l(R_EAX), &reg_l(R_EAX), 24);
+		rtl_sari(&reg_l(R_EAX), &reg_l(R_EAX), 8);
+	rtl_shri(&reg_l(R_EAX), &reg_l(R_EAX), 16);
+	}
+	else {
+		rtl_sext(&reg_l(R_EAX), &reg_l(R_EAX), 2);
+	} 
+	print_asm(decoding.is_operand_size_16 ? "cbtw" : "cwtl");
 }
 
 make_EHelper(movsx) {
-  
-  id_dest->width = decoding.is_operand_size_16 ? 2 : 4;
-  rtl_sext(&t0, &id_src->val, id_src->width);
-  // printf("\n\n movsx src width:%d,dest width:%d,sext-value:0x%08x\n",id_src->width,id_dest->width,t0);
-  operand_write(id_dest, &t0);
-  print_asm_template2(movsx);
+	id_dest->width = decoding.is_operand_size_16 ? 2 : 4;
+	rtl_sext(&t0, &id_src->val, id_src->width);
+	operand_write(id_dest, &t0);
+	print_asm_template2(movsx);
 }
 
 make_EHelper(movzx) {
-  id_dest->width = decoding.is_operand_size_16 ? 2 : 4;
-  operand_write(id_dest, &id_src->val);
-  print_asm_template2(movzx);
+	id_dest->width = decoding.is_operand_size_16 ? 2 : 4;
+	operand_write(id_dest, &id_src->val);
+	print_asm_template2(movzx);
 }
 
 make_EHelper(lea) {
-  operand_write(id_dest, &id_src->addr);
-  print_asm_template2(lea);
+	operand_write(id_dest, &id_src->addr);
+	print_asm_template2(lea);
 }
-
