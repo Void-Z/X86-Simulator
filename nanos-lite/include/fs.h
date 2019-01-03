@@ -5,7 +5,7 @@
 
 #define ssize_t size_t
 #define off_t size_t
-enum {FD_STDIN, FD_STDOUT, FD_STDERR, FD_FB, FD_DISPINFO, FD_EVENTS};
+enum {FD_STDIN, FD_STDOUT, FD_STDERR, FD_FB, FD_DISPINFO, FD_EVENTS, FD_TTY};
 
 
 #ifndef SEEK_SET
