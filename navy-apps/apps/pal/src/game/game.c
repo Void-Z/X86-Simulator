@@ -100,18 +100,14 @@ PAL_GameMain(
          PAL_GameStart();
          gpGlobals->fGameStart = FALSE;
       }
-
-
       //
       // Load the game resources if needed.
       //
       PAL_LoadResources();
-
       //
       // Clear the input state of previous frame.
       //
       PAL_ClearKeyState();
-
       //
       // Wait for the time of one frame. Accept input here.
       //
@@ -122,7 +118,6 @@ PAL_GameMain(
          PAL_ProcessEvent();
          SDL_Delay(1);
       }
-
       //
       // Set the time of the next frame.
       //

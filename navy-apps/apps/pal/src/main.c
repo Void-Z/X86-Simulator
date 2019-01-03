@@ -148,7 +148,7 @@ PAL_Init(
    PAL_InitResources();
    Log("PAL_InitResources success");
    SOUND_OpenAudio();
-   
+
 #ifdef PAL_WIN95
 #ifdef _DEBUG
    SDL_WM_SetCaption("Pal WIN95 (Debug Build)", NULL);
@@ -232,13 +232,9 @@ PAL_TrademarkScreen(
 --*/
 {
    PAL_SetPalette(3, FALSE);
-   //Log("11111");
    PAL_RNGPlay(6, 0, 1000, 25);
-   Log("11111");
    UTIL_Delay(1000);
-   Log("2222");
    PAL_FadeOut(1);
-   Log("3333");
 }
 
 VOID
@@ -270,7 +266,7 @@ PAL_SplashScreen(
    int            cranepos[9][3], i, iImgPos = 200, iCraneFrame = 0, iTitleHeight;
    DWORD          dwTime, dwBeginTime;
    BOOL           fUseCD = TRUE;
-   Log("PAL_SplashScreen");
+
    if (palette == NULL)
    {
       fprintf(stderr, "ERROR: PAL_SplashScreen(): palette == NULL\n");
@@ -556,8 +552,8 @@ main_loop() {
    //
    // Show the trademark screen and splash screen
    //
-   //PAL_TrademarkScreen();
-   //PAL_SplashScreen();
+   // PAL_TrademarkScreen();
+   // PAL_SplashScreen();
 
    //
    // Run the main game routine
