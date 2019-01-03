@@ -5,125 +5,10 @@
 #include <assert.h>
 #include <string.h>
 
-#define true 1
-#define false 0
-typedef uint8_t bool;
-const int GEN_NUM_MAX = 10;
-
-
 // this should be enough
 static char buf[65536];
-uint32_t pos = 0;
-int choose(int range) {
-  return rand() % range;
-}
-
-static inline void gen(char c) {
-  // printf("gen:%c\n",c);
-  buf[pos++] = c;
-  buf[pos] = '\0';
-}
-static inline void gen_rand_space() {
-  switch(choose(2)) {
-    case 0: {
-      gen(' ');
-      break;
-    }
-    case 1: {
-      gen(' ');
-      gen_rand_space();
-      break;
-    }
-  }
-}
-static inline void gen_num(bool non_zero) {
-  int num = choose(GEN_NUM_MAX);
-  if(!num) non_zero ? gen('1') : gen('0');
-  // printf("gen_num:%d\n",num);
-  bool zero = true;
-  while(num) {
-    if(zero) {
-      if(num % 10) {
-        zero = false;
-        gen(num % 10 + '0');
-      }
-    } else {
-      gen(num % 10 + '0');
-    }
-    num /= 10;
-  }
-}
-
-static inline void gen_rand_op(bool *is_div) {
-  *is_div = false;
-  switch(choose(4)) {
-    case 0: {
-      gen('+');
-      break;
-    }
-    case 1: {
-      gen('-');
-      break;
-    }
-    case 2: {
-      gen('*');
-      break;
-    }
-    case 3: {
-      gen('/');
-      *is_div = true;
-      break;
-    }
-  }
-}
-
-static inline void _gen_rand_expr(bool non_zero) {
-  gen_rand_space();
-  switch(choose(3)) {
-    case 0: {
-      gen_num(non_zero);
-      break;
-    }
-    case 1: {
-      gen('(');
-      _gen_rand_expr(false);
-      if(non_zero) {
-        gen('-');
-        uint32_t num = 0x1 << 31;
-        bool zero = true;
-        while(num) {
-          if(zero) {
-            if(num % 10) {
-              zero = false;
-              gen(num % 10 + '0');
-            }
-          } else {
-            gen(num % 10 + '0');
-          }
-          num /= 10;
-        }
-      }
-      gen(')');
-      break;
-    }
-    case 2: {
-      bool *is_div = (bool *)malloc(sizeof(bool));
-      _gen_rand_expr(non_zero);
-      gen_rand_space();
-      gen_rand_op(is_div);
-      *is_div ? _gen_rand_expr(true) : _gen_rand_expr(false);
-      free(is_div);
-      break;
-    }
-  }
-}
-
-static inline void gen_rand_expr() {
-  pos = 0;
-  _gen_rand_expr(false);
-}
-
 static char code_buf[65536];
+
 static char *code_format =
 "#include <stdio.h>\n"
 "int main() { "
@@ -131,6 +16,94 @@ static char *code_format =
 "  printf(\"%%u\", result); "
 "  return 0; "
 "}";
+
+
+static inline int choose(int n){
+	return rand()%n;
+}
+
+static inline void gen(char e) {
+	int i=0;
+	while(buf[i] !='\0')
+		i++;
+	buf[i] = e;
+	buf[i+1] = '\0';
+//	printf("%c:%s\n", e, buf);
+}
+
+static inline void gen_num() {
+	uint32_t num;
+	
+	
+	num = ((uint32_t) rand()) % 10000;
+	
+	switch(choose(2)) {
+		case 0: sprintf(buf + strlen(buf), "%d", num); break;
+		case 1: sprintf(buf + strlen(buf), "0x%x", num); break;
+		default: break;  
+	}
+
+	//printf("%s\n",buf);
+}
+
+static inline void gen_rand_op() {
+	switch(choose(8)) {
+		case 0: gen('*'); break;
+		case 1: gen('/'); break;
+		case 2: gen('+'); break;
+		case 3: gen('-'); break;
+		case 4: gen('='); gen('='); break;
+		case 5: gen('!'); gen('='); break;
+		case 6: gen('&'); gen('&'); break;
+		case 7: gen('|'); gen('|'); break;
+		default : break;
+	}
+
+	//printf("%s\n",buf);
+} 
+
+
+static inline void gen_rand_expr() {
+	char *s = buf;
+	if(strlen(buf) > 0 && *(buf+strlen(buf)-1) == '/'){
+		s = buf + strlen(buf);
+	}
+	int n = choose(3);
+	//printf("choose:%d\n",n);
+	switch(n) {
+		case 0 : gen_num(); break;
+		case 1 : gen('('); gen_rand_expr(); gen(')'); break;
+		default : gen_rand_expr(); gen_rand_op(); gen_rand_expr(); break;
+	}
+	//printf("expr: %s\n",buf);
+	
+	/*Test division 0 */
+	if(s != buf){
+		sprintf(code_buf, code_format, s);
+
+		FILE *fp = fopen(".code.c","w");
+		assert(fp != NULL);
+		fputs(code_buf, fp);
+		fclose(fp);
+	
+		int ret = system("gcc .code.c -o .expr");
+		if(ret != 0){
+			printf("ret: %d\n",ret);
+		}
+		
+		fp = popen("./.expr", "r");
+		assert(fp != NULL);
+
+		int result;
+		fscanf(fp, "%d", &result);
+		pclose(fp);
+		
+		if(result == 0){
+			memset((void*)s, 0, strlen(s) * sizeof(char));
+			gen_rand_expr();
+		}
+	}
+}
 
 int main(int argc, char *argv[]) {
   int seed = time(0);
@@ -140,9 +113,13 @@ int main(int argc, char *argv[]) {
     sscanf(argv[1], "%d", &loop);
   }
   int i;
+	//printf("in main\n");
+
   for (i = 0; i < loop; i ++) {
+	  memset((void *)buf, 0, 65536 * sizeof(char));	
+	//	printf("in for\n");
     gen_rand_expr();
-    // printf("%s\n",buf);
+		
     sprintf(code_buf, code_format, buf);
 
     FILE *fp = fopen(".code.c", "w");
@@ -159,8 +136,8 @@ int main(int argc, char *argv[]) {
     int result;
     fscanf(fp, "%d", &result);
     pclose(fp);
-
-    printf("%u %s\n", result, buf);
+	  printf("%u %s\n", result, buf);
   }
   return 0;
 }
+

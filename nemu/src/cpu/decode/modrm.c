@@ -92,10 +92,9 @@ void read_ModR_M(vaddr_t *eip, Operand *rm, bool load_rm_val, Operand *reg, bool
 #ifdef DEBUG
     snprintf(reg->str, OP_STR_SIZE, "%%%s", reg_name(reg->reg, reg->width));
 #endif
-    
   }
+
   if (m.mod == 3) {
-    
     rm->type = OP_TYPE_REG;
     rm->reg = m.R_M;
     if (load_rm_val) {
@@ -105,10 +104,8 @@ void read_ModR_M(vaddr_t *eip, Operand *rm, bool load_rm_val, Operand *reg, bool
 #ifdef DEBUG
     sprintf(rm->str, "%%%s", reg_name(m.R_M, rm->width));
 #endif
-    
   }
   else {
-    
     load_addr(eip, &m, rm);
     if (load_rm_val) {
       rtl_lm(&rm->val, &rm->addr, rm->width);

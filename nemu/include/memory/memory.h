@@ -4,7 +4,6 @@
 #include "common.h"
 
 extern uint8_t pmem[];
-#define PMEM_SIZE (128 * 1024 * 1024)
 
 /* convert the guest physical address in the guest program to host virtual address in NEMU */
 #define guest_to_host(p) ((void *)(pmem + (unsigned)p))

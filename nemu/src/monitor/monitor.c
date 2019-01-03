@@ -1,7 +1,6 @@
 #include "nemu.h"
 #include "monitor/monitor.h"
 #include <unistd.h>
-#include <getopt.h>
 
 void init_difftest(char *ref_so_file, long img_size);
 void init_regex();
@@ -87,9 +86,6 @@ static inline long load_img() {
 static inline void restart() {
   /* Set the initial instruction pointer. */
   cpu.eip = ENTRY_START;
-  cpu.cs = 8;
-  cpu.idtr = 0;
-  cpu.EFLAGS = 0x2;
 }
 
 static inline void parse_args(int argc, char *argv[]) {
