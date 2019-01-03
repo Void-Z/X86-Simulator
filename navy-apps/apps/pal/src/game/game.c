@@ -101,7 +101,7 @@ PAL_GameMain(
          gpGlobals->fGameStart = FALSE;
       }
 
-
+      printf("asd\n");
       //
       // Load the game resources if needed.
       //
