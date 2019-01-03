@@ -53,7 +53,7 @@ int main() {
   fseek(fp, 500 * 5, SEEK_SET);
   size = ftell(fp);
   printf("55:%d\n",size);
-  int i, n=0;
+  int i, n;
   // fscanf(fp, "%c", &n);
   for (i = 500; i < 1000; i ++) {
     // n = i + 1;
