@@ -57,6 +57,7 @@ int fs_open(const char *pathname, int flags, int mode) {
       return i;
     }
   }
+  Log("name:%s",pathname);
   assert(0);
   return 0;
 }
