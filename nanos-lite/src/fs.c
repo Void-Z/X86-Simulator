@@ -58,24 +58,23 @@ int fs_open(const char *pathname, int flags, int mode) {
   return 0;
 }
 ssize_t fs_write(int fd, const void *buf, size_t len) {
-  // char *p = (char *)file_table[fd].disk_offset;
-  // int i = 0;
-  // for(;(i < len) && (file_table[fd].open_offset < fs_filesz(fd));++i) {
-  //   *(p + file_table[fd].open_offset++) = *((char *)buf + i);
-  // }
+  if(file_table[fd].open_offset + len >= fs_filesz(fd)) {
+    return 0;
+  }
   size_t offset = file_table[fd].disk_offset + file_table[fd].open_offset;
   int i = 0;
   i = ramdisk_write(buf,offset,len);
+  file_table[fd].open_offset += i;
   return i;
 }
 ssize_t fs_read(int fd, void *buf, size_t len) {
-  printf("read %d\n",len);
+  if(file_table[fd].open_offset + len >= fs_filesz(fd)) {
+    return 0;
+  }
   size_t offset = file_table[fd].disk_offset + file_table[fd].open_offset;
   int i = 0;
-  // for(;(i < len) && (file_table[fd].open_offset < fs_filesz(fd));++i) {
-  //   *((char *)buf + i) = *(p + file_table[fd].open_offset++);
-  // }
   i = ramdisk_read(buf,offset,len);
+  file_table[fd].open_offset += i;
   return i;
 }
 off_t fs_lseek(int fd, off_t offset, int whence) {
