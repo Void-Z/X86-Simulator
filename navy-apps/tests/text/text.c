@@ -60,7 +60,7 @@ int main() {
     fscanf(fp, "%d", &n);
     // size = ftell(fp);
     // printf("60:%d\n",size);
-    // printf("61:%d == %d\n",n,i + 1);
+    printf("61:%d == %d\n",n,i + 1);
     assert(n == i + 1);
   }
 
