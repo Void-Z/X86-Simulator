@@ -85,7 +85,7 @@ off_t fs_lseek(int fd, off_t offset, int whence) {
       break;
     }
     case SEEK_END: {
-      file_table[fd].open_offset = file_table[fd].disk_offset + fs_filesz(fd) - offset - 1;
+      file_table[fd].open_offset = file_table[fd].disk_offset + fs_filesz(fd) - offset;
       break;
     }
   }
