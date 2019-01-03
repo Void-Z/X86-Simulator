@@ -14,7 +14,9 @@ static uintptr_t loader(PCB *pcb, const char *filename) {
 }
 
 void naive_uload(PCB *pcb, const char *filename) {
+  Log("naive_uload->Before loader");
   uintptr_t entry = loader(pcb, filename);
+  Log("naive_uload->After loader");
   ((void(*)())entry) ();
 }
 
