@@ -139,10 +139,10 @@ static void get_display_info() {
   screen_w = screen_h = 0;
   char buf[128], key[128], value[128], *delim;
   printf("11\n");
-  // while (fgets(buf, 128, dispinfo)) {
-    char * i = fgets(buf, 128, dispinfo); 
-    printf("fgets return : %d\n",i);
-    while (i) {
+  while (fgets(buf, 128, dispinfo)) {
+    // char * i = fgets(buf, 128, dispinfo); 
+    // printf("fgets return : %d\n",i);
+    // while (i) {
     *(delim = strchr(buf, ':')) = '\0';
     printf("13\n");
     sscanf(buf, "%s", key);
@@ -153,8 +153,8 @@ static void get_display_info() {
     printf("16\n");
     if (strcmp(key, "HEIGHT") == 0) sscanf(value, "%d", &screen_h);
     printf("17\n");
-    if(screen_w > 0 && screen_h > 0) break;
-    i = fgets(buf, 128, dispinfo); 
+    // if(screen_w > 0 && screen_h > 0) break;
+    // i = fgets(buf, 128, dispinfo); 
   }
   printf("12\n");
   fclose(dispinfo);
