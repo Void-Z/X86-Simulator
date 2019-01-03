@@ -125,12 +125,14 @@ ssize_t fs_read(int fd, void *buf, size_t len) {
       break;
     }
     default: {
+      
       if(file_table[fd].open_offset + len >= fs_filesz(fd)) {
         len = fs_filesz(fd) - file_table[fd].open_offset - 1;
       }
       size_t offset = file_table[fd].disk_offset + file_table[fd].open_offset;
       int i = 0;
       i = ramdisk_read(buf,offset,len);
+      printf("%s\n",buf);
       file_table[fd].open_offset += i;
       return i;
     }
