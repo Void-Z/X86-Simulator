@@ -24,11 +24,12 @@ size_t events_read(void *buf, size_t offset, size_t len) {
 static char dispinfo[128] __attribute__((used));
 
 size_t dispinfo_read(void *buf, size_t offset, size_t len) {
-  int i;
-  for(i = 0;i < len && i + offset < fs_filesz(FD_DISPINFO);++i) {
-    *((char *)buf + i) = dispinfo[i];
-  }
-  return i;
+  return 0;
+  // int i;
+  // for(i = 0;i < len && i + offset < fs_filesz(FD_DISPINFO);++i) {
+  //   *((char *)buf + i) = dispinfo[i];
+  // }
+  // return i;
 }
 
 size_t fb_write(const void *buf, size_t offset, size_t len) {
