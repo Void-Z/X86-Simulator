@@ -29,7 +29,7 @@ static Finfo file_table[] __attribute__((used)) = {
   {"stdout", 0, 0, 0, invalid_read, serial_write},
   {"stderr", 0, 0, 0, invalid_read, serial_write},
   [FD_FB] = {"/dev/fb",0,0,0,NULL,fb_write},
-  // [FD_DISPINFO] = {"/proc/dispinfo",128,0,0,dispinfo_read},
+  [FD_DISPINFO] = {"/proc/dispinfo",128,0,0,dispinfo_read},
 #include "files.h"
 };
 
@@ -37,7 +37,7 @@ static Finfo file_table[] __attribute__((used)) = {
 
 void init_fs() {
   // TODO: initialize the size of /dev/fb
-  // file_table[FD_FB].size = screen_width() * screen_height() * 4;
+  file_table[FD_FB].size = screen_width() * screen_height() * 4;
 }
 
 inline off_t fs_disk_offset(int fd) {
