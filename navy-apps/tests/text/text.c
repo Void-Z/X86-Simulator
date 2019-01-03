@@ -53,11 +53,11 @@ int main() {
   fseek(fp, 500 * 5, SEEK_SET);
   size = ftell(fp);
   printf("55:%d\n",size);
-  int i, n;
+  int i, n=0;
   // fscanf(fp, "%c", &n);
   for (i = 500; i < 1000; i ++) {
     // n = i + 1;
-    fscanf(fp, "%d", &n);
+    // fscanf(fp, "%d", &n);
     // size = ftell(fp);
     // printf("60:%d\n",size);
     printf("61:%d == %d\n",n,i + 1);
