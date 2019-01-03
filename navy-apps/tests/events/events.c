@@ -5,11 +5,13 @@ int main() {
   volatile int j = 0;
   while(1) {
     j ++;
-    if(j % 50000) printf("50000 times\n");
+    
     if (j == 1000000) {
+      printf("ready\n");
       char buf[256];
       char *p = buf, ch;
       while ((ch = fgetc(fp)) != -1) {
+        printf("get\n");
         *p ++ = ch;
         if(ch == '\n') {
           *p = '\0';
