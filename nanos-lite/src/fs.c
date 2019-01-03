@@ -59,7 +59,7 @@ int fs_open(const char *pathname, int flags, int mode) {
     }
   }
   Log("Unknown filename:%s",pathname);
-  // assert(0);
+  assert(0);
   return 0;
 }
 ssize_t fs_write(int fd, const void *buf, size_t len) {
