@@ -121,7 +121,7 @@ PAL_GameMain(
       {
          printf("sss\n");
          PAL_ProcessEvent();
-         SDL_Delay(1);
+         // SDL_Delay(1);
       }
       printf("aaasd\n");
       //
