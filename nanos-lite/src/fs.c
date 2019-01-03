@@ -2,7 +2,6 @@
 
 typedef size_t (*ReadFn) (void *buf, size_t offset, size_t len);
 typedef size_t (*WriteFn) (const void *buf, size_t offset, size_t len);
-
 typedef struct {
   char *name;
   size_t size;
@@ -59,20 +58,24 @@ int fs_open(const char *pathname, int flags, int mode) {
   return 0;
 }
 ssize_t fs_write(int fd, const void *buf, size_t len) {
-  char *p = (char *)file_table[fd].disk_offset;
+  // char *p = (char *)file_table[fd].disk_offset;
+  // int i = 0;
+  // for(;(i < len) && (file_table[fd].open_offset < fs_filesz(fd));++i) {
+  //   *(p + file_table[fd].open_offset++) = *((char *)buf + i);
+  // }
+  size_t offset = file_table[fd].disk_offset + file_table[fd].open_offset;
   int i = 0;
-  for(;(i < len) && (file_table[fd].open_offset < fs_filesz(fd));++i) {
-    *(p + file_table[fd].open_offset++) = *((char *)buf + i);
-  }
+  i = ramdisk_write(buf,offset,len);
   return i;
 }
 ssize_t fs_read(int fd, void *buf, size_t len) {
   printf("read %d\n",len);
-  char *p = (char *)file_table[fd].disk_offset;
+  size_t offset = file_table[fd].disk_offset + file_table[fd].open_offset;
   int i = 0;
-  for(;(i < len) && (file_table[fd].open_offset < fs_filesz(fd));++i) {
-    *((char *)buf + i) = *(p + file_table[fd].open_offset++);
-  }
+  // for(;(i < len) && (file_table[fd].open_offset < fs_filesz(fd));++i) {
+  //   *((char *)buf + i) = *(p + file_table[fd].open_offset++);
+  // }
+  i = ramdisk_read(buf,offset,len);
   return i;
 }
 off_t fs_lseek(int fd, off_t offset, int whence) {
