@@ -67,7 +67,6 @@ PAL_PollEvent(
       if (kd) PAL_KeyPressHandler(key);
       else PAL_KeyReleaseHandler(key);
     }
-    printf("get key\n");
     return true;
   }
 
