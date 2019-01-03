@@ -12,7 +12,12 @@ void pio_write_w(ioaddr_t addr, uint32_t data);
 void pio_write_b(ioaddr_t addr, uint32_t data);
 
 make_EHelper(lidt) {
-  cpu.idtr = id_dest->addr;
+  // cpu.idtr = id_dest->addr;
+  if(decoding.is_operand_size_16) {
+    cpu.idtr = vaddr_read(id_dest->addr + 2,4) & 0x00ffffff;
+  } else {
+    cpu.idtr = vaddr_read(id_dest->addr + 2,4);
+  }
   print_asm_template1(lidt);
 }
 
