@@ -88,7 +88,7 @@ PAL_KeyPressHandler(
 			g_InputState.dwKeyPress |= kKeyMenu;
 			break;
 
-		case K_RETURN:
+		case K_RETURN:printf("key return\n");
 		case K_SPACE:
 			g_InputState.dwKeyPress |= kKeySearch;
 			break;
@@ -134,6 +134,7 @@ PAL_KeyPressHandler(
 			break;
 
 		case K_p:
+		printf("key_p\n");
 			VIDEO_SaveScreenshot();
 			break;
 
