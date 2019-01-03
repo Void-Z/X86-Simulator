@@ -100,18 +100,17 @@ PAL_GameMain(
          PAL_GameStart();
          gpGlobals->fGameStart = FALSE;
       }
-
-      printf("asd\n");
+      printf("before pal_loadresources\n");
       //
       // Load the game resources if needed.
       //
       PAL_LoadResources();
-
+      printf("before pal_clearkeystate\n");
       //
       // Clear the input state of previous frame.
       //
       PAL_ClearKeyState();
-
+      printf("before pal_processevent\n");
       //
       // Wait for the time of one frame. Accept input here.
       //
