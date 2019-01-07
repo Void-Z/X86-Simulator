@@ -108,10 +108,10 @@ static inline void _gen_rand_expr(bool non_zero) {
     }
     case 2: {
       bool *is_div = (bool *)malloc(sizeof(bool));
-      _gen_rand_expr(non_zero);
+      _gen_rand_expr(false);
       gen_rand_space();
       gen_rand_op(is_div);
-      *is_div ? _gen_rand_expr(true) : _gen_rand_expr(false);
+      *is_div ? _gen_rand_expr(false) : _gen_rand_expr(false);
       free(is_div);
       break;
     }
