@@ -17,29 +17,29 @@ static const char *keyname[256] __attribute__((used)) = {
 };
 
 size_t events_read(void *buf, size_t offset, size_t len) {
+  int key = read_key();
+  if((key ^ 0x8000) == _KEY_NONE) {
+    uint32_t t = uptime();
+    sprintf(buf,"t %u\n",t);
+  } else {
+    sprintf(buf,"%s %s\n",(key & 0x8000) ? "kd" : "ku",keyname[key ^ 0x8000]);
+    printf("%s\n",buf);
+  }
+  return strlen(buf);
   // int key = read_key();
+  // bool down = false;
+  // if(key & 0x8000) {
+  //   key ^= 0x8000;
+  //   down = true;
+  // }
   // if(key == _KEY_NONE) {
   //   uint32_t t = uptime();
   //   sprintf(buf,"t %u\n",t);
   // } else {
-  //   sprintf(buf,"%s %s\n",(key & 0x8000) ? "kd" : "ku",keyname[key ^ 0x8000]);
+  //   sprintf(buf,"%s %s\n",down ? "kd" : "ku",keyname[key]);
   //   printf("%s\n",buf);
   // }
   // return strlen(buf);
-  int key = read_key();
-  bool down = false;
-  if(key & 0x8000) {
-    key ^= 0x8000;
-    down = true;
-  }
-  if(key == _KEY_NONE) {
-    uint32_t t = uptime();
-    sprintf(buf,"t %u\n",t);
-  } else {
-    sprintf(buf,"%s %s\n",down ? "kd" : "ku",keyname[key]);
-    printf("%s\n",buf);
-  }
-  return strlen(buf);
 }
 
 static char dispinfo[128] __attribute__((used));
